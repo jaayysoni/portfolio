@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jay Soni | Backend Engineer</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+
+<body class="bg-slate-50 text-slate-900">
+
+  <!-- HERO / BANNER -->
+  <section 
+  class="w-full h-96 bg-cover bg-center bg-no-repeat"
+  style="background-image: url('./assets/Colorful\ Pastel\ Modern\ Personal\ LinkedIn\ Banner-4.png');"
+>
+    <div class="bg-white/80 backdrop-blur-sm">
+      <div class="max-w-5xl mx-auto px-6 py-16 text-center">
+
+        <!-- Profile Image -->
+        <img 
+          src="./assets/PHOTO-2025-09-15-22-26-06.jpg"
+          alt="Jay Soni"
+          class="w-32 h-32 mx-auto rounded-full border-4 border-white shadow-md object-cover"
+        />
+
+        <!-- Name -->
+        <h1 class="mt-6 text-3xl font-bold">
+          Jay Soni
+        </h1>
+
+        <!-- Role -->
+        <p class="mt-2 text-lg text-slate-600">
+          Backend Engineer • Python • FastAPI • Redis
+        </p>
+
+        <!-- Short Value Statement -->
+        <p class="mt-4 max-w-2xl mx-auto text-slate-700">
+          Backend-focused engineer building scalable, secure, and production-ready
+          systems with real-time data, authentication, caching, and APIs.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="mt-6 flex justify-center gap-4 flex-wrap">
+          <a href="https://github.com/jaayysoni" target="_blank"
+             class="px-5 py-2 rounded-md bg-slate-900 text-white hover:bg-slate-800 transition">
+            GitHub
+          </a>
+
+          <a href="https://www.linkedin.com/in/jaayysoni" target="_blank"
+             class="px-5 py-2 rounded-md border border-slate-300 hover:bg-slate-100 transition">
+            LinkedIn
+          </a>
+        
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TECH STACK -->
+  <section class="max-w-5xl mx-auto px-6 py-14">
+    <h2 class="text-xl font-semibold mb-4">Tech Stack</h2>
+
+    <div class="flex flex-wrap gap-3">
+      <span class="px-3 py-1 bg-slate-200 rounded-full text-sm">Python</span>
+      <span class="px-3 py-1 bg-slate-200 rounded-full text-sm">FastAPI</span>
+      <span class="px-3 py-1 bg-slate-200 rounded-full text-sm">Redis</span>
+      <span class="px-3 py-1 bg-slate-200 rounded-full text-sm">PostgreSQL</span>
+      <span class="px-3 py-1 bg-slate-200 rounded-full text-sm">Docker</span>
+      <span class="px-3 py-1 bg-slate-200 rounded-full text-sm">JWT Auth</span>
+      <span class="px-3 py-1 bg-slate-200 rounded-full text-sm">REST APIs</span>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="max-w-5xl mx-auto px-6 py-14">
+    <h2 class="text-xl font-semibold mb-6">Featured Projects</h2>
+
+    <div class="grid md:grid-cols-2 gap-6">
+
+      <!-- Project 1 -->
+      <div class="bg-white border border-slate-200 rounded-lg p-6 shadow-sm">
+        <h3 class="font-semibold text-lg">Crypto Trading Simulator</h3>
+        <p class="mt-2 text-slate-600 text-sm">
+          Real-time crypto trading simulator with portfolio tracking, Redis caching,
+          WebSockets, authentication, and tax simulation.
+        </p>
+
+        <p class="mt-3 text-sm text-slate-500">
+          <strong>Tech:</strong> FastAPI, Redis, WebSockets, PostgreSQL
+        </p>
+
+        <a href="#" class="inline-block mt-4 text-blue-600 hover:underline text-sm">
+          View Project →
+        </a>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="bg-white border border-slate-200 rounded-lg p-6 shadow-sm">
+        <h3 class="font-semibold text-lg">Stock Market Simulator</h3>
+        <p class="mt-2 text-slate-600 text-sm">
+          Full-featured stock market simulator with authentication, reports,
+          caching, rate limiting, and portfolio analytics.
+        </p>
+
+        <p class="mt-3 text-sm text-slate-500">
+          <strong>Tech:</strong> FastAPI, SQLite, Redis, Jinja2
+        </p>
+
+        <a href="#" class="inline-block mt-4 text-blue-600 hover:underline text-sm">
+          View Project →
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-200 py-6 text-center text-sm text-slate-500">
+    © 2026 Jay Soni • Backend Engineer
+  </footer>
+
+</body>
+</html>
