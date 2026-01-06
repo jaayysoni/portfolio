@@ -53,19 +53,34 @@
           systems with real-time data, authentication, caching, and APIs.
         </p>
 
-        <!-- CTA Buttons -->
-        <div class="mt-6 flex justify-center gap-4 flex-wrap">
-          <a href="https://github.com/jaayysoni" target="_blank"
-             class="px-5 py-2 rounded-md bg-slate-900 text-white hover:bg-slate-800 transition">
-            GitHub
-          </a>
+   <!-- CTA Buttons -->
+<div class="mt-6 flex justify-center gap-4 flex-wrap">
 
-          <a href="https://www.linkedin.com/in/jaayysoni" target="_blank"
-             class="px-5 py-2 rounded-md border border-slate-300 hover:bg-slate-100 transition">
-            LinkedIn
-          </a>
-        
-        </div>
+  <!-- GitHub -->
+  <a href="https://github.com/jaayysoni" target="_blank"
+     class="px-5 py-2 rounded-md bg-slate-900 text-white hover:bg-slate-800 transition">
+    GitHub
+  </a>
+
+  <!-- LinkedIn -->
+  <a href="https://www.linkedin.com/in/jaayysoni" target="_blank"
+     class="px-5 py-2 rounded-md border border-slate-300 text-slate-800 hover:bg-slate-100 transition">
+    LinkedIn
+  </a>
+
+  <!-- LeetCode -->
+  <a href="https://leetcode.com/jaayysoni" target="_blank"
+     class="px-5 py-2 rounded-md border border-slate-300 text-slate-800 hover:bg-slate-100 transition">
+    LeetCode
+  </a>
+
+  <!-- Credly -->
+  <a href="https://www.credly.com/users/jay-soni.ffd962b9" target="_blank"
+     class="px-5 py-2 rounded-md border border-slate-300 text-slate-800 hover:bg-slate-100 transition">
+    Credly
+  </a>
+
+</div>
 
       </div>
     </div>
@@ -106,11 +121,11 @@
         <h3 class="font-semibold text-lg">Crypto Trading Simulator</h3>
         <p class="mt-2 text-slate-600 text-sm">
           Real-time crypto trading simulator with portfolio tracking, Redis caching,
-          WebSockets, authentication, and tax simulation.
+          WebSockets,Api's.
         </p>
 
         <p class="mt-3 text-sm text-slate-500">
-          <strong>Tech:</strong> FastAPI, Redis, WebSockets, PostgreSQL
+          <strong>Tech:</strong> FastAPI, Redis, WebSockets, SQL
         </p>
 
         <a href="#" class="inline-block mt-4 text-blue-600 hover:underline text-sm">
@@ -120,14 +135,15 @@
 
       <!-- Project 2 -->
       <div class="bg-white border border-slate-200 rounded-lg p-6 shadow-sm">
-        <h3 class="font-semibold text-lg">Stock Market Simulator</h3>
+        <h3 class="font-semibold text-lg">E-voting</h3>
         <p class="mt-2 text-slate-600 text-sm">
-          Full-featured stock market simulator with authentication, reports,
-          caching, rate limiting, and portfolio analytics.
+          Full-featured E-Voting with authentication, Admin Pannel,
+          Role-Based Access control, CSRF Token.
+          .
         </p>
 
         <p class="mt-3 text-sm text-slate-500">
-          <strong>Tech:</strong> FastAPI, SQLite, Redis, Jinja2
+          <strong>Tech:</strong> Django, SQLite.
         </p>
 
         <a href="#" class="inline-block mt-4 text-blue-600 hover:underline text-sm">
@@ -141,25 +157,42 @@
   <section class="max-w-5xl mx-auto px-6 py-14">
     <h2 class="text-xl font-semibold mb-6">Experience</h2>
   
-    <div class="space-y-4">
+    <div class="space-y-6">
+  
+      <!-- Academic Project: E-Voting System -->
       <div>
-        <h3 class="font-semibold">Backend Engineer • Freelance</h3>
-        <p class="text-slate-600 text-sm">Jan 2024 – Present</p>
+        <h3 class="font-semibold">
+          Backend Developer • Academic Project (E-Voting System)
+        </h3>
+        <p class="text-slate-600 text-sm">
+          College Election Use Case • 2024 - 2025
+        </p>
         <ul class="text-slate-700 list-disc list-inside mt-1 text-sm">
-          <li>Developed scalable backend systems with FastAPI and PostgreSQL.</li>
-          <li>Implemented Redis caching and rate limiting for real-time applications.</li>
-          <li>Built RESTful APIs for multiple web and mobile clients.</li>
+          <li>Designed and developed a secure E-Voting system using Django and SQLite for class-level elections.</li>
+          <li>Used by students to elect Class Representative (CR) and House Representatives within the branch.</li>
+          <li>Implemented authentication using enrollment numbers with one-vote-per-user enforcement.</li>
+          <li>Managed candidates and results through Django Admin Panel.</li>
+          <li>Ensured vote integrity using CSRF protection and server-side validation.</li>
         </ul>
       </div>
   
+      <!-- Academic Project: Crypto Trading Simulator -->
       <div>
-        <h3 class="font-semibold">Software Engineer Intern • XYZ Company</h3>
-        <p class="text-slate-600 text-sm">Jun 2023 – Dec 2023</p>
+        <h3 class="font-semibold">
+          Backend Developer • Personal Project (Crypto Trading Simulator)
+        </h3>
+        <p class="text-slate-600 text-sm">
+          Peer Usage & Simulation • 2025 – Present
+        </p>
         <ul class="text-slate-700 list-disc list-inside mt-1 text-sm">
-          <li>Designed and maintained database schemas for high-traffic apps.</li>
-          <li>Created automated unit tests and CI/CD pipelines.</li>
+          <li>Built a real-time crypto trading simulator using FastAPI for educational and practice purposes.</li>
+          <li>Used by peers to simulate trading strategies without real financial risk.</li>
+          <li>Implemented live price fetching, virtual portfolios, and profit/loss tracking.</li>
+          <li>Integrated caching and rate limiting to handle frequent data refreshes.</li>
+          <li>Designed RESTful APIs to support scalable and modular backend architecture.</li>
         </ul>
       </div>
+  
     </div>
   </section>
 
@@ -177,11 +210,23 @@
 
   <section class="max-w-5xl mx-auto px-6 py-14 text-center">
     <h2 class="text-xl font-semibold mb-4">Get in Touch</h2>
-    <p class="text-slate-700 mb-4">Open to backend engineering opportunities. Let's connect!</p>
-    <a href="mailto:jay.soni@example.com"
-       class="px-6 py-3 rounded-md bg-slate-900 text-white hover:bg-slate-800 transition">
+  
+    <p class="text-slate-700 mb-4">
+      Open to backend engineering opportunities. Let's connect!
+    </p>
+  
+    <a href="mailto:jaayysoni@gmail.com"
+       class="inline-block px-6 py-3 rounded-md bg-black text-white hover:bg-neutral-900 transition">
        Email Me
     </a>
+  
+    <p class="mt-4 text-sm text-slate-600">
+      or email me at
+      <a href="mailto:jaayysoni@gmail.com"
+         class="underline hover:text-slate-900">
+         jaayysoni@gmail.com
+      </a>
+    </p>
   </section>
 
   <!-- FOOTER -->
