@@ -2,237 +2,201 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Jay Soni | Backend Engineer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jay Soni | SDE Portfolio</title>
 
-  <!-- Tailwind CDN -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-    }
-  </style>
 </head>
 
-<body class="bg-slate-50 text-slate-900">
+<body class="bg-white text-gray-800 font-[Inter]">
 
-  <!-- HERO / BANNER -->
-  <section 
-  class="w-full h-96 bg-cover bg-center bg-no-repeat"
-  style="background-image: url('./assets/Colorful\ Pastel\ Modern\ Personal\ LinkedIn\ Banner-4.png');"
->
-    <div class="bg-white/80 backdrop-blur-sm">
-      <div class="max-w-5xl mx-auto px-6 py-16 text-center">
+<!-- HERO / BANNER -->
+<section class="relative overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-br from-indigo-100 via-purple-100 to-pink-100"></div>
 
-        <!-- Profile Image -->
-        <img 
-          src="./assets/PHOTO-2025-09-15-22-26-06.jpg"
-          alt="Jay Soni"
-          class="w-32 h-32 mx-auto rounded-full border-4 border-white shadow-md object-cover"
-        />
+  <div class="relative max-w-6xl mx-auto px-6 py-28 text-center">
 
-        <!-- Name -->
-        <h1 class="mt-6 text-3xl font-bold">
-          Jay Soni
-        </h1>
+    <!-- Profile Photo
+    <img
+      src="./assets/PHOTO-2025-09-15-22-26-06.jpg"
+      alt="Jay Soni"
+      class="w-32 h-32 mx-auto rounded-full border-4 border-white shadow-lg object-cover"
+    /> -->
 
-        <!-- Role -->
-        <p class="mt-2 text-lg text-slate-600">
-          Backend Engineer • Python • FastAPI • Redis
-        </p>
+    <h1 class="mt-6 text-5xl md:text-6xl font-extrabold tracking-tight">
+      Hi, I’m <span class="text-indigo-600">Jay Soni</span>
+    </h1>
 
-        <!-- Short Value Statement -->
-        <p class="mt-4 max-w-2xl mx-auto text-slate-700">
-          Backend-focused engineer building scalable, secure, and production-ready
-          systems with real-time data, authentication, caching, and APIs.
-        </p>
+    <p class="mt-6 text-xl md:text-2xl text-gray-700">
+      Software Development Engineer • Backend-focused • System Thinker
+    </p>
 
-   <!-- CTA Buttons -->
-<div class="mt-6 flex justify-center gap-4 flex-wrap">
+    <p class="mt-4 max-w-2xl mx-auto text-gray-600">
+      I design and build scalable backend systems with clean architecture,
+      strong fundamentals, and production-ready practices.
+    </p>
 
-  <!-- GitHub -->
+<!-- Social Links (Highlighted, HR-friendly) -->
+<div class="mt-10 flex justify-center gap-4 flex-wrap">
   <a href="https://github.com/jaayysoni" target="_blank"
-     class="px-5 py-2 rounded-md bg-slate-900 text-white hover:bg-slate-800 transition">
+     class="px-5 py-2 rounded-full border border-indigo-200 bg-white text-indigo-600 font-medium
+            shadow-sm hover:shadow-md hover:bg-indigo-50 transition">
     GitHub
   </a>
 
-  <!-- LinkedIn -->
   <a href="https://www.linkedin.com/in/jaayysoni" target="_blank"
-     class="px-5 py-2 rounded-md border border-slate-300 text-slate-800 hover:bg-slate-100 transition">
+     class="px-5 py-2 rounded-full border border-blue-200 bg-white text-blue-600 font-medium
+            shadow-sm hover:shadow-md hover:bg-blue-50 transition">
     LinkedIn
   </a>
 
-  <!-- LeetCode -->
   <a href="https://leetcode.com/jaayysoni" target="_blank"
-     class="px-5 py-2 rounded-md border border-slate-300 text-slate-800 hover:bg-slate-100 transition">
+     class="px-5 py-2 rounded-full border border-yellow-200 bg-white text-yellow-700 font-medium
+            shadow-sm hover:shadow-md hover:bg-yellow-50 transition">
     LeetCode
   </a>
 
-  <!-- Credly -->
   <a href="https://www.credly.com/users/jay-soni.ffd962b9" target="_blank"
-     class="px-5 py-2 rounded-md border border-slate-300 text-slate-800 hover:bg-slate-100 transition">
+     class="px-5 py-2 rounded-full border border-green-200 bg-white text-green-600 font-medium
+            shadow-sm hover:shadow-md hover:bg-green-50 transition">
     Credly
   </a>
-
 </div>
 
+  </div>
+</section>
+
+<!-- ABOUT ME -->
+<section id="about" class="max-w-5xl mx-auto px-6 py-20">
+  <h2 class="text-3xl font-bold mb-6">About Me</h2>
+  <p class="text-gray-600 leading-relaxed text-lg">
+    I am an aspiring Software Development Engineer with a strong focus on backend engineering.
+    I enjoy designing APIs, building secure systems, and translating real-world problems into
+    scalable software solutions. I prioritize clean code, documentation, and long-term maintainability.
+  </p>
+</section>
+
+<!-- TECHNICAL CAPABILITIES -->
+<section class="bg-gray-50 py-20">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-3xl font-bold mb-12 text-center">Technical Capabilities</h2>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="p-6 rounded-2xl bg-white shadow hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold text-indigo-600">Backend Development</h3>
+        <p class="mt-3 text-gray-600">
+          FastAPI, REST APIs, authentication, authorization, background tasks,
+          service-layer architecture.
+        </p>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-white shadow hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold text-purple-600">Databases & Caching</h3>
+        <p class="mt-3 text-gray-600">
+          PostgreSQL, MongoDB, SQLite, Redis, schema design,
+          indexing, performance tuning.
+        </p>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-white shadow hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold text-pink-600">Engineering Practices</h3>
+        <p class="mt-3 text-gray-600">
+          Docker, Git, CI/CD basics, API security,
+          rate limiting, logging, testing mindset.
+        </p>
       </div>
     </div>
-    <section class="max-w-5xl mx-auto px-6 py-14">
-      <h2 class="text-xl font-semibold mb-4">About Me</h2>
-      <p class="text-slate-700">
-        Passionate backend engineer with 3+ years of experience building scalable,
-        secure, and production-ready systems. Skilled in Python, FastAPI, and
-        database optimization. Experienced in designing RESTful APIs, integrating
-        caching mechanisms, and implementing real-time features.
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="max-w-6xl mx-auto px-6 py-20">
+  <h2 class="text-3xl font-bold mb-12 text-center">Selected Projects</h2>
+
+  <div class="grid md:grid-cols-2 gap-10">
+
+    <!-- Project 1 -->
+    <a href="#" class="block rounded-2xl border border-gray-200 p-8 hover:shadow-xl transition">
+      <div class="flex justify-between items-start">
+        <h3 class="text-2xl font-semibold">E-Voting 2.0</h3>
+        <span class="text-indigo-600 text-2xl">→</span>
+      </div>
+
+      <p class="mt-3 text-gray-600">
+        Production-grade online voting platform focused on security,
+        role-based access control, and auditability.
       </p>
-    </section>
 
-    <section class="max-w-5xl mx-auto px-6 py-14">
-      <h2 class="text-xl font-semibold mb-4">Skills</h2>
-      <div class="flex flex-wrap gap-3">
-        <span class="px-3 py-1 bg-slate-200 rounded-full text-sm">Python</span>
-        <span class="px-3 py-1 bg-slate-200 rounded-full text-sm">FastAPI</span>
-        <span class="px-3 py-1 bg-slate-200 rounded-full text-sm">Redis</span>
-        <span class="px-3 py-1 bg-slate-200 rounded-full text-sm">PostgreSQL</span>
-        <span class="px-3 py-1 bg-slate-200 rounded-full text-sm">Docker</span>
-        <span class="px-3 py-1 bg-slate-200 rounded-full text-sm">REST APIs</span>
-        <span class="px-3 py-1 bg-slate-200 rounded-full text-sm">Testing</span>
-        <span class="px-3 py-1 bg-slate-200 rounded-full text-sm">CI/CD</span>
-        <span class="px-3 py-1 bg-slate-200 rounded-full text-sm">Version Control (Git)</span>
-        <span class="px-3 py-1 bg-slate-200 rounded-full text-sm">Problem Solving</span>
+      <ul class="mt-4 text-gray-600 list-disc list-inside space-y-1">
+        <li>Layered FastAPI backend architecture</li>
+        <li>MongoDB schema design and secure authentication</li>
+        <li>Admin, EC, and voter workflows</li>
+      </ul>
+
+      <div class="mt-6 flex gap-3 text-sm">
+        <span class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full">FastAPI</span>
+        <span class="px-3 py-1 bg-green-100 text-green-600 rounded-full">MongoDB</span>
+        <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full">Security</span>
       </div>
-    </section>
-
-  <!-- PROJECTS -->
-  <section class="max-w-5xl mx-auto px-6 py-14">
-    <h2 class="text-xl font-semibold mb-6">Featured Projects</h2>
-
-    <div class="grid md:grid-cols-2 gap-6">
-
-      <!-- Project 1 -->
-      <div class="bg-white border border-slate-200 rounded-lg p-6 shadow-sm">
-        <h3 class="font-semibold text-lg">Crypto Trading Simulator</h3>
-        <p class="mt-2 text-slate-600 text-sm">
-          Real-time crypto trading simulator with portfolio tracking, Redis caching,
-          WebSockets,Api's.
-        </p>
-
-        <p class="mt-3 text-sm text-slate-500">
-          <strong>Tech:</strong> FastAPI, Redis, WebSockets, SQL
-        </p>
-
-        <a href="#" class="inline-block mt-4 text-blue-600 hover:underline text-sm">
-          View Project →
-        </a>
-      </div>
-
-      <!-- Project 2 -->
-      <div class="bg-white border border-slate-200 rounded-lg p-6 shadow-sm">
-        <h3 class="font-semibold text-lg">E-voting</h3>
-        <p class="mt-2 text-slate-600 text-sm">
-          Full-featured E-Voting with authentication, Admin Pannel,
-          Role-Based Access control, CSRF Token.
-          .
-        </p>
-
-        <p class="mt-3 text-sm text-slate-500">
-          <strong>Tech:</strong> Django, SQLite.
-        </p>
-
-        <a href="#" class="inline-block mt-4 text-blue-600 hover:underline text-sm">
-          View Project →
-        </a>
-      </div>
-
-    </div>
-  </section>
-  
-  <section class="max-w-5xl mx-auto px-6 py-14">
-    <h2 class="text-xl font-semibold mb-6">Experience</h2>
-  
-    <div class="space-y-6">
-  
-      <!-- Academic Project: E-Voting System -->
-      <div>
-        <h3 class="font-semibold">
-          Backend Developer • Academic Project (E-Voting System)
-        </h3>
-        <p class="text-slate-600 text-sm">
-          College Election Use Case • 2024 - 2025
-        </p>
-        <ul class="text-slate-700 list-disc list-inside mt-1 text-sm">
-          <li>Designed and developed a secure E-Voting system using Django and SQLite for class-level elections.</li>
-          <li>Used by students to elect Class Representative (CR) and House Representatives within the branch.</li>
-          <li>Implemented authentication using enrollment numbers with one-vote-per-user enforcement.</li>
-          <li>Managed candidates and results through Django Admin Panel.</li>
-          <li>Ensured vote integrity using CSRF protection and server-side validation.</li>
-        </ul>
-      </div>
-  
-      <!-- Academic Project: Crypto Trading Simulator -->
-      <div>
-        <h3 class="font-semibold">
-          Backend Developer • Personal Project (Crypto Trading Simulator)
-        </h3>
-        <p class="text-slate-600 text-sm">
-          Peer Usage & Simulation • 2025 – Present
-        </p>
-        <ul class="text-slate-700 list-disc list-inside mt-1 text-sm">
-          <li>Built a real-time crypto trading simulator using FastAPI for educational and practice purposes.</li>
-          <li>Used by peers to simulate trading strategies without real financial risk.</li>
-          <li>Implemented live price fetching, virtual portfolios, and profit/loss tracking.</li>
-          <li>Integrated caching and rate limiting to handle frequent data refreshes.</li>
-          <li>Designed RESTful APIs to support scalable and modular backend architecture.</li>
-        </ul>
-      </div>
-  
-    </div>
-  </section>
-
-
-  <section class="max-w-5xl mx-auto px-6 py-14">
-    <h2 class="text-xl font-semibold mb-4">Certifications & Achievements</h2>
-    <div class="flex flex-wrap gap-3">
-      <span class="px-3 py-1 bg-slate-200 rounded-full text-sm">AWS Certified Developer</span>
-      <span class="px-3 py-1 bg-slate-200 rounded-full text-sm">Python for Backend Engineering</span>
-      <span class="px-3 py-1 bg-slate-200 rounded-full text-sm">FastAPI Advanced</span>
-      <span class="px-3 py-1 bg-slate-200 rounded-full text-sm">Git & GitHub</span>
-    </div>
-  </section>
-
-
-  <section class="max-w-5xl mx-auto px-6 py-14 text-center">
-    <h2 class="text-xl font-semibold mb-4">Get in Touch</h2>
-  
-    <p class="text-slate-700 mb-4">
-      Open to backend engineering opportunities. Let's connect!
-    </p>
-  
-    <a href="mailto:jaayysoni@gmail.com"
-       class="inline-block px-6 py-3 rounded-md bg-black text-white hover:bg-neutral-900 transition">
-       Email Me
     </a>
-  
-    <p class="mt-4 text-sm text-slate-600">
-      or email me at
-      <a href="mailto:jaayysoni@gmail.com"
-         class="underline hover:text-slate-900">
-         jaayysoni@gmail.com
-      </a>
-    </p>
-  </section>
 
-  <!-- FOOTER -->
-  <footer class="border-t border-slate-200 py-6 text-center text-sm text-slate-500">
-    © 2026 Jay Soni • Backend Engineer
-  </footer>
+    <!-- Project 2 -->
+    <a href="https://crypto-trading-simulator-4ohm.onrender.com" target="_blank"
+       class="block rounded-2xl border border-gray-200 p-8 hover:shadow-xl transition">
+      <div class="flex justify-between items-start">
+        <h3 class="text-2xl font-semibold">Crypto Trading Simulator</h3>
+        <span class="text-indigo-600 text-2xl">→</span>
+      </div>
+
+      <p class="mt-3 text-gray-600">
+        Simulated trading environment focused on order execution,
+        portfolio analytics, and backend correctness.
+      </p>
+
+      <ul class="mt-4 text-gray-600 list-disc list-inside space-y-1">
+        <li>Real-time price fetching with caching</li>
+        <li>Transaction history and P/L tracking</li>
+        <li>Performance and scalability focused backend design</li>
+      </ul>
+
+      <div class="mt-6 flex gap-3 text-sm">
+        <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full">Python</span>
+        <span class="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full">Redis</span>
+        <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full">APIs</span>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<!-- ENGINEERING MINDSET -->
+<section class="bg-gradient-to-r from-indigo-50 to-pink-50 py-20">
+  <div class="max-w-5xl mx-auto px-6 text-center">
+    <h2 class="text-3xl font-bold mb-6">Engineering Mindset</h2>
+    <p class="text-gray-700 text-lg max-w-3xl mx-auto">
+      I think in terms of data flow, failure cases, scalability, and maintainability.
+      My goal is to build systems that are reliable, readable, and easy to evolve.
+    </p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="max-w-5xl mx-auto px-6 py-20 text-center">
+  <h2 class="text-3xl font-bold mb-6">Let’s Build Something</h2>
+  <p class="text-gray-600 mb-8">
+    Open to SDE roles, backend internships, and challenging engineering problems.
+  </p>
+
+  <a href="mailto:jaayysoni@gmail.com"
+     class="inline-block px-8 py-4 rounded-xl bg-indigo-600 text-white font-medium hover:bg-indigo-700 transition">
+    Email Me
+  </a>
+</section>
+
+<footer class="border-t py-6 text-center text-gray-500 text-sm">
+  © 2026 Jay Soni • Built with clarity & intent
+</footer>
 
 </body>
 </html>
