@@ -1,0 +1,2 @@
+> **Note:** This portfolio is for personal purposes and may not be fully updated or tailored to specific job requirements. It is intended to showcase information about me and my work. Please do not rely on it as an official or current representation of any application or project status.  
+> For any inquiries or further information, feel free to email me at [jaayysoni@gmail.com](mailto:jaayysoni@gmail.com).
