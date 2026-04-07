@@ -3,476 +3,1452 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jay Soni | Python Developer</title>
-  <meta name="description" content="Jay Soni - SDE specializing in scalable FastAPI backends, AWS deployments, MongoDB, Redis, and production systems. Bhopal-based backend engineer.">
-  <meta property="og:title" content="Jay Soni | Software Development Engineer">
-  <meta property="og:description" content="Building scalable backend systems with FastAPI, AWS, MongoDB, and Redis. Production-ready deployments.">
-  <meta property="og:image" content="https://via.placeholder.com/1200x630/4f46e5/ffffff?text=Jay+Soni+SDE">
+  <title>Jay Soni | Python Backend Developer</title>
+  <meta name="description" content="Jay Soni - Python Backend Developer. FastAPI, Django, AWS EC2, Redis, MongoDB, PostgreSQL. 5 deployed systems. Available for roles & internships.">
+  <meta property="og:title" content="Jay Soni | Python Backend Developer">
+  <meta property="og:description" content="Building scalable backend systems with FastAPI, AWS, MongoDB, Redis. 5 production-deployed systems.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-<script>document.documentElement.style.scrollBehavior = 'smooth'</script>
-  
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Instrument+Serif:ital@0;1&family=Geist+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #fafaf8;
+      --bg2: #f3f2ee;
+      --surface: #ffffff;
+      --surface2: #f8f7f4;
+      --border: #e4e2db;
+      --border-strong: #ccc9be;
+      --text: #1a1917;
+      --text-muted: #6b6860;
+      --text-dim: #9c9a94;
+      --accent: #1d4ed8;
+      --accent-light: #eff3ff;
+      --accent-mid: #3b5fc4;
+      --green: #16803c;
+      --green-bg: #f0fdf4;
+      --green-border: #bbf7d0;
+      --amber: #92400e;
+      --amber-bg: #fffbeb;
+      --amber-border: #fde68a;
+      --purple: #5b21b6;
+      --purple-bg: #f5f3ff;
+      --purple-border: #ddd6fe;
+      --teal: #0f766e;
+      --teal-bg: #f0fdfa;
+      --teal-border: #99f6e4;
+      --red: #b91c1c;
+      --red-bg: #fef2f2;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Bricolage Grotesque', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 0;
+      background: rgba(250,250,248,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 32px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      font-family: 'Geist Mono', monospace;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text);
+      text-decoration: none;
+      letter-spacing: -0.01em;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 36px;
+      list-style: none;
+    }
+
+    nav a {
+      font-family: 'Geist Mono', monospace;
+      font-size: 11.5px;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    nav a:hover { color: var(--text); }
+
+    /* ── CONTAINER ── */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    /* ── HERO ── */
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 56px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 80px;
+      align-items: center;
+      width: 100%;
+      padding: 80px 0;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 5px 12px;
+      border-radius: 100px;
+      background: var(--green-bg);
+      border: 1px solid var(--green-border);
+      font-family: 'Geist Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      color: var(--green);
+      margin-bottom: 28px;
+    }
+
+    .badge-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--green);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+
+    h1 {
+      font-family: 'Bricolage Grotesque', sans-serif;
+      font-size: clamp(42px, 5vw, 68px);
+      font-weight: 700;
+      line-height: 1.07;
+      letter-spacing: -0.025em;
+      color: var(--text);
+      margin-bottom: 20px;
+    }
+
+    h1 em {
+      font-family: 'Instrument Serif', serif;
+      font-style: italic;
+      font-weight: 400;
+      color: var(--accent);
+    }
+
+    .hero-sub {
+      font-size: 17px;
+      color: var(--text-muted);
+      line-height: 1.75;
+      margin-bottom: 36px;
+      max-width: 440px;
+      font-weight: 400;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 0;
+      margin-bottom: 40px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      background: var(--surface);
+      width: fit-content;
+    }
+
+    .stat {
+      padding: 16px 28px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-right: 1px solid var(--border);
+    }
+
+    .stat:last-child { border-right: none; }
+
+    .stat-num {
+      font-family: 'Bricolage Grotesque', sans-serif;
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.03em;
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-family: 'Geist Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-top: 5px;
+    }
+
+    .hero-links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      padding: 11px 22px;
+      background: var(--text);
+      color: #fff;
+      font-family: 'Geist Mono', monospace;
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.15s, transform 0.15s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .btn-primary:hover { background: #2d2b27; transform: translateY(-1px); }
+
+    .btn-ghost {
+      padding: 11px 20px;
+      border: 1px solid var(--border-strong);
+      color: var(--text-muted);
+      font-family: 'Geist Mono', monospace;
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      border-radius: 8px;
+      background: var(--surface);
+      transition: border-color 0.15s, color 0.15s, transform 0.15s;
+    }
+
+    .btn-ghost:hover { border-color: var(--text); color: var(--text); transform: translateY(-1px); }
+
+    /* Hero right */
+    .hero-right {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .profile-wrap {
+      position: relative;
+    }
+
+    .profile-frame {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 3px solid var(--border);
+      background: var(--bg2);
+    }
+
+    .profile-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .profile-initials {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Bricolage Grotesque', sans-serif;
+      font-size: 48px;
+      font-weight: 700;
+      color: var(--text-muted);
+      letter-spacing: -0.03em;
+    }
+
+    .tech-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      justify-content: center;
+      max-width: 360px;
+    }
+
+    .pill {
+      padding: 5px 11px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-family: 'Geist Mono', monospace;
+      font-size: 11px;
+      color: var(--text-muted);
+      background: var(--surface);
+      transition: border-color 0.15s, color 0.15s, background 0.15s;
+    }
+
+    .pill:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: var(--accent-light);
+    }
+
+    /* ── SECTION HEADING ── */
+    .section-label {
+      font-family: 'Geist Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      font-family: 'Bricolage Grotesque', sans-serif;
+      font-size: clamp(26px, 3vw, 36px);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      margin-bottom: 40px;
+      line-height: 1.15;
+    }
+
+    /* ── ABOUT ── */
+    #about {
+      padding: 100px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .about-text p {
+      font-size: 16px;
+      color: var(--text-muted);
+      line-height: 1.8;
+      margin-bottom: 16px;
+      font-weight: 400;
+    }
+
+    .about-text p strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .about-highlights {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .highlight-card {
+      padding: 20px 22px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      transition: border-color 0.2s;
+    }
+
+    .highlight-card:hover { border-color: var(--border-strong); }
+
+    .highlight-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+
+    .icon-blue { background: var(--accent-light); }
+    .icon-green { background: var(--green-bg); }
+    .icon-amber { background: var(--amber-bg); }
+
+    .highlight-text h4 {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 3px;
+    }
+
+    .highlight-text p {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    /* ── SKILLS ── */
+    #skills {
+      padding: 100px 0;
+      border-bottom: 1px solid var(--border);
+      background: var(--bg2);
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .skill-group {
+      padding: 24px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--surface);
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .skill-group:hover { border-color: var(--border-strong); transform: translateY(-2px); }
+
+    .skill-group-label {
+      font-family: 'Geist Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .skill-group-label::before {
+      content: '';
+      display: inline-block;
+      width: 8px;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 1px;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .skill-tag {
+      padding: 4px 10px;
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-size: 12px;
+      color: var(--text-muted);
+      font-family: 'Geist Mono', monospace;
+      font-weight: 400;
+    }
+
+    /* ── EXPERIENCE ── */
+    #experience {
+      padding: 100px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .exp-card {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 48px;
+      padding: 36px 40px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: var(--surface);
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .exp-card:hover {
+      border-color: var(--border-strong);
+      box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+    }
+
+    .exp-meta { display: flex; flex-direction: column; gap: 8px; }
+
+    .exp-date {
+      font-family: 'Geist Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      color: var(--accent);
+      text-transform: uppercase;
+    }
+
+    .exp-company {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.5;
+      font-weight: 500;
+    }
+
+    .exp-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 100px;
+      background: var(--green-bg);
+      border: 1px solid var(--green-border);
+      font-family: 'Geist Mono', monospace;
+      font-size: 10px;
+      color: var(--green);
+      width: fit-content;
+    }
+
+    .exp-status .dot {
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: var(--green);
+      animation: pulse 2s infinite;
+    }
+
+    .exp-content h3 {
+      font-family: 'Bricolage Grotesque', sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 18px;
+      color: var(--text);
+      letter-spacing: -0.01em;
+    }
+
+    .exp-bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .exp-bullets li {
+      font-size: 14.5px;
+      color: var(--text-muted);
+      padding-left: 18px;
+      position: relative;
+      line-height: 1.65;
+    }
+
+    .exp-bullets li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 12px;
+      top: 2px;
+    }
+
+    /* ── PROJECTS ── */
+    #projects {
+      padding: 100px 0;
+      border-bottom: 1px solid var(--border);
+      background: var(--bg2);
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .project-card {
+      display: block;
+      padding: 28px 30px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: var(--surface);
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+      position: relative;
+    }
+
+    .project-card:hover {
+      border-color: var(--border-strong);
+      box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+      transform: translateY(-2px);
+    }
+
+    .project-card.wide { grid-column: 1 / -1; }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 10px;
+    }
+
+    .project-name {
+      font-family: 'Bricolage Grotesque', sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text);
+      letter-spacing: -0.01em;
+      line-height: 1.25;
+    }
+
+    .project-arrow {
+      font-size: 16px;
+      color: var(--text-dim);
+      transition: transform 0.2s, color 0.2s;
+      flex-shrink: 0;
+      margin-left: 12px;
+    }
+
+    .project-card:hover .project-arrow {
+      transform: translate(3px, -3px);
+      color: var(--accent);
+    }
+
+    .project-deploy-tag {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 100px;
+      font-family: 'Geist Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.04em;
+      margin-bottom: 14px;
+    }
+
+    .tag-aws {
+      background: var(--amber-bg);
+      color: var(--amber);
+      border: 1px solid var(--amber-border);
+    }
+
+    .tag-github {
+      background: var(--bg2);
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+    }
+
+    .project-desc {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 18px;
+    }
+
+    .project-highlights {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      margin-bottom: 18px;
+    }
+
+    .project-highlights li {
+      font-size: 13px;
+      color: var(--text-muted);
+      padding-left: 16px;
+      position: relative;
+      line-height: 1.6;
+    }
+
+    .project-highlights li::before {
+      content: '·';
+      position: absolute;
+      left: 4px;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .project-metrics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 16px;
+    }
+
+    .metric {
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-family: 'Geist Mono', monospace;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+    }
+
+    .m-green { background: var(--green-bg); color: var(--green); border: 1px solid var(--green-border); }
+    .m-blue { background: var(--accent-light); color: var(--accent); border: 1px solid #bfdbfe; }
+    .m-purple { background: var(--purple-bg); color: var(--purple); border: 1px solid var(--purple-border); }
+    .m-amber { background: var(--amber-bg); color: var(--amber); border: 1px solid var(--amber-border); }
+    .m-teal { background: var(--teal-bg); color: var(--teal); border: 1px solid var(--teal-border); }
+
+    .project-tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+
+    .tech-tag {
+      padding: 3px 8px;
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      font-family: 'Geist Mono', monospace;
+      font-size: 10px;
+      color: var(--text-dim);
+    }
+
+    /* ── ACHIEVEMENTS ── */
+    #achievements {
+      padding: 100px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .achievements-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .ach-card {
+      padding: 28px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--surface);
+      transition: border-color 0.2s;
+    }
+
+    .ach-card:hover { border-color: var(--border-strong); }
+
+    .ach-number {
+      font-family: 'Bricolage Grotesque', sans-serif;
+      font-size: 44px;
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      color: var(--text);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .ach-number span {
+      font-family: 'Instrument Serif', serif;
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .ach-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    .ach-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    /* ── CONTACT ── */
+    #contact {
+      padding: 100px 0;
+    }
+
+    .contact-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .contact-left h2 {
+      font-family: 'Bricolage Grotesque', sans-serif;
+      font-size: clamp(30px, 3.5vw, 46px);
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+
+    .contact-left h2 em {
+      font-family: 'Instrument Serif', serif;
+      font-style: italic;
+      font-weight: 400;
+      color: var(--accent);
+    }
+
+    .contact-left p {
+      font-size: 15.5px;
+      color: var(--text-muted);
+      line-height: 1.75;
+      margin-bottom: 32px;
+    }
+
+    .contact-email-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      background: var(--text);
+      color: #fff;
+      font-family: 'Geist Mono', monospace;
+      font-size: 13px;
+      font-weight: 500;
+      text-decoration: none;
+      border-radius: 10px;
+      transition: background 0.15s, transform 0.15s;
+    }
+
+    .contact-email-btn:hover { background: #2d2b27; transform: translateY(-2px); }
+
+    .contact-right {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding-top: 8px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 20px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: var(--surface);
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .contact-item:hover { border-color: var(--border-strong); transform: translateX(4px); }
+
+    .contact-item-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .contact-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+    }
+
+    .contact-item-label {
+      font-family: 'Geist Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-bottom: 2px;
+    }
+
+    .contact-item-value {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    .contact-item-arrow {
+      color: var(--text-dim);
+      font-size: 14px;
+      transition: color 0.15s;
+    }
+
+    .contact-item:hover .contact-item-arrow { color: var(--accent); }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 24px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-copy {
+      font-family: 'Geist Mono', monospace;
+      font-size: 11px;
+      color: var(--text-dim);
+      letter-spacing: 0.04em;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .footer-links a {
+      font-family: 'Geist Mono', monospace;
+      font-size: 11px;
+      color: var(--text-dim);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      transition: color 0.15s;
+    }
+
+    .footer-links a:hover { color: var(--text); }
+
+    /* ── SECTION DIVIDER ── */
+    .divider {
+      width: 32px;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 1px;
+      margin-bottom: 40px;
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .fade-up { animation: fadeUp 0.6s ease both; }
+    .d1 { animation-delay: 0.05s; }
+    .d2 { animation-delay: 0.15s; }
+    .d3 { animation-delay: 0.25s; }
+    .d4 { animation-delay: 0.35s; }
+    .d5 { animation-delay: 0.45s; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 40px; text-align: center; }
+      .hero-stats { justify-content: center; }
+      .hero-links { justify-content: center; }
+      .hero-sub { margin: 0 auto 36px; }
+      .hero-badge { display: inline-flex; }
+      .hero-right { order: -1; }
+      .about-grid { grid-template-columns: 1fr; gap: 40px; }
+      .skills-grid { grid-template-columns: 1fr 1fr; }
+      .projects-grid { grid-template-columns: 1fr; }
+      .project-card.wide { grid-column: auto; }
+      .achievements-row { grid-template-columns: 1fr; }
+      .exp-card { grid-template-columns: 1fr; gap: 20px; }
+      .contact-inner { grid-template-columns: 1fr; gap: 40px; }
+    }
+
+    @media (max-width: 600px) {
+      .container { padding: 0 20px; }
+      .skills-grid { grid-template-columns: 1fr; }
+      nav ul { gap: 18px; }
+      nav a { font-size: 10px; }
+      .footer-inner { flex-direction: column; gap: 12px; text-align: center; }
+    }
+  </style>
 </head>
+<body>
 
-<body class="bg-white text-gray-800 font-[Inter]">
-  
-<!-- Navigation -->
-<nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200/50">
-  <div class="max-w-6xl mx-auto px-6 py-4">
-    <ul class="flex justify-center space-x-8">
-      <li>
-        <a href="#about"
-           class="text-lg font-medium text-gray-700 hover:text-indigo-600 transition-all duration-200">
-          About
-        </a>
-      </li>
-      
-      <li>
-        <a href="#experience"
-           class="text-lg font-medium text-gray-700 hover:text-indigo-600 transition-all duration-200">
-          Experience
-        </a>
-      </li>
-
-      <li>
-        <a href="#projects"
-           class="text-lg font-medium text-gray-700 hover:text-indigo-600 transition-all duration-200">
-          Projects
-        </a>
-      </li>
-      <li>
-        <a href="#contact"
-           class="text-lg font-medium text-gray-700 hover:text-indigo-600 transition-all duration-200">
-          Contact
-        </a>
-      </li>
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">jay soni</a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </div>
 </nav>
 
-<!-- HERO / BANNER -->
-<main>
-<section class="relative overflow-hidden">
-  <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/20 via-purple-500/20 to-pink-500/20"></div>
+<!-- HERO -->
+<section id="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-left">
+        <div class="hero-badge fade-up d1">
+          <span class="badge-dot"></span>
+          Available for roles &amp; internships
+        </div>
 
-  <div class="relative max-w-6xl mx-auto px-6 py-16 md:py-28 text-center">
+        <h1 class="fade-up d2">
+          Hi, I'm<br><em>Jay Soni</em>
+        </h1>
 
-    <!-- Profile Photo -->
-    <img
-      src="assets/PHOTO-2026-02-03-22-02-52.jpg"
-      alt="Jay Soni - Software Development Engineer"
-      class="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full border-4 border-white shadow-xl object-cover ring-4 ring-white/50"
-      loading="lazy"
-    />
+        <p class="hero-sub fade-up d3">
+          Python Backend Developer building reliable, high-performance systems with FastAPI, Django, AWS EC2, and Redis.
+        </p>
 
-    <h1 class="mt-6 text-4xl md:text-6xl font-extrabold tracking-tight">
-      Hi, I'm <span class="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent font-extrabold">Jay Soni</span>
+        <div class="hero-stats fade-up d4">
+          <div class="stat">
+            <span class="stat-num">5</span>
+            <span class="stat-label">Deployed Systems</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">90+</span>
+            <span class="stat-label">DSA Problems</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">10+</span>
+            <span class="stat-label">AWS Badges</span>
+          </div>
+        </div>
 
-    </h1>
+        <div class="hero-links fade-up d5">
+          <a href="mailto:jaayysoni@gmail.com" class="btn-primary">Email Me →</a>
+          <a href="https://github.com/jaayysoni" target="_blank" rel="noopener" class="btn-ghost">GitHub ↗</a>
+          <a href="https://www.linkedin.com/in/jaayysoni" target="_blank" rel="noopener" class="btn-ghost">LinkedIn ↗</a>
+          <a href="https://www.credly.com/users/jay-soni.ffd962b9" target="_blank" rel="noopener" class="btn-ghost">Credly ↗</a>
+        </div>
+      </div>
 
-    <p class="mt-6 text-xl md:text-2xl text-gray-700 font-medium">
-      Python Developer
-    </p>
-
-    <p class="mt-4 max-w-2xl mx-auto text-gray-600 text-lg leading-relaxed">
-      I design, build, and deploy backend systems that are reliable, maintainable, and genuinely useful in real-world scenarios.
-    </p>
-
-    <!-- Social Links -->
-    <div class="mt-10 flex justify-center gap-3 md:gap-4 flex-wrap">
-      <a href="https://github.com/jaayysoni" target="_blank" rel="noopener noreferrer"
-         class="px-4 md:px-5 py-2.5 rounded-full border border-indigo-200 bg-white text-indigo-600 font-medium text-sm md:text-base shadow-sm hover:shadow-md hover:bg-indigo-50 transition-all duration-200">
-        GitHub
-      </a>
-
-      <a href="https://www.linkedin.com/in/jaayysoni" target="_blank" rel="noopener noreferrer"
-         class="px-4 md:px-5 py-2.5 rounded-full border border-blue-200 bg-white text-blue-600 font-medium text-sm md:text-base shadow-sm hover:shadow-md hover:bg-blue-50 transition-all duration-200">
-        LinkedIn
-      </a>
-
-      <a href="https://leetcode.com/jaayysoni" target="_blank" rel="noopener noreferrer"
-         class="px-4 md:px-5 py-2.5 rounded-full border border-yellow-200 bg-white text-yellow-700 font-medium text-sm md:text-base shadow-sm hover:shadow-md hover:bg-yellow-50 transition-all duration-200">
-        LeetCode
-      </a>
-
-      <a href="https://www.credly.com/users/jay-soni.ffd962b9" target="_blank" rel="noopener noreferrer"
-         class="px-4 md:px-5 py-2.5 rounded-full border border-green-200 bg-white text-green-600 font-medium text-sm md:text-base shadow-sm hover:shadow-md hover:bg-green-50 transition-all duration-200">
-        Credly
-      </a>
+      <div class="hero-right fade-up d3">
+        <div class="profile-frame">
+          <img src="assets/PHOTO-2026-02-03-22-02-52.jpg" alt="Jay Soni"
+            onerror="this.style.display='none'; this.parentElement.querySelector('.profile-initials').style.display='flex';"
+          />
+          <div class="profile-initials" style="display:none;">JS</div>
+        </div>
+        <div class="tech-pills">
+          <span class="pill">FastAPI</span>
+          <span class="pill">Django</span>
+          <span class="pill">PostgreSQL</span>
+          <span class="pill">MongoDB</span>
+          <span class="pill">Redis</span>
+          <span class="pill">RabbitMQ</span>
+          <span class="pill">Docker</span>
+          <span class="pill">AWS EC2</span>
+          <span class="pill">Celery</span>
+          <span class="pill">WebSockets</span>
+          <span class="pill">GitHub Actions</span>
+          <span class="pill">SQLAlchemy</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ABOUT ME -->
-<section id="about" class="max-w-5xl mx-auto px-6 py-20">
-  <h2 class="text-3xl md:text-4xl font-bold mb-6 text-center bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
-    About Me
-  </h2>
-
-  <div class="text-gray-600 leading-relaxed text-lg max-w-3xl mx-auto">
-    <p class="mb-6">
-      I’m a Python Backend Developer who enjoys building clean, dependable systems that solve real problems.
-      I focus on designing APIs, structuring backend logic, and turning product requirements into working solutions.
-    </p>
-
-    <p>
-      I care about clarity in code, strong fundamentals, and maintainable architecture.
-      I like taking ownership of what I build, learning through real challenges, and continuously improving as an engineer.
-    </p>
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <p class="section-label">About</p>
+    <h2 class="section-title">Backend engineer who ships real systems</h2>
+    <div class="divider"></div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>
+          I'm a Python Backend Developer who designs and deploys systems that handle <strong>real concurrency, real data, and real failure cases.</strong> My work covers API design, async architecture, database optimization, and CI/CD-driven deployments.
+        </p>
+        <p>
+          I care about writing code that's maintainable and easy to reason about — not just code that works once. I take ownership of what I build, from architecture decisions to production monitoring.
+        </p>
+        <p>
+          Currently interning at <strong>KEP Labs (Bhopal)</strong>, open to Python Developer roles and backend internships. Willing to relocate.
+        </p>
+      </div>
+      <div class="about-highlights">
+        <div class="highlight-card">
+          <div class="highlight-icon icon-blue">🏗️</div>
+          <div class="highlight-text">
+            <h4>Production-First Mindset</h4>
+            <p>Every project deployed on AWS EC2 with Docker, Nginx, SSL, and CI/CD — not just localhost demos.</p>
+          </div>
+        </div>
+        <div class="highlight-card">
+          <div class="highlight-icon icon-green">⚡</div>
+          <div class="highlight-text">
+            <h4>Async & High-Concurrency</h4>
+            <p>90+ concurrent WebSocket connections, Redis caching reducing latency by 40–60%, RabbitMQ message queues.</p>
+          </div>
+        </div>
+        <div class="highlight-card">
+          <div class="highlight-icon icon-amber">☁️</div>
+          <div class="highlight-text">
+            <h4>Cloud-Certified</h4>
+            <p>10+ AWS Educate badges across Compute, Databases, Security, Storage, and Cloud Foundations.</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container">
+    <p class="section-label">Tech Stack</p>
+    <h2 class="section-title">What I work with</h2>
+    <div class="divider"></div>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <p class="skill-group-label">Frameworks</p>
+        <div class="skill-tags">
+          <span class="skill-tag">FastAPI</span>
+          <span class="skill-tag">Django</span>
+          <span class="skill-tag">DRF</span>
+          <span class="skill-tag">Flask</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <p class="skill-group-label">Databases</p>
+        <div class="skill-tags">
+          <span class="skill-tag">PostgreSQL</span>
+          <span class="skill-tag">MongoDB</span>
+          <span class="skill-tag">SQLite</span>
+          <span class="skill-tag">SQLAlchemy</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <p class="skill-group-label">Infra &amp; Async</p>
+        <div class="skill-tags">
+          <span class="skill-tag">Redis</span>
+          <span class="skill-tag">RabbitMQ</span>
+          <span class="skill-tag">Celery</span>
+          <span class="skill-tag">WebSockets</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <p class="skill-group-label">DevOps</p>
+        <div class="skill-tags">
+          <span class="skill-tag">Docker</span>
+          <span class="skill-tag">AWS EC2</span>
+          <span class="skill-tag">AWS S3</span>
+          <span class="skill-tag">GitHub Actions</span>
+          <span class="skill-tag">Nginx</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-  
 <!-- EXPERIENCE -->
-<section id="experience" class="max-w-5xl mx-auto px-6 py-20">
-  <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-    Experience
-  </h2>
-
-  <div class="space-y-8">
-
-    <!-- Job / Experience Entry (Clickable Card) -->
-    <a href="https://www.linkedin.com/company/keshava-elite-projects/posts/?feedView=all" target="_blank" rel="noopener noreferrer"
-       class="block p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-200">
-
-      <div class="flex flex-col md:flex-row md:items-center md:justify-between">
-        <!-- Left side: Timeline circle -->
-        <div class="flex flex-col items-center md:mr-6 mb-4 md:mb-0">
-          <div class="w-4 h-4 bg-indigo-600 rounded-full mt-1"></div>
-          <div class="w-1 bg-gray-300 flex-1"></div>
-        </div>
-
-        <!-- Right side: Content -->
-        <div class="flex-1">
-          <h3 class="text-2xl font-semibold text-gray-900">Python Backend and Simulation Intern</h3>
-          <p class="text-gray-500 mt-1">Keshava Elite Projects (KEP Labs)</p>
-          <p class="text-gray-500 italic mt-1">March 2026 – Present</p>
-        </div>
+<section id="experience">
+  <div class="container">
+    <p class="section-label">Experience</p>
+    <h2 class="section-title">Where I've worked</h2>
+    <div class="divider"></div>
+    <a href="https://www.linkedin.com/company/keshava-elite-projects/posts/?feedView=all"
+       target="_blank" rel="noopener noreferrer" class="exp-card">
+      <div class="exp-meta">
+        <span class="exp-date">Feb 2026 – Present</span>
+        <span class="exp-company">Keshava Elite Projects<br>(KEP Labs)</span>
+        <span class="exp-status"><span class="dot"></span>Active</span>
+      </div>
+      <div class="exp-content">
+        <h3>Python Backend &amp; Simulation Intern</h3>
+        <ul class="exp-bullets">
+          <li>Designed and built RESTful APIs using FastAPI and Django for scalable backend services and simulation workflows</li>
+          <li>Optimized database queries and data models, improving response efficiency and reducing latency under high load</li>
+          <li>Implemented Redis caching to enhance API performance and reduce redundant computations</li>
+          <li>Built modular backend architecture with clean code practices, ensuring long-term scalability</li>
+        </ul>
       </div>
     </a>
-
-    <!-- Add more clickable experience cards here if needed -->
-
-  </div>
-</section>
-
-
-
-
-<!-- TECHNICAL CAPABILITIES -->
-<section class="bg-gray-50 py-20">
-  <div class="max-w-6xl mx-auto px-6">
-    <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-      Technical Capabilities
-    </h2>
-
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-
-      <!-- Backend & API Engineering -->
-      <div class="p-8 rounded-2xl bg-white shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-        <h3 class="text-2xl font-semibold text-indigo-600 mb-4">
-          Backend & API Engineering
-        </h3>
-        <ul class="text-gray-600 space-y-2 list-disc list-inside">
-          <li>FastAPI & Django REST backends</li>
-          <li>Pydantic-driven request/response validation</li>
-          <li>RESTful APIs with role-based endpoints</li>
-          <li>OAuth2 & cookie-based authentication</li>
-          <li>Async endpoints & background workers (RabbitMQ, Celery + Redis)</li>
-          <li>Service-layer architecture & clean code practices</li>
-        </ul>
-      </div>
-
-      <!-- Databases & Data Handling -->
-      <div class="p-8 rounded-2xl bg-white shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-        <h3 class="text-2xl font-semibold text-purple-600 mb-4">
-          Databases & Data Handling
-        </h3>
-        <ul class="text-gray-600 space-y-2 list-disc list-inside">
-          <li>PostgreSQL schemas & ACID-safe operations</li>
-          <li>MongoDB aggregation & document-centric patterns</li>
-          <li>Redis for caching, counters & message brokers</li>
-          <li>SQLAlchemy ORM & optimized raw queries</li>
-        </ul>
-      </div>
-
-      <!-- Deployment, CI/CD & Integration -->
-      <div class="p-8 rounded-2xl bg-white shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-        <h3 class="text-2xl font-semibold text-pink-600 mb-4">
-          Deployment, CI/CD & Integration
-        </h3>
-        <ul class="text-gray-600 space-y-2 list-disc list-inside">
-          <li>FastAPI / Django deployment on AWS EC2 & Render</li>
-          <li>Dockerized services with environment configs</li>
-          <li>CI/CD pipelines using GitHub Actions</li>
-          <li>Integration with external APIs (SendGrid, crypto feeds)</li>
-        </ul>
-      </div>
-
-    </div>
   </div>
 </section>
 
 <!-- PROJECTS -->
-<section id="projects" class="max-w-6xl mx-auto px-6 py-20">
-  <h2 class="text-3xl md:text-4xl font-bold mb-14 text-center bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
-    Selected Projects
-  </h2>
+<section id="projects">
+  <div class="container">
+    <p class="section-label">Projects</p>
+    <h2 class="section-title">Selected work</h2>
+    <div class="divider"></div>
+    <div class="projects-grid">
 
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+      <!-- FinVerse -->
+      <a href="https://finverse.jaayysoni.com" target="_blank" rel="noopener" class="project-card">
+        <div class="project-header">
+          <h3 class="project-name">FinVerse — Finance Platform</h3>
+          <span class="project-arrow">↗</span>
+        </div>
+        <span class="project-deploy-tag tag-aws">Deployed · AWS EC2</span>
+        <p class="project-desc">
+          Full-stack financial management platform with true server-side RBAC, a dual browser + REST API interface, and clean separation between authorization layers.
+        </p>
+        <ul class="project-highlights">
+          <li>3-role RBAC (admin/analyst/viewer) enforced server-side — UI hiding is cosmetic, the real guard is in Python</li>
+          <li>Dual interface: browser dashboard (Jinja2) + full REST API (/api/*)</li>
+          <li>17+ endpoints — full CRUD, CSV import/export with fault tolerance, analytics</li>
+          <li>Deployed on AWS EC2, Pytest suite covering RBAC paths</li>
+        </ul>
+        <div class="project-metrics">
+          <span class="metric m-purple">17 API Endpoints</span>
+          <span class="metric m-green">Server-side RBAC</span>
+          <span class="metric m-blue">Dual Interface</span>
+          <span class="metric m-amber">Docker + AWS</span>
+        </div>
+        <div class="project-tech">
+          <span class="tech-tag">FastAPI</span>
+          <span class="tech-tag">SQLAlchemy</span>
+          <span class="tech-tag">PostgreSQL</span>
+          <span class="tech-tag">Jinja2</span>
+          <span class="tech-tag">Pytest</span>
+          <span class="tech-tag">AWS EC2</span>
+        </div>
+      </a>
 
-    <!-- Project 1: Crypto Trading Simulator -->
-    <a
-      href="https://crypto.jaayysoni.com"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="group block rounded-2xl border border-gray-200 p-8 bg-gradient-to-br from-white to-gray-50
-             hover:shadow-2xl hover:border-indigo-200 hover:-translate-y-2 transition-all duration-300"
-    >
-      <div class="flex justify-between items-start mb-4">
-        <h3 class="text-2xl font-semibold group-hover:text-indigo-600 transition-colors">
-          Crypto Trading Simulator
-        </h3>
-        <span class="text-indigo-600 text-2xl group-hover:translate-x-1 transition-transform">→</span>
-      </div>
-      <span class="px-3 py-1 bg-blue-200 text-blue-800 rounded-full text-xs font-semibold">
-        Deployed on AWS EC2
-      </span>
+      <!-- Crypto -->
+      <a href="https://crypto.jaayysoni.com" target="_blank" rel="noopener" class="project-card">
+        <div class="project-header">
+          <h3 class="project-name">Crypto Trading Simulator</h3>
+          <span class="project-arrow">↗</span>
+        </div>
+        <span class="project-deploy-tag tag-aws">Deployed · AWS EC2</span>
+        <p class="project-desc">
+          Real-time crypto trading simulator handling high concurrency, accurate portfolio tracking, and low-latency data delivery via WebSockets.
+        </p>
+        <ul class="project-highlights">
+          <li>FastAPI backend sustaining 90+ concurrent WebSocket connections</li>
+          <li>Redis caching + async APIs cutting latency by 40–60%</li>
+          <li>FIFO-based portfolio, transaction history &amp; P/L calculation logic</li>
+          <li>CI/CD pipelines via GitHub Actions for automated build, test &amp; deploy</li>
+        </ul>
+        <div class="project-metrics">
+          <span class="metric m-blue">90+ Concurrent WSS</span>
+          <span class="metric m-amber">40–60% Lower Latency</span>
+          <span class="metric m-green">99% Uptime</span>
+        </div>
+        <div class="project-tech">
+          <span class="tech-tag">FastAPI</span>
+          <span class="tech-tag">Redis</span>
+          <span class="tech-tag">WebSockets</span>
+          <span class="tech-tag">Docker</span>
+          <span class="tech-tag">GitHub Actions</span>
+          <span class="tech-tag">AWS EC2</span>
+        </div>
+      </a>
 
-      <p class="mt-3 text-gray-600 leading-relaxed">
-        Real-time crypto trading simulator focused on high-concurrency performance,
-        accurate portfolio tracking, and low-latency data delivery.
-      </p>
+      <!-- E-Voting -->
+      <a href="https://evoting.jaayysoni.com" target="_blank" rel="noopener" class="project-card">
+        <div class="project-header">
+          <h3 class="project-name">Secure E-Voting System 2.0</h3>
+          <span class="project-arrow">↗</span>
+        </div>
+        <span class="project-deploy-tag tag-aws">Deployed · AWS EC2</span>
+        <p class="project-desc">
+          Role-based online voting platform built for reliability, auditability, and controlled access — supporting 5,000–8,000 concurrent users.
+        </p>
+        <ul class="project-highlights">
+          <li>Scalable REST APIs supporting 5K–8K concurrent voters</li>
+          <li>MongoDB aggregation pipelines for real-time vote reporting</li>
+          <li>Cookie-based auth + bcrypt for secure sessions and voter verification</li>
+          <li>Duplicate prevention, vote validation, and data integrity enforcement</li>
+        </ul>
+        <div class="project-metrics">
+          <span class="metric m-blue">5K–8K Concurrent Users</span>
+          <span class="metric m-green">bcrypt Auth</span>
+          <span class="metric m-teal">CI/CD</span>
+        </div>
+        <div class="project-tech">
+          <span class="tech-tag">FastAPI</span>
+          <span class="tech-tag">MongoDB</span>
+          <span class="tech-tag">Cookie Auth</span>
+          <span class="tech-tag">bcrypt</span>
+          <span class="tech-tag">WebSockets</span>
+          <span class="tech-tag">GitHub Actions</span>
+        </div>
+      </a>
 
-      <ul class="mt-6 text-gray-600 space-y-2 text-sm leading-relaxed">
-        <li>• FastAPI backend with 90+ concurrent WebSocket connections</li>
-        <li>• Redis caching & async APIs reducing latency by 40–60%</li>
-        <li>• Portfolio, transaction history & P/L calculation logic</li>
-        <li>• CI/CD pipelines for automated build, test & deployment</li>
-        
-      </ul>
+      <!-- Notifications -->
+      <a href="https://github.com/jaayysoni/Event-Driven-Notification-System" target="_blank" rel="noopener" class="project-card">
+        <div class="project-header">
+          <h3 class="project-name">Event-Driven Notification System</h3>
+          <span class="project-arrow">↗</span>
+        </div>
+        <span class="project-deploy-tag tag-github">GitHub</span>
+        <p class="project-desc">
+          Scalable notification backend with decoupled async email processing — notification failures never block core application requests.
+        </p>
+        <ul class="project-highlights">
+          <li>RabbitMQ message queues with durable channels, manual ACKs, and retry logic</li>
+          <li>SendGrid API integration for transactional and notification emails</li>
+          <li>PostgreSQL for user data, sessions, and audit logs</li>
+          <li>OAuth2 authentication with secure session management</li>
+        </ul>
+        <div class="project-metrics">
+          <span class="metric m-green">Fault-tolerant queues</span>
+          <span class="metric m-purple">OAuth2 Secured</span>
+          <span class="metric m-blue">PostgreSQL Audit Logs</span>
+        </div>
+        <div class="project-tech">
+          <span class="tech-tag">FastAPI</span>
+          <span class="tech-tag">RabbitMQ</span>
+          <span class="tech-tag">SendGrid</span>
+          <span class="tech-tag">PostgreSQL</span>
+          <span class="tech-tag">OAuth2</span>
+        </div>
+      </a>
 
-      <!-- Stats -->
-      <div class="mt-6 flex flex-wrap gap-2">
-        <span class="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-xs font-semibold">
-          40–60% Lower Latency
-        </span>
-        <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-semibold">
-          99% Uptime
-        </span>
-        <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-semibold">
-          CI/CD Enabled
-        </span>
-      </div>
+      <!-- Credit Approval -->
+      <a href="https://github.com/jaayysoni/Credit-Approval-Backend-System" target="_blank" rel="noopener" class="project-card wide">
+        <div class="project-header">
+          <h3 class="project-name">Credit Approval Backend System</h3>
+          <span class="project-arrow">↗</span>
+        </div>
+        <span class="project-deploy-tag tag-github">GitHub</span>
+        <p class="project-desc">
+          Backend engine for loan approvals with rule-based credit scoring, dynamic EMI calculation, and async background task processing for scalable loan workflows.
+        </p>
+        <ul class="project-highlights">
+          <li>Django REST Framework ViewSets with optimized ORM queries and efficient data modeling</li>
+          <li>Credit scoring engine using DTI ratio, repayment history, and dynamic tier-based scoring</li>
+          <li>Celery + Redis for async background tasks and scheduled loan computations</li>
+          <li>Automated EMI and interest rate calculations based on credit score tiers</li>
+          <li>PostgreSQL transactional storage with ACID-safe operations</li>
+        </ul>
+        <div class="project-metrics">
+          <span class="metric m-amber">Async Task Queue</span>
+          <span class="metric m-green">Rule-Based Scoring Engine</span>
+          <span class="metric m-purple">Optimized ORM</span>
+          <span class="metric m-blue">PostgreSQL ACID</span>
+        </div>
+        <div class="project-tech">
+          <span class="tech-tag">Django REST</span>
+          <span class="tech-tag">Celery</span>
+          <span class="tech-tag">Redis</span>
+          <span class="tech-tag">PostgreSQL</span>
+          <span class="tech-tag">Python</span>
+        </div>
+      </a>
 
-      <!-- Tech Tags -->
-      <div class="mt-6 flex flex-wrap gap-2">
-        <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-xs">FastAPI</span>
-        <span class="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-xs">Redis</span>
-        <span class="px-3 py-1 bg-orange-100 text-orange-600 rounded-full text-xs">WebSockets</span>
-        <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-xs">Docker</span>
-        <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-xs">GitHub Actions</span>
-        <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">AWS EC2</span>
-      </div>
-    </a>
-
-    <!-- Project 2: Secure E-Voting System -->
-    <a
-      href="https://evoting.jaayysoni.com"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="group block rounded-2xl border border-gray-200 p-8 bg-gradient-to-br from-white to-gray-50
-             hover:shadow-2xl hover:border-indigo-200 hover:-translate-y-2 transition-all duration-300"
-    >
-      <div class="flex justify-between items-start mb-4">
-        <h3 class="text-2xl font-semibold group-hover:text-indigo-600 transition-colors">
-          Secure E-Voting System
-        </h3>
-        <span class="text-indigo-600 text-2xl group-hover:translate-x-1 transition-transform">→</span>
-      </div>
-      <span class="px-3 py-1 bg-blue-200 text-blue-800 rounded-full text-xs font-semibold">
-        Deployed on AWS EC2
-      </span>
-
-      <p class="mt-3 text-gray-600 leading-relaxed">
-        Secure, role-based online voting platform built for reliability,
-        auditability, and controlled access at scale.
-      </p>
-
-      <ul class="mt-6 text-gray-600 space-y-2 text-sm leading-relaxed">
-        <li>• FastAPI backend supporting elections for 5,000+ voters</li>
-        <li>• Custom token-based authentication bound to voter/admin schemas</li>
-        <li>• MongoDB aggregation pipelines for real-time vote reporting</li>
-        <li>• Automated testing & CI/CD-driven deployments</li>
-      </ul>
-
-      <!-- Stats -->
-      <div class="mt-6 flex flex-wrap gap-2">
-        <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold">
-          5K+ Voters
-        </span>
-        <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-semibold">
-          Custom Auth
-        </span>
-        <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-semibold">
-          CI/CD Enabled
-        </span>
-      </div>
-
-      <!-- Tech Tags -->
-      <div class="mt-6 flex flex-wrap gap-2">
-        <span class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-xs">FastAPI</span>
-        <span class="px-3 py-1 bg-green-100 text-green-600 rounded-full text-xs">MongoDB</span>
-        <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-xs">Token Auth</span>
-        <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-xs">GitHub Actions</span>
-        <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-xs">WebSockets</span>
-      </div>
-    </a>
-
-<!-- Project 3: Event-Driven Notification System -->
-<a
-  href="https://github.com/jaayysoni/Event-Driven-Notification-System"
-  target="_blank"
-  rel="noopener noreferrer"
-  class="group block rounded-2xl border border-gray-200 p-8 bg-gradient-to-br from-white to-gray-50
-         hover:shadow-2xl hover:border-indigo-200 hover:-translate-y-2 transition-all duration-300"
->
-  <div class="flex justify-between items-start mb-4">
-    <h3 class="text-2xl font-semibold group-hover:text-indigo-600 transition-colors">
-      Event-Driven Notification System
-    </h3>
-    <span class="text-indigo-600 text-2xl group-hover:translate-x-1 transition-transform">→</span>
-  </div>
-
-  <p class="mt-3 text-gray-600 leading-relaxed">
-    Scalable notification backend with decoupled email processing using RabbitMQ and SendGrid API, ensuring reliable delivery without blocking core requests.
-  </p>
-
-  <ul class="mt-6 text-gray-600 space-y-2 text-sm leading-relaxed">
-    <li>• Event-driven architecture with RabbitMQ for async email processing</li>
-    <li>• Integration with SendGrid API for transactional and notification emails</li>
-    <li>• PostgreSQL database for user data, sessions, and audit logs</li>
-    <li>• Durable queues, manual ACKs, and retry logic for fault tolerance</li>
-    <li>• OAuth authentication & secure session management</li>
-  </ul>
-
-  <!-- Stats -->
-  <div class="mt-6 flex flex-wrap gap-2">
-    <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-semibold">
-      Reliable Messaging
-    </span>
-    <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-semibold">
-      External API Integration
-    </span>
-    <span class="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-xs font-semibold">
-      OAuth Secured
-    </span>
-    <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold">
-      PostgreSQL Persistence
-    </span>
-  </div>
-
-  <!-- Tech Tags -->
-  <div class="mt-6 flex flex-wrap gap-2">
-    <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-xs">RabbitMQ</span>
-    <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-xs">Python</span>
-    <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-xs">FastAPI</span>
-    <span class="px-3 py-1 bg-green-100 text-green-600 rounded-full text-xs">SendGrid</span>
-    <span class="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-xs">OAuth</span>
-    <span class="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs">PostgreSQL</span>
-  </div>
-</a>
-
-<!-- Project 4: Credit Approval Backend System -->
-<a
-href="https://github.com/jaayysoni/Credit-Approval-Backend-System"
-target="_blank"
-rel="noopener noreferrer"
-class="group block rounded-2xl border border-gray-200 p-8 bg-gradient-to-br from-white to-gray-50
-       hover:shadow-2xl hover:border-indigo-200 hover:-translate-y-2 transition-all duration-300"
->
-  <div class="flex justify-between items-start mb-4">
-    <h3 class="text-2xl font-semibold group-hover:text-indigo-600 transition-colors">
-      Credit Approval Backend System
-    </h3>
-    <span class="text-indigo-600 text-2xl group-hover:translate-x-1 transition-transform">→</span>
-  </div>
-
-  <p class="mt-3 text-gray-600 leading-relaxed">
-    Backend engine for loan approvals with rule-based credit scoring, dynamic EMI calculation, and asynchronous task handling for scalable processing.
-  </p>
-
-  <ul class="mt-6 text-gray-600 space-y-2 text-sm leading-relaxed">
-    <li>• Django REST Framework APIs with ViewSets & optimized ORM queries</li>
-    <li>• Credit eligibility checks using DTI ratio, repayment history, and dynamic scoring</li>
-    <li>• Celery + Redis for async background tasks and scheduled loan computations</li>
-    <li>• Automated EMI and interest rate calculations based on credit score tiers</li>
-    <li>• PostgreSQL relational database for secure, transactional storage</li>
-  </ul>
-
-  <!-- Stats -->
-  <div class="mt-6 flex flex-wrap gap-2">
-    <span class="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-xs font-semibold">
-      Async Tasks
-    </span>
-    <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-semibold">
-      Rule-Based Scoring
-    </span>
-    <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-semibold">
-      Optimized ORM
-    </span>
-    <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold">
-      PostgreSQL
-    </span>
-  </div>
-
-  <!-- Tech Tags -->
-  <div class="mt-6 flex flex-wrap gap-2">
-    <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-xs">Django REST</span>
-    <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-xs">Celery</span>
-    <span class="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-xs">Redis</span>
-    <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-xs">PostgreSQL</span>
-  </div>
-</a>
-
+    </div>
   </div>
 </section>
 
-<!-- ENGINEERING MINDSET -->
-<section class="bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 py-20">
-  <div class="max-w-5xl mx-auto px-6 text-center">
-    <h2 class="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Engineering Mindset</h2>
-    <p class="text-gray-700 text-lg max-w-3xl mx-auto leading-relaxed">
-      I think in terms of data flow, failure cases, scalability, and maintainability.
-      My goal is to build systems that are reliable, readable, and easy to evolve.
-    </p>
+<!-- ACHIEVEMENTS -->
+<section id="achievements">
+  <div class="container">
+    <p class="section-label">Achievements</p>
+    <h2 class="section-title">Highlights</h2>
+    <div class="divider"></div>
+    <div class="achievements-row">
+      <div class="ach-card">
+        <div class="ach-number">90<span>+</span></div>
+        <div class="ach-title">LeetCode Problems</div>
+        <p class="ach-desc">Consistent DSA practice focused on arrays, trees, graphs, and dynamic programming for interview-level problem solving.</p>
+      </div>
+      <div class="ach-card">
+        <div class="ach-number">10<span>+</span></div>
+        <div class="ach-title">AWS Educate Badges</div>
+        <p class="ach-desc">Earned across Cloud Foundations, Compute, Databases, Security, and Storage — verified on Credly.</p>
+      </div>
+      <div class="ach-card">
+        <div class="ach-number">5</div>
+        <div class="ach-title">Production Deployments</div>
+        <p class="ach-desc">Multiple projects running on AWS EC2 with Docker, Nginx, SSL, and CI/CD pipelines — not just localhost.</p>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="max-w-5xl mx-auto px-6 py-20 text-center">
-  <h2 class="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">Let's Build Something</h2>
-  <p class="text-gray-600 mb-8 text-lg max-w-2xl mx-auto">
-  Open to Python Developer roles, internships, and backend projects.
-  </p>
-
-  <div class="space-y-4 max-w-md mx-auto">
-    <a href="mailto:jaayysoni@gmail.com"
-       class="inline-block w-full px-8 py-6 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold text-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-200 shadow-xl hover:shadow-2xl transform hover:-translate-y-1">
-      Email Me
-    </a>
-    <p class="text-sm text-gray-500">jaayysoni@gmail.com</p>
+<section id="contact">
+  <div class="container">
+    <div class="contact-inner">
+      <div class="contact-left">
+        <p class="section-label">Contact</p>
+        <h2>Let's work<br><em>together</em></h2>
+        <p>
+          Open to Python Developer roles, backend internships, and interesting projects. Willing to relocate. Response within 24 hours.
+        </p>
+        <a href="mailto:jaayysoni@gmail.com" class="contact-email-btn">
+          jaayysoni@gmail.com →
+        </a>
+      </div>
+      <div class="contact-right">
+        <a href="https://github.com/jaayysoni" target="_blank" rel="noopener" class="contact-item">
+          <div class="contact-item-left">
+            <div class="contact-icon">⌥</div>
+            <div>
+              <div class="contact-item-label">GitHub</div>
+              <div class="contact-item-value">github.com/jaayysoni</div>
+            </div>
+          </div>
+          <span class="contact-item-arrow">↗</span>
+        </a>
+        <a href="https://www.linkedin.com/in/jaayysoni" target="_blank" rel="noopener" class="contact-item">
+          <div class="contact-item-left">
+            <div class="contact-icon">in</div>
+            <div>
+              <div class="contact-item-label">LinkedIn</div>
+              <div class="contact-item-value">linkedin.com/in/jaayysoni</div>
+            </div>
+          </div>
+          <span class="contact-item-arrow">↗</span>
+        </a>
+        <a href="https://leetcode.com/jaayysoni" target="_blank" rel="noopener" class="contact-item">
+          <div class="contact-item-left">
+            <div class="contact-icon">LC</div>
+            <div>
+              <div class="contact-item-label">LeetCode</div>
+              <div class="contact-item-value">leetcode.com/jaayysoni</div>
+            </div>
+          </div>
+          <span class="contact-item-arrow">↗</span>
+        </a>
+        <a href="https://www.credly.com/users/jay-soni.ffd962b9" target="_blank" rel="noopener" class="contact-item">
+          <div class="contact-item-left">
+            <div class="contact-icon">☁</div>
+            <div>
+              <div class="contact-item-label">Credly</div>
+              <div class="contact-item-value">AWS Badges</div>
+            </div>
+          </div>
+          <span class="contact-item-arrow">↗</span>
+        </a>
+        <a href="tel:+919407820271" class="contact-item">
+          <div class="contact-item-left">
+            <div class="contact-icon">✆</div>
+            <div>
+              <div class="contact-item-label">Phone</div>
+              <div class="contact-item-value">+91 94078 20271</div>
+            </div>
+          </div>
+          <span class="contact-item-arrow">→</span>
+        </a>
+      </div>
+    </div>
   </div>
 </section>
-</main>
 
-<footer class="border-t border-gray-200 py-8 text-center text-gray-500 text-sm">
-  <div class="max-w-6xl mx-auto px-6">
-    © 2026 Jay Soni • Built with clarity & intent • Last updated March 2026
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <span class="footer-copy">© 2026 Jay Soni · Python Backend Developer · Bhopal, India</span>
+      <div class="footer-links">
+        <a href="https://github.com/jaayysoni" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/jaayysoni" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:jaayysoni@gmail.com">Email</a>
+      </div>
+    </div>
   </div>
 </footer>
 
