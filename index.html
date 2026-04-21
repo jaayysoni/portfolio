@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jay Soni | Python Backend Developer</title>
-  <meta name="description" content="Jay Soni - Python Backend Developer. FastAPI, Django, AWS EC2, Redis, MongoDB, PostgreSQL. 5 deployed systems. Available for roles & internships.">
-  <meta property="og:title" content="Jay Soni | Python Backend Developer">
-  <meta property="og:description" content="Building scalable backend systems with FastAPI, AWS, MongoDB, Redis. 5 production-deployed systems.">
+  <title>Jay Soni | Backend Engineer — Distributed Systems & APIs</title>
+  <meta name="description" content="Jay Soni — Backend Engineer specializing in distributed systems, high-concurrency APIs, and production AWS deployments. FastAPI, Redis, PostgreSQL, Docker, WebSockets.">
+  <meta property="og:title" content="Jay Soni | Backend Engineer — Distributed Systems & APIs">
+  <meta property="og:description" content="5 production-deployed systems. FastAPI, Redis, RabbitMQ, AWS EC2, Docker. Building backends that stay up under load.">
+  <meta name="keywords" content="backend engineer, python developer, fastapi, distributed systems, redis, aws, postgresql, websockets, docker">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -59,7 +60,6 @@
       position: fixed;
       top: 0; left: 0; right: 0;
       z-index: 100;
-      padding: 0;
       background: rgba(250,250,248,0.92);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
@@ -84,11 +84,7 @@
       letter-spacing: -0.01em;
     }
 
-    nav ul {
-      display: flex;
-      gap: 36px;
-      list-style: none;
-    }
+    nav ul { display: flex; gap: 36px; list-style: none; align-items: center; }
 
     nav a {
       font-family: 'Geist Mono', monospace;
@@ -103,12 +99,26 @@
 
     nav a:hover { color: var(--text); }
 
-    /* ── CONTAINER ── */
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 32px;
+    .nav-resume-btn {
+      padding: 7px 16px;
+      background: var(--text);
+      color: #fff !important;
+      border-radius: 7px;
+      font-family: 'Geist Mono', monospace;
+      font-size: 11px !important;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background 0.15s, transform 0.15s !important;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
     }
+
+    .nav-resume-btn:hover { background: #2d2b27 !important; color: #fff !important; transform: translateY(-1px); }
+
+    /* ── CONTAINER ── */
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 32px; }
 
     /* ── HERO ── */
     #hero {
@@ -121,7 +131,7 @@
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1fr 420px;
+      grid-template-columns: 1fr 400px;
       gap: 80px;
       align-items: center;
       width: 100%;
@@ -157,7 +167,7 @@
 
     h1 {
       font-family: 'Bricolage Grotesque', sans-serif;
-      font-size: clamp(42px, 5vw, 68px);
+      font-size: clamp(42px, 5vw, 66px);
       font-weight: 700;
       line-height: 1.07;
       letter-spacing: -0.025em;
@@ -177,7 +187,7 @@
       color: var(--text-muted);
       line-height: 1.75;
       margin-bottom: 36px;
-      max-width: 440px;
+      max-width: 480px;
       font-weight: 400;
     }
 
@@ -193,7 +203,7 @@
     }
 
     .stat {
-      padding: 16px 28px;
+      padding: 16px 26px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -218,6 +228,7 @@
       text-transform: uppercase;
       color: var(--text-dim);
       margin-top: 5px;
+      white-space: nowrap;
     }
 
     .hero-links {
@@ -243,6 +254,23 @@
 
     .btn-primary:hover { background: #2d2b27; transform: translateY(-1px); }
 
+    .btn-accent {
+      padding: 11px 22px;
+      background: var(--accent);
+      color: #fff;
+      font-family: 'Geist Mono', monospace;
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.15s, transform 0.15s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .btn-accent:hover { background: var(--accent-mid); transform: translateY(-1px); }
+
     .btn-ghost {
       padding: 11px 20px;
       border: 1px solid var(--border-strong);
@@ -266,10 +294,6 @@
       gap: 28px;
     }
 
-    .profile-wrap {
-      position: relative;
-    }
-
     .profile-frame {
       width: 180px;
       height: 180px;
@@ -280,14 +304,12 @@
     }
 
     .profile-frame img {
-      width: 100%;
-      height: 100%;
+      width: 100%; height: 100%;
       object-fit: cover;
     }
 
     .profile-initials {
-      width: 100%;
-      height: 100%;
+      width: 100%; height: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -343,6 +365,13 @@
       line-height: 1.15;
     }
 
+    .divider {
+      width: 32px; height: 2px;
+      background: var(--accent);
+      border-radius: 1px;
+      margin-bottom: 40px;
+    }
+
     /* ── ABOUT ── */
     #about {
       padding: 100px 0;
@@ -361,12 +390,22 @@
       color: var(--text-muted);
       line-height: 1.8;
       margin-bottom: 16px;
-      font-weight: 400;
     }
 
-    .about-text p strong {
-      color: var(--text);
-      font-weight: 600;
+    .about-text p strong { color: var(--text); font-weight: 600; }
+
+    .about-text .role-note {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      background: var(--accent-light);
+      border: 1px solid #bfdbfe;
+      border-radius: 8px;
+      font-family: 'Geist Mono', monospace;
+      font-size: 12px;
+      color: var(--accent);
+      margin-top: 8px;
     }
 
     .about-highlights {
@@ -389,8 +428,7 @@
     .highlight-card:hover { border-color: var(--border-strong); }
 
     .highlight-icon {
-      width: 36px;
-      height: 36px;
+      width: 36px; height: 36px;
       border-radius: 8px;
       display: flex;
       align-items: center;
@@ -454,17 +492,12 @@
     .skill-group-label::before {
       content: '';
       display: inline-block;
-      width: 8px;
-      height: 2px;
+      width: 8px; height: 2px;
       background: var(--accent);
       border-radius: 1px;
     }
 
-    .skill-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-    }
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 6px; }
 
     .skill-tag {
       padding: 4px 10px;
@@ -474,7 +507,6 @@
       font-size: 12px;
       color: var(--text-muted);
       font-family: 'Geist Mono', monospace;
-      font-weight: 400;
     }
 
     /* ── EXPERIENCE ── */
@@ -572,6 +604,8 @@
       top: 2px;
     }
 
+    .exp-bullets li strong { color: var(--text); font-weight: 600; }
+
     /* ── PROJECTS ── */
     #projects {
       padding: 100px 0;
@@ -629,10 +663,7 @@
       margin-left: 12px;
     }
 
-    .project-card:hover .project-arrow {
-      transform: translate(3px, -3px);
-      color: var(--accent);
-    }
+    .project-card:hover .project-arrow { transform: translate(3px, -3px); color: var(--accent); }
 
     .project-deploy-tag {
       display: inline-block;
@@ -644,23 +675,27 @@
       margin-bottom: 14px;
     }
 
-    .tag-aws {
-      background: var(--amber-bg);
-      color: var(--amber);
-      border: 1px solid var(--amber-border);
-    }
-
-    .tag-github {
-      background: var(--bg2);
-      color: var(--text-muted);
-      border: 1px solid var(--border);
-    }
+    .tag-aws { background: var(--amber-bg); color: var(--amber); border: 1px solid var(--amber-border); }
+    .tag-github { background: var(--bg2); color: var(--text-muted); border: 1px solid var(--border); }
 
     .project-desc {
       font-size: 13.5px;
       color: var(--text-muted);
       line-height: 1.7;
-      margin-bottom: 18px;
+      margin-bottom: 16px;
+    }
+
+    /* Engineering insight callout */
+    .project-insight {
+      padding: 10px 14px;
+      background: var(--accent-light);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 6px 6px 0;
+      font-size: 12.5px;
+      color: var(--accent-mid);
+      font-family: 'Geist Mono', monospace;
+      margin-bottom: 16px;
+      line-height: 1.55;
     }
 
     .project-highlights {
@@ -709,11 +744,7 @@
     .m-amber { background: var(--amber-bg); color: var(--amber); border: 1px solid var(--amber-border); }
     .m-teal { background: var(--teal-bg); color: var(--teal); border: 1px solid var(--teal-border); }
 
-    .project-tech {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 5px;
-    }
+    .project-tech { display: flex; flex-wrap: wrap; gap: 5px; }
 
     .tech-tag {
       padding: 3px 8px;
@@ -725,10 +756,66 @@
       color: var(--text-dim);
     }
 
+    /* ── WRITING ── */
+    #writing {
+      padding: 100px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .writing-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px 28px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--surface);
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .writing-card:hover { border-color: var(--border-strong); transform: translateX(4px); }
+
+    .writing-label {
+      font-family: 'Geist Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+
+    .writing-title {
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--text);
+      letter-spacing: -0.01em;
+      line-height: 1.3;
+      margin-bottom: 6px;
+    }
+
+    .writing-sub {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .writing-arrow {
+      font-size: 18px;
+      color: var(--text-dim);
+      transition: color 0.2s, transform 0.2s;
+      flex-shrink: 0;
+      margin-left: 20px;
+    }
+
+    .writing-card:hover .writing-arrow { color: var(--accent); transform: translate(3px, -3px); }
+
     /* ── ACHIEVEMENTS ── */
     #achievements {
       padding: 100px 0;
       border-bottom: 1px solid var(--border);
+      background: var(--bg2);
     }
 
     .achievements-row {
@@ -763,23 +850,11 @@
       color: var(--accent);
     }
 
-    .ach-title {
-      font-size: 15px;
-      font-weight: 600;
-      color: var(--text);
-      margin-bottom: 8px;
-    }
-
-    .ach-desc {
-      font-size: 13px;
-      color: var(--text-muted);
-      line-height: 1.65;
-    }
+    .ach-title { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
+    .ach-desc { font-size: 13px; color: var(--text-muted); line-height: 1.65; }
 
     /* ── CONTACT ── */
-    #contact {
-      padding: 100px 0;
-    }
+    #contact { padding: 100px 0; }
 
     .contact-inner {
       display: grid;
@@ -850,15 +925,10 @@
 
     .contact-item:hover { border-color: var(--border-strong); transform: translateX(4px); }
 
-    .contact-item-left {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
+    .contact-item-left { display: flex; align-items: center; gap: 12px; }
 
     .contact-icon {
-      width: 34px;
-      height: 34px;
+      width: 34px; height: 34px;
       border-radius: 8px;
       background: var(--bg2);
       border: 1px solid var(--border);
@@ -877,31 +947,15 @@
       margin-bottom: 2px;
     }
 
-    .contact-item-value {
-      font-size: 14px;
-      font-weight: 500;
-      color: var(--text);
-    }
+    .contact-item-value { font-size: 14px; font-weight: 500; color: var(--text); }
 
-    .contact-item-arrow {
-      color: var(--text-dim);
-      font-size: 14px;
-      transition: color 0.15s;
-    }
-
+    .contact-item-arrow { color: var(--text-dim); font-size: 14px; transition: color 0.15s; }
     .contact-item:hover .contact-item-arrow { color: var(--accent); }
 
     /* ── FOOTER ── */
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 24px 0;
-    }
+    footer { border-top: 1px solid var(--border); padding: 24px 0; }
 
-    .footer-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+    .footer-inner { display: flex; justify-content: space-between; align-items: center; }
 
     .footer-copy {
       font-family: 'Geist Mono', monospace;
@@ -910,10 +964,7 @@
       letter-spacing: 0.04em;
     }
 
-    .footer-links {
-      display: flex;
-      gap: 20px;
-    }
+    .footer-links { display: flex; gap: 20px; }
 
     .footer-links a {
       font-family: 'Geist Mono', monospace;
@@ -925,15 +976,6 @@
     }
 
     .footer-links a:hover { color: var(--text); }
-
-    /* ── SECTION DIVIDER ── */
-    .divider {
-      width: 32px;
-      height: 2px;
-      background: var(--accent);
-      border-radius: 1px;
-      margin-bottom: 40px;
-    }
 
     /* ── ANIMATIONS ── */
     @keyframes fadeUp {
@@ -954,21 +996,22 @@
       .hero-stats { justify-content: center; }
       .hero-links { justify-content: center; }
       .hero-sub { margin: 0 auto 36px; }
-      .hero-badge { display: inline-flex; }
       .hero-right { order: -1; }
       .about-grid { grid-template-columns: 1fr; gap: 40px; }
       .skills-grid { grid-template-columns: 1fr 1fr; }
       .projects-grid { grid-template-columns: 1fr; }
       .project-card.wide { grid-column: auto; }
       .achievements-row { grid-template-columns: 1fr; }
-      .exp-card { grid-template-columns: 1fr; gap: 20px; }
+      .exp-card { grid-template-columns: 1fr; gap: 20px; padding: 28px; }
       .contact-inner { grid-template-columns: 1fr; gap: 40px; }
+      nav ul { gap: 16px; }
+      .nav-resume-btn { display: none; }
     }
 
     @media (max-width: 600px) {
       .container { padding: 0 20px; }
       .skills-grid { grid-template-columns: 1fr; }
-      nav ul { gap: 18px; }
+      nav ul { gap: 14px; }
       nav a { font-size: 10px; }
       .footer-inner { flex-direction: column; gap: 12px; text-align: center; }
     }
@@ -984,7 +1027,9 @@
       <li><a href="#about">About</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#projects">Projects</a></li>
+      <li><a href="#writing">Writing</a></li>
       <li><a href="#contact">Contact</a></li>
+      <li><a href="resume.pdf" target="_blank" class="nav-resume-btn">Resume ↓</a></li>
     </ul>
   </div>
 </nav>
@@ -996,7 +1041,7 @@
       <div class="hero-left">
         <div class="hero-badge fade-up d1">
           <span class="badge-dot"></span>
-          Available for roles
+          Open to Backend / SWE Roles — India or Remote
         </div>
 
         <h1 class="fade-up d2">
@@ -1004,29 +1049,29 @@
         </h1>
 
         <p class="hero-sub fade-up d3">
-          Backend Developer building reliable, high-performance systems with FastAPI, Django, AWS EC2, and Redis.
+          I build backends that stay up under load — distributed systems with real concurrency, sub-100ms APIs, and zero-downtime deployments on AWS. FastAPI · Redis · PostgreSQL · Docker.
         </p>
 
         <div class="hero-stats fade-up d4">
           <div class="stat">
             <span class="stat-num">5</span>
-            <span class="stat-label">Deployed Systems</span>
+            <span class="stat-label">Prod Deployments</span>
           </div>
           <div class="stat">
-            <span class="stat-num">110+</span>
-            <span class="stat-label">DSA Problems</span>
+            <span class="stat-num">130<span style="font-size:18px;font-family:'Instrument Serif',serif;font-style:italic;color:var(--accent)">+</span></span>
+            <span class="stat-label">DSA Solved</span>
           </div>
           <div class="stat">
-            <span class="stat-num">10+</span>
+            <span class="stat-num">10<span style="font-size:18px;font-family:'Instrument Serif',serif;font-style:italic;color:var(--accent)">+</span></span>
             <span class="stat-label">AWS Badges</span>
           </div>
         </div>
 
         <div class="hero-links fade-up d5">
+          <a href="resume.pdf" target="_blank" class="btn-accent">Download Resume ↓</a>
           <a href="mailto:jaayysoni@gmail.com" class="btn-primary">Email Me →</a>
           <a href="https://github.com/jaayysoni" target="_blank" rel="noopener" class="btn-ghost">GitHub ↗</a>
           <a href="https://www.linkedin.com/in/jaayysoni" target="_blank" rel="noopener" class="btn-ghost">LinkedIn ↗</a>
-          <a href="https://www.credly.com/users/jay-soni.ffd962b9" target="_blank" rel="noopener" class="btn-ghost">Credly ↗</a>
         </div>
       </div>
 
@@ -1046,7 +1091,6 @@
           <span class="pill">Redis</span>
           <span class="pill">RabbitMQ</span>
           <span class="pill">Docker</span>
-          <span class="pill">AWS EC2</span>
           <span class="pill">Celery</span>
           <span class="pill">WebSockets</span>
           <span class="pill">GitHub Actions</span>
@@ -1066,14 +1110,15 @@
     <div class="about-grid">
       <div class="about-text">
         <p>
-          I'm a Python Backend Developer who designs and deploys systems that handle <strong>real concurrency, real data, and real failure cases.</strong> My work covers API design, async architecture, database optimization, and CI/CD-driven deployments.
+          I'm a Python Backend Engineer who designs and deploys systems that handle <strong>real concurrency, real data, and real failure cases.</strong> My work covers API design, async architecture, database optimization, and CI/CD-driven deployments.
         </p>
         <p>
-          I care about writing code that's maintainable and easy to reason about — not just code that works once. I take ownership of what I build, from architecture decisions to production monitoring.
+          I care about writing code that's maintainable and easy to reason about — not just code that works once. I take ownership of what I build, from architecture decisions to production monitoring and incident response.
         </p>
         <p>
-          Currently interning at <strong>KEP Labs (Bhopal)</strong>, open to Python Developer roles and backend internships. Willing to relocate.
+          Currently building at <strong>KEP Labs (Bhopal)</strong>. Also documenting what I learn through technical writing on Medium. Willing to relocate.
         </p>
+        <span class="role-note">🎯 Targeting Backend Engineer &amp; SWE roles — Full-time or Internship</span>
       </div>
       <div class="about-highlights">
         <div class="highlight-card">
@@ -1086,15 +1131,15 @@
         <div class="highlight-card">
           <div class="highlight-icon icon-green">⚡</div>
           <div class="highlight-text">
-            <h4>Async & High-Concurrency</h4>
-            <p>90+ concurrent WebSocket connections, Redis caching reducing latency by 40–60%, RabbitMQ message queues.</p>
+            <h4>Async &amp; High-Concurrency</h4>
+            <p>90+ concurrent WebSocket connections, Redis caching reducing latency by 40–60%, RabbitMQ message queues with fault-tolerant retry logic.</p>
           </div>
         </div>
         <div class="highlight-card">
           <div class="highlight-icon icon-amber">☁️</div>
           <div class="highlight-text">
             <h4>Cloud-Certified</h4>
-            <p>10+ AWS Educate badges across Compute, Databases, Security, Storage, and Cloud Foundations.</p>
+            <p>10+ AWS Educate badges across Compute, Databases, Security, Storage, and Cloud Foundations — verified on Credly.</p>
           </div>
         </div>
       </div>
@@ -1125,26 +1170,27 @@
           <span class="skill-tag">MongoDB</span>
           <span class="skill-tag">SQLite</span>
           <span class="skill-tag">SQLAlchemy</span>
+          <span class="skill-tag">Redis</span>
         </div>
       </div>
       <div class="skill-group">
-        <p class="skill-group-label">Infra &amp; Async</p>
+        <p class="skill-group-label">Async &amp; Messaging</p>
         <div class="skill-tags">
-          <span class="skill-tag">Redis</span>
           <span class="skill-tag">RabbitMQ</span>
           <span class="skill-tag">Celery</span>
           <span class="skill-tag">WebSockets</span>
+          <span class="skill-tag">Async/Await</span>
         </div>
       </div>
       <div class="skill-group">
-        <p class="skill-group-label">DevOps</p>
+        <p class="skill-group-label">DevOps &amp; Cloud</p>
         <div class="skill-tags">
           <span class="skill-tag">Docker</span>
-          <span class="skill-tag">AWS Services</span>
           <span class="skill-tag">AWS EC2</span>
           <span class="skill-tag">AWS S3</span>
           <span class="skill-tag">GitHub Actions</span>
           <span class="skill-tag">Nginx</span>
+          <span class="skill-tag">CI/CD</span>
         </div>
       </div>
     </div>
@@ -1167,12 +1213,10 @@
       <div class="exp-content">
         <h3>Python Backend &amp; Simulation Intern</h3>
         <ul class="exp-bullets">
-          <ul class="exp-bullets">
-            <li>Contributed to core backend system development by implementing business logic and extending service-level components for production workflows</li>
-            <li>Collaborated on backend architecture by analyzing existing systems and contributing to design and structural improvements</li>
-            <li>Developed and optimized RESTful APIs, improving request flow efficiency and enhancing response performance</li>
-            <li>Improved backend scalability by optimizing database queries, refining schema design, and implementing caching strategies to enhance system efficiency</li>
-          </ul>
+          <li>Built and extended <strong>service-level backend components</strong> for production simulation workflows, owning end-to-end implementation from schema design to deployment</li>
+          <li>Designed and optimized <strong>RESTful APIs</strong> with async request handling — improved endpoint response time by identifying N+1 query patterns and applying targeted index optimizations on PostgreSQL</li>
+          <li>Contributed to backend architecture review — analyzed existing system bottlenecks and proposed structural improvements adopted in the next sprint cycle</li>
+          <li>Implemented <strong>Redis-based caching strategies</strong> on hot read paths, reducing average query load and improving scalability of high-traffic routes</li>
         </ul>
       </div>
     </a>
@@ -1197,11 +1241,12 @@
         <p class="project-desc">
           Full-stack financial management platform with true server-side RBAC, a dual browser + REST API interface, and clean separation between authorization layers.
         </p>
+        <div class="project-insight">⚙ Enforced RBAC at the route/dependency level — UI hiding is cosmetic, the real authorization guard lives in Python middleware</div>
         <ul class="project-highlights">
-          <li>3-role RBAC (admin/analyst/viewer) enforced server-side — UI hiding is cosmetic, the real guard is in Python</li>
-          <li>Dual interface: browser dashboard (Jinja2) + full REST API (/api/*)</li>
-          <li>17+ endpoints — full CRUD, CSV import/export with fault tolerance, analytics</li>
-          <li>Deployed on AWS EC2, Pytest suite covering RBAC paths</li>
+          <li>3-role hierarchy (admin/analyst/viewer) with server-side enforcement via FastAPI dependency injection</li>
+          <li>Dual interface: Jinja2 browser dashboard + full REST API (/api/*) sharing one auth layer</li>
+          <li>17+ endpoints with full CRUD, CSV import/export with fault tolerance, and analytics views</li>
+          <li>Pytest suite covering all RBAC permission paths and edge cases</li>
         </ul>
         <div class="project-metrics">
           <span class="metric m-purple">17 API Endpoints</span>
@@ -1227,13 +1272,14 @@
         </div>
         <span class="project-deploy-tag tag-aws">Deployed · AWS EC2</span>
         <p class="project-desc">
-          Real-time crypto trading simulator handling high concurrency, accurate portfolio tracking, and low-latency data delivery via WebSockets.
+          Real-time crypto trading simulator with high-concurrency WebSocket architecture, accurate FIFO portfolio tracking, and live P&amp;L calculation.
         </p>
+        <div class="project-insight">⚙ Designed per-connection async queues to prevent broadcast bottlenecks — each WebSocket maintains independent state without shared-memory contention</div>
         <ul class="project-highlights">
-          <li>FastAPI backend sustaining 90+ concurrent WebSocket connections</li>
-          <li>Redis caching + async APIs cutting latency by 40–60%</li>
-          <li>FIFO-based portfolio, transaction history &amp; P/L calculation logic</li>
-          <li>CI/CD pipelines via GitHub Actions for automated build, test &amp; deploy</li>
+          <li>FastAPI backend sustaining 90+ concurrent WebSocket connections with async fan-out</li>
+          <li>Redis caching on price feed + position data cuts latency by 40–60%</li>
+          <li>FIFO-based portfolio engine with transaction history &amp; real-time P/L calculation</li>
+          <li>CI/CD via GitHub Actions — automated test, build &amp; zero-downtime deploy to EC2</li>
         </ul>
         <div class="project-metrics">
           <span class="metric m-blue">90+ Concurrent WSS</span>
@@ -1258,18 +1304,19 @@
         </div>
         <span class="project-deploy-tag tag-aws">Deployed · AWS EC2</span>
         <p class="project-desc">
-          Role-based online voting platform built for reliability, auditability, and controlled access — supporting 5,000–8,000 concurrent users.
+          Production-grade role-based voting platform built for reliability, auditability, and controlled access — supporting 5K–8K concurrent users.
         </p>
+        <div class="project-insight">⚙ Used MongoDB aggregation pipelines over ORM-style queries for real-time vote tallying — chosen for horizontal scaleout and native document grouping performance</div>
         <ul class="project-highlights">
-          <li>Scalable REST APIs supporting 5K–8K concurrent voters</li>
-          <li>MongoDB aggregation pipelines for real-time vote reporting</li>
-          <li>Cookie-based auth + bcrypt for secure sessions and voter verification</li>
-          <li>Duplicate prevention, vote validation, and data integrity enforcement</li>
+          <li>Scalable REST APIs stress-tested to 5K–8K concurrent voters without degradation</li>
+          <li>MongoDB aggregation pipelines for real-time vote reporting and audit trails</li>
+          <li>bcrypt + cookie-based auth with duplicate vote prevention and data integrity enforcement</li>
+          <li>Full CI/CD pipeline — push-to-deploy with rollback capability</li>
         </ul>
         <div class="project-metrics">
           <span class="metric m-blue">5K–8K Concurrent Users</span>
           <span class="metric m-green">bcrypt Auth</span>
-          <span class="metric m-teal">CI/CD</span>
+          <span class="metric m-teal">Audit Trail</span>
         </div>
         <div class="project-tech">
           <span class="tech-tag">FastAPI</span>
@@ -1289,22 +1336,24 @@
         </div>
         <span class="project-deploy-tag tag-github">GitHub</span>
         <p class="project-desc">
-          Scalable notification backend with decoupled async email processing — notification failures never block core application requests.
+          Scalable notification backend with fully decoupled async email processing — notification failures never block core application requests.
         </p>
+        <div class="project-insight">⚙ Used manual ACKs + dead-letter queues so failed notifications retry without data loss — core API stays unblocked regardless of email provider status</div>
         <ul class="project-highlights">
-          <li>RabbitMQ message queues with durable channels, manual ACKs, and retry logic</li>
-          <li>SendGrid API integration for transactional and notification emails</li>
-          <li>PostgreSQL for user data, sessions, and audit logs</li>
+          <li>RabbitMQ with durable channels, manual ACKs, and retry logic for fault tolerance</li>
+          <li>SendGrid API for transactional emails with delivery status tracking</li>
+          <li>PostgreSQL for user data, sessions, and full audit logs</li>
           <li>OAuth2 authentication with secure session management</li>
         </ul>
         <div class="project-metrics">
-          <span class="metric m-green">Fault-tolerant queues</span>
+          <span class="metric m-green">Fault-tolerant Queues</span>
           <span class="metric m-purple">OAuth2 Secured</span>
-          <span class="metric m-blue">PostgreSQL Audit Logs</span>
+          <span class="metric m-blue">Audit Logs</span>
         </div>
         <div class="project-tech">
           <span class="tech-tag">FastAPI</span>
           <span class="tech-tag">RabbitMQ</span>
+          <span class="tech-tag">Celery</span>
           <span class="tech-tag">SendGrid</span>
           <span class="tech-tag">PostgreSQL</span>
           <span class="tech-tag">OAuth2</span>
@@ -1319,14 +1368,15 @@
         </div>
         <span class="project-deploy-tag tag-github">GitHub</span>
         <p class="project-desc">
-          Backend engine for loan approvals with rule-based credit scoring, dynamic EMI calculation, and async background task processing for scalable loan workflows.
+          Production-style fintech backend for loan approvals with rule-based credit scoring, dynamic EMI calculation, and async background task processing.
         </p>
+        <div class="project-insight">⚙ Built a tiered credit scoring engine using DTI ratio + repayment history — modeled after real NBFC underwriting logic rather than arbitrary thresholds</div>
         <ul class="project-highlights">
-          <li>Django REST Framework ViewSets with optimized ORM queries and efficient data modeling</li>
-          <li>Credit scoring engine using DTI ratio, repayment history, and dynamic tier-based scoring</li>
-          <li>Celery + Redis for async background tasks and scheduled loan computations</li>
+          <li>Django REST Framework ViewSets with heavily optimized ORM queries and select_related/prefetch patterns</li>
+          <li>Credit scoring engine: DTI ratio, repayment history, and dynamic tier-based risk classification</li>
+          <li>Celery + Redis for async background tasks — loan computation runs off the request thread</li>
           <li>Automated EMI and interest rate calculations based on credit score tiers</li>
-          <li>PostgreSQL transactional storage with ACID-safe operations</li>
+          <li>PostgreSQL with ACID-safe transactional storage for financial integrity</li>
         </ul>
         <div class="project-metrics">
           <span class="metric m-amber">Async Task Queue</span>
@@ -1347,27 +1397,59 @@
   </div>
 </section>
 
+<!-- WRITING -->
+<section id="writing">
+  <div class="container">
+    <p class="section-label">Writing</p>
+    <h2 class="section-title">Technical articles &amp; notes</h2>
+    <div class="divider"></div>
+
+    <div style="display: flex; flex-direction: column; gap: 12px;">
+
+      <!-- Coming soon card with CTA -->
+      <div style="padding: 28px 30px; border: 1px dashed var(--border-strong); border-radius: 16px; background: var(--surface2); display: flex; align-items: center; justify-content: space-between; gap: 20px;">
+        <div>
+          <div class="writing-label">Coming Soon · Medium</div>
+          <div class="writing-title" style="color: var(--text-muted);">How I Built 90+ Concurrent WebSocket Connections in FastAPI</div>
+          <div class="writing-sub">Architecture decisions, async fan-out patterns, and Redis caching strategy from the Crypto Trading Simulator.</div>
+        </div>
+        <div style="flex-shrink:0; padding: 8px 16px; border: 1px solid var(--border); border-radius: 8px; font-family: 'Geist Mono', monospace; font-size: 11px; color: var(--text-dim); white-space: nowrap;">Draft in Progress</div>
+      </div>
+
+      <a href="https://medium.com/@jaayysoni" target="_blank" rel="noopener" class="writing-card">
+        <div>
+          <div class="writing-label">Medium · @jaayysoni</div>
+          <div class="writing-title">Follow for backend engineering deep-dives</div>
+          <div class="writing-sub">Writing about distributed systems, async Python, API design, and production lessons from real deployments.</div>
+        </div>
+        <span class="writing-arrow">↗</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
 <!-- ACHIEVEMENTS -->
 <section id="achievements">
   <div class="container">
     <p class="section-label">Achievements</p>
-    <h2 class="section-title">Highlights</h2>
+    <h2 class="section-title">By the numbers</h2>
     <div class="divider"></div>
     <div class="achievements-row">
       <div class="ach-card">
-        <div class="ach-number">110<span>+</span></div>
+        <div class="ach-number">130<span>+</span></div>
         <div class="ach-title">LeetCode Problems</div>
-        <p class="ach-desc">Consistent DSA practice focused on arrays, trees, graphs, and dynamic programming for interview-level problem solving.</p>
+        <p class="ach-desc">Solving 2–3 problems daily — targeting 300+ with focus on trees, graphs, dynamic programming, and system design patterns for backend interviews.</p>
       </div>
       <div class="ach-card">
         <div class="ach-number">10<span>+</span></div>
         <div class="ach-title">AWS Educate Badges</div>
-        <p class="ach-desc">Earned across Cloud Foundations, Compute, Databases, Security, and Storage — verified on Credly.</p>
+        <p class="ach-desc">Earned across Cloud Foundations, Compute, Databases, Security, and Storage — all verified on Credly.</p>
       </div>
       <div class="ach-card">
         <div class="ach-number">5</div>
         <div class="ach-title">Production Deployments</div>
-        <p class="ach-desc">Multiple projects running on AWS EC2 with Docker, Nginx, SSL, and CI/CD pipelines — not just localhost.</p>
+        <p class="ach-desc">Every project runs on AWS EC2 with Docker, Nginx, SSL, and CI/CD pipelines. These are live systems, not weekend demos.</p>
       </div>
     </div>
   </div>
@@ -1381,7 +1463,7 @@
         <p class="section-label">Contact</p>
         <h2>Let's work<br><em>together</em></h2>
         <p>
-          Open to roles and interesting projects. Willing to relocate. Response within 24 hours.
+          Open to Backend Engineer &amp; SWE roles — full-time or internship. Willing to relocate anywhere in India or work remotely. Response within 24 hours.
         </p>
         <a href="mailto:jaayysoni@gmail.com" class="contact-email-btn">
           jaayysoni@gmail.com →
@@ -1408,12 +1490,12 @@
           </div>
           <span class="contact-item-arrow">↗</span>
         </a>
-        <a href="https://leetcode.com/jaayysoni" target="_blank" rel="noopener" class="contact-item">
+        <a href="https://medium.com/@jaayysoni" target="_blank" rel="noopener" class="contact-item">
           <div class="contact-item-left">
-            <div class="contact-icon">LC</div>
+            <div class="contact-icon" style="font-size:12px; font-weight:700; font-family:'Bricolage Grotesque',sans-serif;">M</div>
             <div>
-              <div class="contact-item-label">LeetCode</div>
-              <div class="contact-item-value">leetcode.com/jaayysoni</div>
+              <div class="contact-item-label">Medium</div>
+              <div class="contact-item-value">medium.com/@jaayysoni</div>
             </div>
           </div>
           <span class="contact-item-arrow">↗</span>
@@ -1423,7 +1505,17 @@
             <div class="contact-icon">☁</div>
             <div>
               <div class="contact-item-label">Credly</div>
-              <div class="contact-item-value">AWS Badges</div>
+              <div class="contact-item-value">AWS Badges Verified</div>
+            </div>
+          </div>
+          <span class="contact-item-arrow">↗</span>
+        </a>
+        <a href="https://leetcode.com/jaayysoni" target="_blank" rel="noopener" class="contact-item">
+          <div class="contact-item-left">
+            <div class="contact-icon">LC</div>
+            <div>
+              <div class="contact-item-label">LeetCode</div>
+              <div class="contact-item-value">leetcode.com/jaayysoni</div>
             </div>
           </div>
           <span class="contact-item-arrow">↗</span>
@@ -1446,10 +1538,11 @@
 <footer>
   <div class="container">
     <div class="footer-inner">
-      <span class="footer-copy">© 2026 Jay Soni · Python Backend Developer · Bhopal, India</span>
+      <span class="footer-copy">© 2026 Jay Soni · Backend Engineer · Bhopal, India</span>
       <div class="footer-links">
         <a href="https://github.com/jaayysoni" target="_blank" rel="noopener">GitHub</a>
         <a href="https://www.linkedin.com/in/jaayysoni" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://medium.com/@jaayysoni" target="_blank" rel="noopener">Medium</a>
         <a href="mailto:jaayysoni@gmail.com">Email</a>
       </div>
     </div>
