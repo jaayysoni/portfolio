@@ -995,7 +995,7 @@
 
         <!-- CHANGE 2: Hero subtitle — sharper, engineering-forward, mentions Crypto.com signal -->
         <p class="hero-sub fade-up d3">
-          Backend engineer shipping <strong style="color:var(--text)">production systems</strong> — not just side projects. I've built real-time WebSocket servers load-tested to 90+ connections, cut API latency by 40–60% with Redis, and deployed 5 systems on AWS that are live right now. My GitHub work has attracted outreach from industry professionals — I'm ready to bring that same standard to a team.
+          Backend engineer shipping <strong style="color:var(--text)">production systems</strong>. I've built real-time WebSocket servers load-tested to 90+ connections, cut API latency by 40–60% with Redis, and deployed 5 systems on AWS that are live right now. My GitHub work has attracted outreach from industry professionals — I'm ready to bring that same standard to a team.
         </p>
 
         <!-- CHANGE 3: Stats — strongest engineering numbers -->
@@ -1009,7 +1009,7 @@
             <span class="stat-label">WS Connections</span>
           </div>
           <div class="stat">
-            <span class="stat-num">140<span style="font-size:18px;font-family:'Instrument Serif',serif;font-style:italic;color:var(--accent)">+</span></span>
+            <span class="stat-num">170<span style="font-size:18px;font-family:'Instrument Serif',serif;font-style:italic;color:var(--accent)">+</span></span>
             <span class="stat-label">DSA Solved</span>
           </div>
         </div>
@@ -1061,7 +1061,7 @@
           Most students build CRUD apps and call it done. I went further — <strong>real-time systems, message queues, Redis caching, role-based auth, CI/CD pipelines</strong> — and deployed all of it on AWS EC2 where it actually runs. Five projects. All live.
         </p>
         <p>
-          I care about writing backend code that doesn't fall apart when real traffic hits it. That means understanding <strong>why</strong> a query is slow, not just that it is. It means knowing when async helps and when it just adds complexity. It means building things that are easy for the next engineer to pick up.
+          I care about writing backend code that doesn't fall apart when real traffic hits it. That means understanding <strong>why</strong> a query is slow. It means knowing when async helps and when it just adds complexity. It means building things that are easy for the next engineer to pick up.
         </p>
         <p>
           Currently interning at <strong>KEP Labs (Bhopal)</strong> working on production APIs with Django, FastAPI, and PostgreSQL. Looking for my next role where I can take on more ownership and work on harder problems. Open to relocating anywhere in India.
@@ -1072,15 +1072,15 @@
         <div class="highlight-card">
           <div class="highlight-icon icon-blue">🏗️</div>
           <div class="highlight-text">
-            <h4>Production, Not Just Practice</h4>
-            <p>5 systems deployed on AWS EC2 with Docker, Nginx, and GitHub Actions CI/CD — not local demos, actually live at real domains.</p>
+            <h4>Production</h4>
+            <p>5 systems deployed on AWS EC2 with Docker, Nginx, and GitHub Actions CI/CD — live at my domains.</p>
           </div>
         </div>
         <div class="highlight-card">
           <div class="highlight-icon icon-green">⚡</div>
           <div class="highlight-text">
-            <h4>Tradeoff Thinking, Not Just Tooling</h4>
-            <p>Redis over schema denormalization. Sync over async when the complexity isn't worth it. Cookie sessions over JWTs when revocation matters. Tools chosen for reasons, not habits.</p>
+            <h4>Tradeoff Thinking</h4>
+            <p>Redis over schema denormalization. Sync over async when the complexity isn't worth it. Cookie sessions over JWTs when revocation matters. Tools chosen for Purpose.</p>
           </div>
         </div>
         <div class="highlight-card">
@@ -1161,6 +1161,15 @@
         </div>
       </div>
 
+      <div class="skill-group">
+        <p class="skill-group-label">Templating & Frontend</p>
+        <div class="skill-tags">
+          <span class="skill-tag">Jinja2</span>
+          <span class="skill-tag">HTML</span>
+          <span class="skill-tag">CSS</span>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -1182,8 +1191,8 @@
         <h3>Python Backend Intern</h3>
         <ul class="exp-bullets">
           <li>Built and maintained REST API endpoints using <strong>Django and FastAPI</strong> for internal tooling and business workflows</li>
-          <li>Worked with <strong>SQL databases</strong> for data modeling and query writing — handling data flow and storage across API layers</li>
-          <li>Debugged API issues by tracing request flows and validating responses — ensuring correct behavior and stability across endpoints</li>
+          <li>Worked with <strong>SQL databases</strong> for data modeling and query writing handling data flow and storage across API layers</li>
+          <li>Debugged API issues by tracing request flows and validating responses ensuring correct behavior and stability across endpoints</li>
           <li>Tested APIs using <strong>Postman</strong> and <strong>pytest</strong>, validating outputs and data flow to confirm expected responses before delivery</li>
         </ul>
       </div>
@@ -1207,9 +1216,9 @@
   </div>
   <span class="project-deploy-tag tag-aws">Deployed · AWS EC2</span>
   <p class="project-desc">
-    Full-stack financial management platform with role-based access control — 3 roles, 17+ API endpoints, a Jinja2 dashboard, and a REST API layer, all sharing the same auth backend.
+    Full-stack financial management platform with role-based access control 3 roles, 17+ API endpoints, a Jinja2 dashboard, and a REST API layer, all sharing the same auth backend.
   </p>
-  <div class="project-insight">⚙ RBAC enforced at the FastAPI dependency layer, not just the UI — access control holds even if someone hits the API directly</div>
+  <div class="project-insight">⚙ RBAC enforced at the FastAPI dependency layer even with the UI — access control holds even if someone hits the API directly</div>
   <ul class="project-highlights">
     <li>3-role system (admin / analyst / viewer) with server-side enforcement on every protected route</li>
     <li>Dual interface: browser dashboard via Jinja2 + REST API via <code>/api/*</code> — one shared auth layer for both</li>
@@ -1240,9 +1249,9 @@
   </div>
   <span class="project-deploy-tag tag-aws">Deployed · AWS EC2</span>
   <p class="project-desc">
-    Real-time trading simulator with WebSocket-based price streaming, FIFO portfolio tracking, and live P&amp;L — load-tested to 90+ concurrent connections and deployed on AWS with full CI/CD.
+    Real-time trading simulator with WebSocket-based price streaming, FIFO portfolio tracking, and live P&amp;L load-tested to 90+ concurrent connections and deployed on AWS with full CI/CD.
   </p>
-  <div class="project-insight">⚙ Per-connection async handling with Redis as shared state — avoids bottlenecks without blocking the event loop</div>
+  <div class="project-insight">⚙ Per-connection async handling with Redis as shared state avoids bottlenecks without blocking the event loop</div>
 
   <!-- CHANGE 4: Crypto.com outreach callout — honest, accurate -->
   <div style="padding: 9px 14px; background: var(--amber-bg); border: 1px solid var(--amber-border); border-radius: 8px; font-family: 'Geist Mono', monospace; font-size: 11.5px; color: var(--amber); margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
@@ -1251,9 +1260,9 @@
   </div>
 
   <ul class="project-highlights">
-    <li>FastAPI WebSocket backend load-tested at 90+ concurrent connections — no dropped connections, consistent message delivery</li>
+    <li>FastAPI WebSocket backend load-tested at 90+ concurrent connections no dropped connections, consistent message delivery</li>
     <li>Redis caching for shared price + portfolio state reduced redundant DB reads and cut API latency by <strong>40–60%</strong></li>
-    <li>FIFO-based portfolio engine with full transaction history and real-time P&amp;L — accurate across hundreds of simulated trades per session</li>
+    <li>FIFO-based portfolio engine with full transaction history and real-time P&amp;L accurate across hundreds of simulated trades per session</li>
     <li>GitHub Actions CI/CD → Docker build → AWS EC2 deploy — push to main, it ships</li>
   </ul>
   <div class="project-metrics">
@@ -1279,14 +1288,14 @@
   </div>
   <span class="project-deploy-tag tag-aws">Deployed · AWS EC2</span>
   <p class="project-desc">
-    Role-based voting platform built around correctness guarantees — one vote per user, real-time result aggregation, and a layered architecture that keeps read performance fast under concurrent load.
+    Role-based voting platform built around correctness guarantees one vote per user, real-time result aggregation, and a layered architecture that keeps read performance fast under concurrent load.
   </p>
-  <div class="project-insight">⚙ Vote counting runs entirely in MongoDB aggregation pipelines — server-side grouping with compound indexes, not pulling records into Python to count</div>
+  <div class="project-insight">⚙ Vote counting runs entirely in MongoDB aggregation pipelines server-side grouping with compound indexes, not pulling records into Python to count</div>
   <ul class="project-highlights">
     <li>Layered architecture: FastAPI → Services → MongoDB — deliberate separation so business logic, auth, and data access never bleed into each other</li>
     <li>Compound indexes on voter ID + election ID fields — high-cardinality reads stay fast without full collection scans under concurrent load</li>
-    <li>Chose cookie-based sessions over JWTs here to keep revocation simple — tradeoff made deliberately, not by default</li>
-    <li>bcrypt auth with duplicate-vote prevention enforced at the database level, not just application logic — constraint holds even under race conditions</li>
+    <li>Chose cookie-based sessions over JWTs here to keep revocation simple tradeoff made deliberately, not by default</li>
+    <li>bcrypt auth with duplicate-vote prevention enforced at the database level, not just application logic constraint holds even under race conditions</li>
   </ul>
   <div class="project-metrics">
     <span class="metric m-blue">Compound Indexed for Concurrent Reads</span>
@@ -1311,11 +1320,11 @@
   </div>
   <span class="project-deploy-tag tag-github">GitHub</span>
   <p class="project-desc">
-    Async notification backend using RabbitMQ to decouple email delivery from the main request flow — failed messages retry automatically, nothing gets silently dropped.
+    Async notification backend using RabbitMQ to decouple email delivery from the main request flow failed messages retry automatically, nothing gets silently dropped.
   </p>
   <div class="project-insight">⚙ Manual acknowledgments + dead-letter queues — a message isn't marked done until delivery is confirmed, and failures go to a retry queue automatically</div>
   <ul class="project-highlights">
-    <li>RabbitMQ producer-consumer workflow with durable queues and retry logic — zero message loss on delivery failure</li>
+    <li>RabbitMQ producer-consumer workflow with durable queues and retry logic zero message loss on delivery failure</li>
     <li>SendGrid integration for transactional email with delivery status tracking</li>
     <li>PostgreSQL for user data, session state, and a full audit log of every notification dispatched</li>
     <li>OAuth2 authentication with middleware-based request validation across all protected routes</li>
@@ -1343,15 +1352,15 @@
   </div>
   <span class="project-deploy-tag tag-github">GitHub</span>
   <p class="project-desc">
-    Loan approval backend with rule-based credit scoring, EMI calculation, and async processing via Celery — built to mirror how a real fintech backend handles credit decisions.
+    Loan approval backend with rule-based credit scoring, EMI calculation, and async processing via Celery built to mirror how a real fintech backend handles credit decisions.
   </p>
-  <div class="project-insight">⚙ ORM queries use select_related and prefetch_related throughout — no N+1 queries, no unnecessary round-trips to the database</div>
+  <div class="project-insight">⚙ ORM queries use select_related and prefetch_related throughout no N+1 queries, no unnecessary round-trips to the database</div>
   <ul class="project-highlights">
-    <li>Django REST Framework APIs with optimized ORM queries — deliberately avoided N+1 patterns from the start</li>
+    <li>Django REST Framework APIs with optimized ORM queries deliberately avoided N+1 patterns from the start</li>
     <li>Rule-based credit scoring engine: income, debt-to-income ratio, repayment history → eligibility category → interest rate</li>
-    <li>Celery + Redis for async loan computation — heavy processing doesn't block the API response</li>
+    <li>Celery + Redis for async loan computation heavy processing doesn't block the API response</li>
     <li>EMI and amortization calculations per credit tier, stored and retrievable per user</li>
-    <li>PostgreSQL with transactional integrity — financial data either commits fully or not at all</li>
+    <li>PostgreSQL with transactional integrity financial data either commits fully or not at all</li>
   </ul>
   <div class="project-metrics">
     <span class="metric m-amber">Async Loan Processing</span>
@@ -1397,7 +1406,7 @@
       </div>
 
       <div class="ach-card">
-        <div class="ach-number">140<span>+</span></div>
+        <div class="ach-number">170<span>+</span></div>
         <div class="ach-title">LeetCode Problems</div>
         <p class="ach-desc">
           DSA across arrays, trees, graphs, and dynamic programming — the kind of foundation that shows up when you're debugging a slow query or designing an efficient data structure under pressure.
@@ -1458,7 +1467,7 @@
             <div class="contact-icon">LC</div>
             <div>
               <div class="contact-item-label">LeetCode</div>
-              <div class="contact-item-value">140+ Problems Solved</div>
+              <div class="contact-item-value">170+ Problems Solved</div>
             </div>
           </div>
           <span class="contact-item-arrow">↗</span>
