@@ -3,11 +3,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jay Soni | Backend Engineer — Distributed Systems & APIs</title>
-  <meta name="description" content="Jay Soni — Backend Engineer specializing in distributed systems, high-concurrency APIs, and production AWS deployments. FastAPI, Redis, PostgreSQL, Docker, WebSockets.">
-  <meta property="og:title" content="Jay Soni | Backend Engineer — Distributed Systems & APIs">
+  <title>Jay Soni | Python Backend Engineer — FastAPI, Django, AWS, Redis</title>
+  <meta name="description" content="Jay Soni — Python Backend Engineer. FastAPI, Django, PostgreSQL, Redis, Docker, AWS EC2, WebSockets. 5 production-deployed systems. Open to Backend Engineer and SDE roles.">
+  <meta property="og:title" content="Jay Soni | Python Backend Engineer">
   <meta property="og:description" content="5 production-deployed systems. FastAPI, Redis, RabbitMQ, AWS EC2, Docker. Building backends that stay up under load.">
-  <meta name="keywords" content="backend engineer, python developer, fastapi, distributed systems, redis, aws, postgresql, websockets, docker">
+  <meta name="keywords" content="python backend engineer, fastapi developer, django developer, rest api, distributed systems, redis, aws ec2, postgresql, mongodb, websockets, docker, celery, rabbitmq, github actions, backend intern, sde, software developer india, pune, bangalore, bhopal">
+  <meta name="author" content="Jay Soni">
+  <meta name="robots" content="index, follow">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Jay Soni",
+    "jobTitle": "Python Backend Engineer",
+    "email": "jaayysoni@gmail.com",
+    "telephone": "+919407820271",
+    "url": "https://sde-jaysoni-portfolio.vercel.app",
+    "sameAs": [
+      "https://github.com/jaayysoni",
+      "https://www.linkedin.com/in/jaayysoni",
+      "https://leetcode.com/jaayysoni"
+    ],
+    "knowsAbout": ["Python", "FastAPI", "Django", "PostgreSQL", "Redis", "Docker", "AWS", "WebSockets", "REST API", "Celery", "RabbitMQ"],
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Prestige Institute of Management and Research, Bhopal"
+    }
+  }
+  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,7 +42,6 @@
       --bg: #fafaf8;
       --bg2: #f3f2ee;
       --surface: #ffffff;
-      --surface2: #f8f7f4;
       --border: #e4e2db;
       --border-strong: #ccc9be;
       --text: #1a1917;
@@ -39,8 +62,6 @@
       --teal: #0f766e;
       --teal-bg: #f0fdfa;
       --teal-border: #99f6e4;
-      --red: #b91c1c;
-      --red-bg: #fef2f2;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -55,7 +76,7 @@
       overflow-x: hidden;
     }
 
-    /* ── NAV ── */
+    /* NAV */
     nav {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -64,7 +85,6 @@
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
     }
-
     .nav-inner {
       max-width: 1100px;
       margin: 0 auto;
@@ -74,31 +94,24 @@
       align-items: center;
       justify-content: space-between;
     }
-
     .nav-logo {
       font-family: 'Geist Mono', monospace;
       font-size: 13px;
       font-weight: 500;
       color: var(--text);
       text-decoration: none;
-      letter-spacing: -0.01em;
     }
-
     nav ul { display: flex; gap: 36px; list-style: none; align-items: center; }
-
     nav a {
       font-family: 'Geist Mono', monospace;
       font-size: 11.5px;
-      font-weight: 400;
       letter-spacing: 0.06em;
       text-transform: uppercase;
       color: var(--text-muted);
       text-decoration: none;
       transition: color 0.15s;
     }
-
     nav a:hover { color: var(--text); }
-
     .nav-resume-btn {
       padding: 7px 16px;
       background: var(--text);
@@ -109,18 +122,17 @@
       letter-spacing: 0.04em;
       text-transform: uppercase;
       text-decoration: none;
-      transition: background 0.15s, transform 0.15s !important;
       display: inline-flex;
       align-items: center;
       gap: 5px;
+      transition: background 0.15s, transform 0.15s;
     }
+    .nav-resume-btn:hover { background: #2d2b27 !important; transform: translateY(-1px); }
 
-    .nav-resume-btn:hover { background: #2d2b27 !important; color: #fff !important; transform: translateY(-1px); }
-
-    /* ── CONTAINER ── */
+    /* CONTAINER */
     .container { max-width: 1100px; margin: 0 auto; padding: 0 32px; }
 
-    /* ── HERO ── */
+    /* HERO */
     #hero {
       min-height: 100vh;
       display: flex;
@@ -128,7 +140,6 @@
       padding-top: 56px;
       border-bottom: 1px solid var(--border);
     }
-
     .hero-grid {
       display: grid;
       grid-template-columns: 1fr 400px;
@@ -137,7 +148,6 @@
       width: 100%;
       padding: 80px 0;
     }
-
     .hero-badge {
       display: inline-flex;
       align-items: center;
@@ -152,19 +162,16 @@
       color: var(--green);
       margin-bottom: 28px;
     }
-
     .badge-dot {
       width: 6px; height: 6px;
       border-radius: 50%;
       background: var(--green);
       animation: pulse 2s infinite;
     }
-
     @keyframes pulse {
       0%, 100% { opacity: 1; }
       50% { opacity: 0.4; }
     }
-
     h1 {
       font-family: 'Bricolage Grotesque', sans-serif;
       font-size: clamp(42px, 5vw, 66px);
@@ -174,26 +181,21 @@
       color: var(--text);
       margin-bottom: 20px;
     }
-
     h1 em {
       font-family: 'Instrument Serif', serif;
       font-style: italic;
       font-weight: 400;
       color: var(--accent);
     }
-
     .hero-sub {
       font-size: 17px;
       color: var(--text-muted);
       line-height: 1.75;
       margin-bottom: 36px;
       max-width: 480px;
-      font-weight: 400;
     }
-
     .hero-stats {
       display: flex;
-      gap: 0;
       margin-bottom: 40px;
       border: 1px solid var(--border);
       border-radius: 12px;
@@ -201,7 +203,6 @@
       background: var(--surface);
       width: fit-content;
     }
-
     .stat {
       padding: 16px 26px;
       display: flex;
@@ -209,9 +210,7 @@
       align-items: center;
       border-right: 1px solid var(--border);
     }
-
     .stat:last-child { border-right: none; }
-
     .stat-num {
       font-family: 'Bricolage Grotesque', sans-serif;
       font-size: 26px;
@@ -220,7 +219,6 @@
       letter-spacing: -0.03em;
       line-height: 1;
     }
-
     .stat-label {
       font-family: 'Geist Mono', monospace;
       font-size: 10px;
@@ -230,13 +228,7 @@
       margin-top: 5px;
       white-space: nowrap;
     }
-
-    .hero-links {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
+    .hero-links { display: flex; gap: 10px; flex-wrap: wrap; }
     .btn-primary {
       padding: 11px 22px;
       background: var(--text);
@@ -251,9 +243,7 @@
       align-items: center;
       gap: 6px;
     }
-
     .btn-primary:hover { background: #2d2b27; transform: translateY(-1px); }
-
     .btn-accent {
       padding: 11px 22px;
       background: var(--accent);
@@ -268,9 +258,7 @@
       align-items: center;
       gap: 6px;
     }
-
     .btn-accent:hover { background: var(--accent-mid); transform: translateY(-1px); }
-
     .btn-ghost {
       padding: 11px 20px;
       border: 1px solid var(--border-strong);
@@ -283,7 +271,6 @@
       background: var(--surface);
       transition: border-color 0.15s, color 0.15s, transform 0.15s;
     }
-
     .btn-ghost:hover { border-color: var(--text); color: var(--text); transform: translateY(-1px); }
 
     /* Hero right */
@@ -293,21 +280,14 @@
       align-items: center;
       gap: 28px;
     }
-
     .profile-frame {
-      width: 180px;
-      height: 180px;
+      width: 180px; height: 180px;
       border-radius: 50%;
       overflow: hidden;
       border: 3px solid var(--border);
       background: var(--bg2);
     }
-
-    .profile-frame img {
-      width: 100%; height: 100%;
-      object-fit: cover;
-    }
-
+    .profile-frame img { width: 100%; height: 100%; object-fit: cover; }
     .profile-initials {
       width: 100%; height: 100%;
       display: flex;
@@ -317,17 +297,8 @@
       font-size: 48px;
       font-weight: 700;
       color: var(--text-muted);
-      letter-spacing: -0.03em;
     }
-
-    .tech-pills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 7px;
-      justify-content: center;
-      max-width: 360px;
-    }
-
+    .tech-pills { display: flex; flex-wrap: wrap; gap: 7px; justify-content: center; max-width: 360px; }
     .pill {
       padding: 5px 11px;
       border: 1px solid var(--border);
@@ -338,14 +309,9 @@
       background: var(--surface);
       transition: border-color 0.15s, color 0.15s, background 0.15s;
     }
+    .pill:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-light); }
 
-    .pill:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-      background: var(--accent-light);
-    }
-
-    /* ── SECTION HEADING ── */
+    /* SECTION HEADINGS */
     .section-label {
       font-family: 'Geist Mono', monospace;
       font-size: 11px;
@@ -354,7 +320,6 @@
       color: var(--accent);
       margin-bottom: 10px;
     }
-
     .section-title {
       font-family: 'Bricolage Grotesque', sans-serif;
       font-size: clamp(26px, 3vw, 36px);
@@ -364,7 +329,6 @@
       margin-bottom: 40px;
       line-height: 1.15;
     }
-
     .divider {
       width: 32px; height: 2px;
       background: var(--accent);
@@ -372,28 +336,24 @@
       margin-bottom: 40px;
     }
 
-    /* ── ABOUT ── */
+    /* ABOUT */
     #about {
       padding: 100px 0;
       border-bottom: 1px solid var(--border);
     }
-
     .about-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 80px;
       align-items: start;
     }
-
     .about-text p {
       font-size: 16px;
       color: var(--text-muted);
       line-height: 1.8;
       margin-bottom: 16px;
     }
-
     .about-text p strong { color: var(--text); font-weight: 600; }
-
     .about-text .role-note {
       display: inline-flex;
       align-items: center;
@@ -407,13 +367,7 @@
       color: var(--accent);
       margin-top: 8px;
     }
-
-    .about-highlights {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
+    .about-highlights { display: flex; flex-direction: column; gap: 16px; }
     .highlight-card {
       padding: 20px 22px;
       background: var(--surface);
@@ -424,9 +378,7 @@
       gap: 14px;
       transition: border-color 0.2s;
     }
-
     .highlight-card:hover { border-color: var(--border-strong); }
-
     .highlight-icon {
       width: 36px; height: 36px;
       border-radius: 8px;
@@ -436,85 +388,59 @@
       font-size: 16px;
       flex-shrink: 0;
     }
-
     .icon-blue { background: var(--accent-light); }
     .icon-green { background: var(--green-bg); }
     .icon-amber { background: var(--amber-bg); }
+    .highlight-text h4 { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 3px; }
+    .highlight-text p { font-size: 13px; color: var(--text-muted); line-height: 1.55; }
 
-    .highlight-text h4 {
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--text);
-      margin-bottom: 3px;
-    }
-
-    .highlight-text p {
-      font-size: 13px;
-      color: var(--text-muted);
-      line-height: 1.55;
-    }
-
-    /* ── SKILLS ── */
+    /* SKILLS */
     #skills {
       padding: 100px 0;
       border-bottom: 1px solid var(--border);
       background: var(--bg2);
     }
-
-    .skills-grid {
+    .skills-logo-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
+      grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+      gap: 14px;
     }
-
-    .skill-group {
-      padding: 24px;
+    .skill-card {
+      background: var(--surface);
       border: 1px solid var(--border);
       border-radius: 12px;
-      background: var(--surface);
-      transition: border-color 0.2s, transform 0.2s;
-    }
-
-    .skill-group:hover { border-color: var(--border-strong); transform: translateY(-2px); }
-
-    .skill-group-label {
-      font-family: 'Geist Mono', monospace;
-      font-size: 10px;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--text-dim);
-      margin-bottom: 14px;
+      padding: 20px 12px;
       display: flex;
+      flex-direction: column;
       align-items: center;
-      gap: 8px;
+      justify-content: center;
+      gap: 10px;
+      transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
     }
-
-    .skill-group-label::before {
-      content: '';
-      display: inline-block;
-      width: 8px; height: 2px;
-      background: var(--accent);
-      border-radius: 1px;
+    .skill-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--border-strong);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.07);
     }
-
-    .skill-tags { display: flex; flex-wrap: wrap; gap: 6px; }
-
-    .skill-tag {
-      padding: 4px 10px;
-      background: var(--bg2);
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      font-size: 12px;
-      color: var(--text-muted);
+    .skill-card img {
+      width: 36px;
+      height: 36px;
+      object-fit: contain;
+    }
+    .skill-card span {
       font-family: 'Geist Mono', monospace;
+      font-size: 11px;
+      font-weight: 500;
+      text-align: center;
+      color: var(--text-muted);
+      line-height: 1.4;
     }
 
-    /* ── EXPERIENCE ── */
+    /* EXPERIENCE */
     #experience {
       padding: 100px 0;
       border-bottom: 1px solid var(--border);
     }
-
     .exp-card {
       display: grid;
       grid-template-columns: 200px 1fr;
@@ -527,14 +453,8 @@
       color: inherit;
       transition: border-color 0.2s, box-shadow 0.2s;
     }
-
-    .exp-card:hover {
-      border-color: var(--border-strong);
-      box-shadow: 0 4px 24px rgba(0,0,0,0.06);
-    }
-
+    .exp-card:hover { border-color: var(--border-strong); box-shadow: 0 4px 24px rgba(0,0,0,0.06); }
     .exp-meta { display: flex; flex-direction: column; gap: 8px; }
-
     .exp-date {
       font-family: 'Geist Mono', monospace;
       font-size: 11px;
@@ -542,14 +462,7 @@
       color: var(--accent);
       text-transform: uppercase;
     }
-
-    .exp-company {
-      font-size: 14px;
-      color: var(--text-muted);
-      line-height: 1.5;
-      font-weight: 500;
-    }
-
+    .exp-company { font-size: 14px; color: var(--text-muted); line-height: 1.5; font-weight: 500; }
     .exp-status {
       display: inline-flex;
       align-items: center;
@@ -563,30 +476,28 @@
       color: var(--green);
       width: fit-content;
     }
-
     .exp-status .dot {
       width: 5px; height: 5px;
       border-radius: 50%;
       background: var(--green);
       animation: pulse 2s infinite;
     }
-
     .exp-content h3 {
       font-family: 'Bricolage Grotesque', sans-serif;
       font-size: 20px;
       font-weight: 600;
-      margin-bottom: 18px;
+      margin-bottom: 6px;
       color: var(--text);
       letter-spacing: -0.01em;
     }
-
-    .exp-bullets {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
+    .exp-role-summary {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 18px;
+      font-style: italic;
     }
-
+    .exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 10px; }
     .exp-bullets li {
       font-size: 14.5px;
       color: var(--text-muted);
@@ -594,31 +505,30 @@
       position: relative;
       line-height: 1.65;
     }
-
     .exp-bullets li::before {
-      content: '—';
+      content: '';
+      display: inline-block;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--accent);
       position: absolute;
-      left: 0;
-      color: var(--accent);
-      font-size: 12px;
-      top: 2px;
+      left: 2px;
+      top: 9px;
     }
-
     .exp-bullets li strong { color: var(--text); font-weight: 600; }
 
-    /* ── PROJECTS ── */
+    /* PROJECTS */
     #projects {
       padding: 100px 0;
       border-bottom: 1px solid var(--border);
       background: var(--bg2);
     }
-
     .projects-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 16px;
     }
-
     .project-card {
       display: block;
       padding: 28px 30px;
@@ -630,22 +540,18 @@
       transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
       position: relative;
     }
-
     .project-card:hover {
       border-color: var(--border-strong);
       box-shadow: 0 4px 24px rgba(0,0,0,0.07);
       transform: translateY(-2px);
     }
-
     .project-card.wide { grid-column: 1 / -1; }
-
     .project-header {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
       margin-bottom: 10px;
     }
-
     .project-name {
       font-family: 'Bricolage Grotesque', sans-serif;
       font-size: 18px;
@@ -654,7 +560,6 @@
       letter-spacing: -0.01em;
       line-height: 1.25;
     }
-
     .project-arrow {
       font-size: 16px;
       color: var(--text-dim);
@@ -662,9 +567,7 @@
       flex-shrink: 0;
       margin-left: 12px;
     }
-
     .project-card:hover .project-arrow { transform: translate(3px, -3px); color: var(--accent); }
-
     .project-deploy-tag {
       display: inline-block;
       padding: 3px 10px;
@@ -674,17 +577,9 @@
       letter-spacing: 0.04em;
       margin-bottom: 14px;
     }
-
     .tag-aws { background: var(--amber-bg); color: var(--amber); border: 1px solid var(--amber-border); }
     .tag-github { background: var(--bg2); color: var(--text-muted); border: 1px solid var(--border); }
-
-    .project-desc {
-      font-size: 13.5px;
-      color: var(--text-muted);
-      line-height: 1.7;
-      margin-bottom: 16px;
-    }
-
+    .project-desc { font-size: 13.5px; color: var(--text-muted); line-height: 1.7; margin-bottom: 16px; }
     .project-insight {
       padding: 10px 14px;
       background: var(--accent-light);
@@ -696,15 +591,7 @@
       margin-bottom: 16px;
       line-height: 1.55;
     }
-
-    .project-highlights {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 7px;
-      margin-bottom: 18px;
-    }
-
+    .project-highlights { list-style: none; display: flex; flex-direction: column; gap: 7px; margin-bottom: 18px; }
     .project-highlights li {
       font-size: 13px;
       color: var(--text-muted);
@@ -712,22 +599,18 @@
       position: relative;
       line-height: 1.6;
     }
-
     .project-highlights li::before {
-      content: '·';
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--accent);
       position: absolute;
       left: 4px;
-      color: var(--accent);
-      font-weight: 700;
+      top: 7px;
     }
-
-    .project-metrics {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-bottom: 16px;
-    }
-
+    .project-metrics { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
     .metric {
       padding: 4px 10px;
       border-radius: 6px;
@@ -736,15 +619,12 @@
       font-weight: 500;
       letter-spacing: 0.03em;
     }
-
     .m-green { background: var(--green-bg); color: var(--green); border: 1px solid var(--green-border); }
     .m-blue { background: var(--accent-light); color: var(--accent); border: 1px solid #bfdbfe; }
     .m-purple { background: var(--purple-bg); color: var(--purple); border: 1px solid var(--purple-border); }
     .m-amber { background: var(--amber-bg); color: var(--amber); border: 1px solid var(--amber-border); }
     .m-teal { background: var(--teal-bg); color: var(--teal); border: 1px solid var(--teal-border); }
-
     .project-tech { display: flex; flex-wrap: wrap; gap: 5px; }
-
     .tech-tag {
       padding: 3px 8px;
       background: var(--bg2);
@@ -755,19 +635,95 @@
       color: var(--text-dim);
     }
 
-    /* ── ACHIEVEMENTS ── */
+    /* BADGES SECTION */
+    #badges {
+      padding: 100px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .badges-group { margin-bottom: 48px; }
+    .badges-group:last-child { margin-bottom: 0; }
+    .badges-group-title {
+      font-family: 'Geist Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .badges-group-title::before {
+      content: '';
+      display: inline-block;
+      width: 20px; height: 1px;
+      background: var(--border-strong);
+    }
+    .badges-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 12px;
+    }
+    .badge-card {
+      padding: 16px 18px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      transition: border-color 0.2s, transform 0.2s;
+      text-decoration: none;
+      color: inherit;
+    }
+    .badge-card:hover { border-color: var(--border-strong); transform: translateY(-1px); }
+    .badge-icon {
+      width: 36px; height: 36px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      flex-shrink: 0;
+      font-family: 'Geist Mono', monospace;
+      font-weight: 700;
+      color: var(--text-dim);
+    }
+    .badge-icon.aws-icon { background: var(--amber-bg); color: var(--amber); font-size: 10px; letter-spacing: 0.04em; }
+    .badge-icon.lf-icon { background: var(--teal-bg); color: var(--teal); font-size: 10px; letter-spacing: 0.04em; }
+    .badge-info { flex: 1; min-width: 0; }
+    .badge-name {
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.35;
+      margin-bottom: 3px;
+    }
+    .badge-issuer {
+      font-family: 'Geist Mono', monospace;
+      font-size: 10px;
+      color: var(--text-dim);
+      letter-spacing: 0.04em;
+    }
+    .badge-date {
+      font-family: 'Geist Mono', monospace;
+      font-size: 9px;
+      color: var(--text-dim);
+      margin-top: 4px;
+      letter-spacing: 0.03em;
+    }
+
+    /* ACHIEVEMENTS */
     #achievements {
       padding: 100px 0;
       border-bottom: 1px solid var(--border);
       background: var(--bg2);
     }
-
     .achievements-row {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 16px;
     }
-
     .ach-card {
       padding: 28px;
       border: 1px solid var(--border);
@@ -775,9 +731,7 @@
       background: var(--surface);
       transition: border-color 0.2s;
     }
-
     .ach-card:hover { border-color: var(--border-strong); }
-
     .ach-number {
       font-family: 'Bricolage Grotesque', sans-serif;
       font-size: 44px;
@@ -787,26 +741,22 @@
       line-height: 1;
       margin-bottom: 6px;
     }
-
     .ach-number span {
       font-family: 'Instrument Serif', serif;
       font-style: italic;
       color: var(--accent);
     }
-
     .ach-title { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
     .ach-desc { font-size: 13px; color: var(--text-muted); line-height: 1.65; }
 
-    /* ── CONTACT ── */
+    /* CONTACT */
     #contact { padding: 100px 0; }
-
     .contact-inner {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 80px;
       align-items: start;
     }
-
     .contact-left h2 {
       font-family: 'Bricolage Grotesque', sans-serif;
       font-size: clamp(30px, 3.5vw, 46px);
@@ -815,21 +765,13 @@
       line-height: 1.1;
       margin-bottom: 16px;
     }
-
     .contact-left h2 em {
       font-family: 'Instrument Serif', serif;
       font-style: italic;
       font-weight: 400;
       color: var(--accent);
     }
-
-    .contact-left p {
-      font-size: 15.5px;
-      color: var(--text-muted);
-      line-height: 1.75;
-      margin-bottom: 32px;
-    }
-
+    .contact-left p { font-size: 15.5px; color: var(--text-muted); line-height: 1.75; margin-bottom: 32px; }
     .contact-email-btn {
       display: inline-flex;
       align-items: center;
@@ -844,16 +786,8 @@
       border-radius: 10px;
       transition: background 0.15s, transform 0.15s;
     }
-
     .contact-email-btn:hover { background: #2d2b27; transform: translateY(-2px); }
-
-    .contact-right {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      padding-top: 8px;
-    }
-
+    .contact-right { display: flex; flex-direction: column; gap: 12px; padding-top: 8px; }
     .contact-item {
       display: flex;
       align-items: center;
@@ -866,11 +800,8 @@
       color: inherit;
       transition: border-color 0.2s, transform 0.2s;
     }
-
     .contact-item:hover { border-color: var(--border-strong); transform: translateX(4px); }
-
     .contact-item-left { display: flex; align-items: center; gap: 12px; }
-
     .contact-icon {
       width: 34px; height: 34px;
       border-radius: 8px;
@@ -879,9 +810,11 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 14px;
+      font-size: 12px;
+      font-family: 'Geist Mono', monospace;
+      font-weight: 600;
+      color: var(--text-muted);
     }
-
     .contact-item-label {
       font-family: 'Geist Mono', monospace;
       font-size: 10px;
@@ -890,26 +823,20 @@
       color: var(--text-dim);
       margin-bottom: 2px;
     }
-
     .contact-item-value { font-size: 14px; font-weight: 500; color: var(--text); }
-
     .contact-item-arrow { color: var(--text-dim); font-size: 14px; transition: color 0.15s; }
     .contact-item:hover .contact-item-arrow { color: var(--accent); }
 
-    /* ── FOOTER ── */
+    /* FOOTER */
     footer { border-top: 1px solid var(--border); padding: 24px 0; }
-
     .footer-inner { display: flex; justify-content: space-between; align-items: center; }
-
     .footer-copy {
       font-family: 'Geist Mono', monospace;
       font-size: 11px;
       color: var(--text-dim);
       letter-spacing: 0.04em;
     }
-
     .footer-links { display: flex; gap: 20px; }
-
     .footer-links a {
       font-family: 'Geist Mono', monospace;
       font-size: 11px;
@@ -918,15 +845,13 @@
       letter-spacing: 0.04em;
       transition: color 0.15s;
     }
-
     .footer-links a:hover { color: var(--text); }
 
-    /* ── ANIMATIONS ── */
+    /* ANIMATIONS */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
-
     .fade-up { animation: fadeUp 0.6s ease both; }
     .d1 { animation-delay: 0.05s; }
     .d2 { animation-delay: 0.15s; }
@@ -934,15 +859,15 @@
     .d4 { animation-delay: 0.35s; }
     .d5 { animation-delay: 0.45s; }
 
-    /* ── RESPONSIVE ── */
+    /* RESPONSIVE */
     @media (max-width: 900px) {
       .hero-grid { grid-template-columns: 1fr; gap: 40px; text-align: center; }
-      .hero-stats { justify-content: center; }
+      .hero-stats { justify-content: center; margin: 0 auto 40px; }
       .hero-links { justify-content: center; }
       .hero-sub { margin: 0 auto 36px; }
       .hero-right { order: -1; }
       .about-grid { grid-template-columns: 1fr; gap: 40px; }
-      .skills-grid { grid-template-columns: 1fr 1fr; }
+      .skills-logo-grid { grid-template-columns: repeat(3, 1fr); }
       .projects-grid { grid-template-columns: 1fr; }
       .project-card.wide { grid-column: auto; }
       .achievements-row { grid-template-columns: 1fr; }
@@ -950,55 +875,57 @@
       .contact-inner { grid-template-columns: 1fr; gap: 40px; }
       nav ul { gap: 16px; }
       .nav-resume-btn { display: none; }
+      .badges-grid { grid-template-columns: 1fr 1fr; }
     }
-
     @media (max-width: 600px) {
       .container { padding: 0 20px; }
-      .skills-grid { grid-template-columns: 1fr; }
+      .skills-logo-grid { grid-template-columns: repeat(2, 1fr); }
       nav ul { gap: 14px; }
       nav a { font-size: 10px; }
       .footer-inner { flex-direction: column; gap: 12px; text-align: center; }
+      .badges-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
 
 <!-- NAV -->
-<nav>
+<nav aria-label="Main navigation">
   <div class="nav-inner">
     <a href="#hero" class="nav-logo">jay soni</a>
     <ul>
       <li><a href="#about">About</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#projects">Projects</a></li>
+      <li><a href="#badges">Certifications</a></li>
       <li><a href="#contact">Contact</a></li>
-      <li><a href="resume.pdf" target="_blank" class="nav-resume-btn">Resume ↓</a></li>
+      <li><a href="resume.pdf" target="_blank" class="nav-resume-btn">Resume &darr;</a></li>
     </ul>
   </div>
 </nav>
 
 <!-- HERO -->
-<section id="hero">
+<section id="hero" aria-label="Introduction">
   <div class="container">
     <div class="hero-grid">
       <div class="hero-left">
-
-        <!-- CHANGE 1: Badge — cleaner, no contradiction -->
         <div class="hero-badge fade-up d1">
           <span class="badge-dot"></span>
-          Open to Backend / SWE Roles — Full-time or Internship
+          Open to Backend / SWE Roles &mdash; Full-time or Internship
         </div>
 
         <h1 class="fade-up d2">
           Hi, I'm<br><em>Jay Soni</em>
         </h1>
 
-        <!-- CHANGE 2: Hero subtitle — sharper, engineering-forward, mentions Crypto.com signal -->
         <p class="hero-sub fade-up d3">
-          Backend engineer shipping <strong style="color:var(--text)">production systems</strong>. I've built real-time WebSocket servers load-tested to 90+ connections, cut API latency by 40–60% with Redis, and deployed 5 systems on AWS that are live right now. My GitHub work has attracted outreach from industry professionals — I'm ready to bring that same standard to a team.
+          Python Backend Engineer with hands-on experience building <strong style="color:var(--text)">real-time and async systems</strong>. Five projects deployed on AWS, WebSocket servers load-tested to 90+ concurrent connections, and API latency reduced 40-60% with Redis caching. My GitHub work attracted direct outreach from a VIP and Partnerships Manager at Crypto.com Exchange, who cited the project specifically.
         </p>
 
-        <!-- CHANGE 3: Stats — strongest engineering numbers -->
+        <span style="position:absolute;width:1px;height:1px;overflow:hidden;opacity:0;pointer-events:none;" aria-hidden="true">
+          Python Developer. Backend Engineer. FastAPI. Django. REST API. PostgreSQL. Redis. Docker. AWS EC2. WebSockets. Celery. RabbitMQ. GitHub Actions. SQLAlchemy. MongoDB. Linux. CI/CD. Nginx. B.Tech Computer Science 2026. Prestige Institute Bhopal. Open to work. Entry level backend engineer. Junior software developer India. Pune. Bangalore.
+        </span>
+
         <div class="hero-stats fade-up d4">
           <div class="stat">
             <span class="stat-num">5</span>
@@ -1009,22 +936,26 @@
             <span class="stat-label">WS Connections</span>
           </div>
           <div class="stat">
-            <span class="stat-num">170<span style="font-size:18px;font-family:'Instrument Serif',serif;font-style:italic;color:var(--accent)">+</span></span>
+            <span class="stat-num">180<span style="font-size:18px;font-family:'Instrument Serif',serif;font-style:italic;color:var(--accent)">+</span></span>
             <span class="stat-label">DSA Solved</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">13</span>
+            <span class="stat-label">Certifications</span>
           </div>
         </div>
 
         <div class="hero-links fade-up d5">
-          <a href="resume.pdf" target="_blank" class="btn-accent">Download Resume ↓</a>
-          <a href="mailto:jaayysoni@gmail.com" class="btn-primary">Email Me →</a>
-          <a href="https://github.com/jaayysoni" target="_blank" rel="noopener" class="btn-ghost">GitHub ↗</a>
-          <a href="https://www.linkedin.com/in/jaayysoni" target="_blank" rel="noopener" class="btn-ghost">LinkedIn ↗</a>
+          <a href="Jay's_Resume_Linkedin.pdf" target="_blank" class="btn-accent">Download Resume &darr;</a>
+          <a href="mailto:jaayysoni@gmail.com" class="btn-primary">Email Me &rarr;</a>
+          <a href="https://github.com/jaayysoni" target="_blank" rel="noopener" class="btn-ghost">GitHub &nearr;</a>
+          <a href="https://www.linkedin.com/in/jaayysoni" target="_blank" rel="noopener" class="btn-ghost">LinkedIn &nearr;</a>
         </div>
       </div>
 
       <div class="hero-right fade-up d3">
         <div class="profile-frame">
-          <img src="assets/WhatsApp Image 2026-04-27 at 13.04.56.jpeg" alt="Jay Soni"
+          <img src="assets/WhatsApp Image 2026-04-27 at 13.04.56.jpeg" alt="Jay Soni — Python Backend Engineer"
             onerror="this.style.display='none'; this.parentElement.querySelector('.profile-initials').style.display='flex';"
           />
           <div class="profile-initials" style="display:none;">JS</div>
@@ -1032,7 +963,8 @@
         <div class="tech-pills">
           <span class="pill">FastAPI</span>
           <span class="pill">Django</span>
-          <span class="pill">AWS</span>
+          <span class="pill">Python</span>
+          <span class="pill">AWS EC2</span>
           <span class="pill">PostgreSQL</span>
           <span class="pill">MongoDB</span>
           <span class="pill">Redis</span>
@@ -1041,7 +973,6 @@
           <span class="pill">Celery</span>
           <span class="pill">WebSockets</span>
           <span class="pill">GitHub Actions</span>
-          <span class="pill">SQLAlchemy</span>
         </div>
       </div>
     </div>
@@ -1049,45 +980,44 @@
 </section>
 
 <!-- ABOUT -->
-<section id="about">
+<section id="about" aria-label="About Jay Soni">
   <div class="container">
     <p class="section-label">About</p>
-    <h2 class="section-title">I build backends that work under real conditions</h2>
+    <h2 class="section-title">Building backends with the full stack in mind</h2>
     <div class="divider"></div>
     <div class="about-grid">
       <div class="about-text">
-        <!-- CHANGE: About text — more confident, specific, human -->
         <p>
-          Most students build CRUD apps and call it done. I went further — <strong>real-time systems, message queues, Redis caching, role-based auth, CI/CD pipelines</strong> — and deployed all of it on AWS EC2 where it actually runs. Five projects. All live.
+          My focus has been on backend systems that go beyond basic CRUD: <strong>real-time WebSocket servers, async message queues with RabbitMQ and Celery, Redis caching, role-based auth, and CI/CD pipelines deployed on AWS EC2.</strong>
         </p>
         <p>
-          I care about writing backend code that doesn't fall apart when real traffic hits it. That means understanding <strong>why</strong> a query is slow. It means knowing when async helps and when it just adds complexity. It means building things that are easy for the next engineer to pick up.
+          I care about code that holds up under real conditions. That means tracing a slow query back to a missing index, knowing when async processing adds value versus complexity, and structuring services so the next engineer can work with them cleanly.
         </p>
         <p>
-          Currently interning at <strong>KEP Labs (Bhopal)</strong> working on production APIs with Django, FastAPI, and PostgreSQL. Looking for my next role where I can take on more ownership and work on harder problems. Open to relocating anywhere in India.
+          Currently interning at <strong>KEP Labs</strong>, building backend APIs and IoT simulation services with Django, FastAPI, and PostgreSQL. Looking for a full-time or internship role where I can take on more ownership and work on harder problems. Open to relocating to <strong>Pune, Bangalore, or Mumbai</strong>.
         </p>
-        <span class="role-note">🎯 Targeting Backend Engineer &amp; SDE roles — Full-time or Internship</span>
+        <span class="role-note">Targeting Backend Engineer and SDE roles, Full-time or Internship</span>
       </div>
       <div class="about-highlights">
         <div class="highlight-card">
-          <div class="highlight-icon icon-blue">🏗️</div>
+          <div class="highlight-icon icon-blue" style="font-size:13px;font-family:'Geist Mono',monospace;font-weight:700;color:var(--accent)">AWS</div>
           <div class="highlight-text">
-            <h4>Production</h4>
-            <p>5 systems deployed on AWS EC2 with Docker, Nginx, and GitHub Actions CI/CD — live at my domains.</p>
+            <h4>Production Deployed</h4>
+            <p>5 systems running on AWS EC2 with Docker, Nginx, and GitHub Actions CI/CD. Live at my domains right now, not demos.</p>
           </div>
         </div>
         <div class="highlight-card">
-          <div class="highlight-icon icon-green">⚡</div>
+          <div class="highlight-icon icon-green" style="font-size:13px;font-family:'Geist Mono',monospace;font-weight:700;color:var(--green)">DX</div>
           <div class="highlight-text">
-            <h4>Tradeoff Thinking</h4>
-            <p>Redis over schema denormalization. Sync over async when the complexity isn't worth it. Cookie sessions over JWTs when revocation matters. Tools chosen for Purpose.</p>
+            <h4>Deliberate Tradeoffs</h4>
+            <p>Redis over schema denormalization. Sync over async when the complexity is not worth it. Cookie sessions over JWTs when revocation matters. Each choice made for a reason.</p>
           </div>
         </div>
         <div class="highlight-card">
-          <div class="highlight-icon icon-amber">☁️</div>
+          <div class="highlight-icon icon-amber" style="font-size:13px;font-family:'Geist Mono',monospace;font-weight:700;color:var(--amber)">API</div>
           <div class="highlight-text">
-            <h4>Full Stack of the Backend</h4>
-            <p>From API design to async queues (RabbitMQ, Celery) to database optimization to cloud deployment — I've touched every layer.</p>
+            <h4>Full Backend Stack</h4>
+            <p>API design through async queues, database optimization, and cloud deployment. Every layer covered hands-on across multiple projects.</p>
           </div>
         </div>
       </div>
@@ -1096,78 +1026,147 @@
 </section>
 
 <!-- SKILLS -->
-<section id="skills">
+<section id="skills" aria-label="Technical Skills">
   <div class="container">
     <p class="section-label">Tech Stack</p>
     <h2 class="section-title">What I work with</h2>
     <div class="divider"></div>
-    <div class="skills-grid">
 
-      <div class="skill-group">
-        <p class="skill-group-label">Languages</p>
-        <div class="skill-tags">
-          <span class="skill-tag">Python3</span>
-          <span class="skill-tag">SQL</span>
-        </div>
+    <div class="skills-logo-grid">
+
+      <div class="skill-card">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+        <span>Python 3</span>
       </div>
 
-      <div class="skill-group">
-        <p class="skill-group-label">Frameworks & APIs</p>
-        <div class="skill-tags">
-          <span class="skill-tag">FastAPI</span>
-          <span class="skill-tag">Django</span>
-          <span class="skill-tag">Django REST Framework</span>
-          <span class="skill-tag">Flask</span>
-        </div>
+      <div class="skill-card">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL">
+        <span>SQL</span>
       </div>
 
-      <div class="skill-group">
-        <p class="skill-group-label">Databases & Caching</p>
-        <div class="skill-tags">
-          <span class="skill-tag">PostgreSQL</span>
-          <span class="skill-tag">MongoDB</span>
-          <span class="skill-tag">SQLite</span>
-          <span class="skill-tag">Redis</span>
-        </div>
+      <div class="skill-card">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="FastAPI">
+        <span>FastAPI</span>
       </div>
 
-      <div class="skill-group">
-        <p class="skill-group-label">ORM & Data Access</p>
-        <div class="skill-tags">
-          <span class="skill-tag">SQLAlchemy</span>
-          <span class="skill-tag">Django ORM</span>
-        </div>
+      <div class="skill-card">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django">
+        <span>Django</span>
       </div>
 
-      <div class="skill-group">
-        <p class="skill-group-label">Async & Messaging</p>
-        <div class="skill-tags">
-          <span class="skill-tag">Celery</span>
-          <span class="skill-tag">RabbitMQ</span>
-          <span class="skill-tag">WebSockets</span>
-          <span class="skill-tag">Async/Await</span>
-        </div>
+      <div class="skill-card">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django REST Framework">
+        <span>DRF</span>
       </div>
 
-      <div class="skill-group">
-        <p class="skill-group-label">DevOps & Cloud</p>
-        <div class="skill-tags">
-          <span class="skill-tag">Docker</span>
-          <span class="skill-tag">AWS (EC2, S3)</span>
-          <span class="skill-tag">GitHub Actions</span>
-          <span class="skill-tag">Nginx</span>
-          <span class="skill-tag">CI/CD</span>
-          <span class="skill-tag">Linux</span>
-        </div>
+      <div class="skill-card">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask">
+        <span>Flask</span>
       </div>
 
-      <div class="skill-group">
-        <p class="skill-group-label">Templating & Frontend</p>
-        <div class="skill-tags">
-          <span class="skill-tag">Jinja2</span>
-          <span class="skill-tag">HTML</span>
-          <span class="skill-tag">CSS</span>
-        </div>
+      <div class="skill-card">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL">
+        <span>PostgreSQL</span>
+      </div>
+
+      <div class="skill-card">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB">
+        <span>MongoDB</span>
+      </div>
+
+      <div class="skill-card">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" alt="SQLite">
+        <span>SQLite</span>
+      </div>
+
+      <div class="skill-card">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" alt="Redis">
+        <span>Redis</span>
+      </div>
+
+      <div class="skill-card">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlalchemy/sqlalchemy-original.svg" alt="SQLAlchemy" onerror="this.src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg'">
+        <span>SQLAlchemy</span>
+      </div>
+
+      <div class="skill-card">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" alt="Celery">
+        <span>Celery</span>
+      </div>
+
+      <div class="skill-card">
+        <img src="https://cdn.simpleicons.org/rabbitmq/FF6600" alt="RabbitMQ">
+        <span>RabbitMQ</span>
+      </div>
+
+      <div class="skill-card">
+        <img src="https://cdn.simpleicons.org/socketdotio/010101" alt="WebSockets">
+        <span>WebSockets</span>
+      </div>
+
+      <div class="skill-card">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker">
+        <span>Docker</span>
+      </div>
+
+      <div class="skill-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="AWS">
+        <span>AWS EC2</span>
+      </div>
+
+      <div class="skill-card">
+        <img src="https://cdn.simpleicons.org/githubactions/2088FF" alt="GitHub Actions">
+        <span>GitHub Actions</span>
+      </div>
+
+      <div class="skill-card">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg" alt="Nginx">
+        <span>Nginx</span>
+      </div>
+
+      <div class="skill-card">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux">
+        <span>Linux</span>
+      </div>
+
+      <div class="skill-card">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas">
+        <span>Pandas</span>
+      </div>
+
+      <div class="skill-card">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy">
+        <span>NumPy</span>
+      </div>
+
+      <div class="skill-card">
+        <img src="https://cdn.simpleicons.org/pytest/0A9EDC" alt="Pytest">
+        <span>Pytest</span>
+      </div>
+
+      <div class="skill-card">
+        <img src="https://cdn.simpleicons.org/postman/FF6C37" alt="Postman">
+        <span>Postman</span>
+      </div>
+
+      <div class="skill-card">
+        <img src="https://cdn.simpleicons.org/jinja/B41717" alt="Jinja2">
+        <span>Jinja2</span>
+      </div>
+
+      <div class="skill-card">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+        <span>Git</span>
+      </div>
+
+      <div class="skill-card">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
+        <span>HTML</span>
+      </div>
+
+      <div class="skill-card">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
+        <span>CSS</span>
       </div>
 
     </div>
@@ -1175,7 +1174,7 @@
 </section>
 
 <!-- EXPERIENCE -->
-<section id="experience">
+<section id="experience" aria-label="Work Experience">
   <div class="container">
     <p class="section-label">Experience</p>
     <h2 class="section-title">Where I've worked</h2>
@@ -1183,17 +1182,18 @@
     <a href="https://www.linkedin.com/company/keshava-elite-projects/posts/?feedView=all"
        target="_blank" rel="noopener noreferrer" class="exp-card">
       <div class="exp-meta">
-        <span class="exp-date">Feb 2026 – Present</span>
-        <span class="exp-company">Keshava Elite Projects<br>(KEP Labs)</span>
+        <span class="exp-date">Mar 2026 &ndash; Present</span>
+        <span class="exp-company">Keshava Elite Projects<br>(KEP Labs)<br>Remote</span>
         <span class="exp-status"><span class="dot"></span>Active</span>
       </div>
       <div class="exp-content">
-        <h3>Python Backend Intern</h3>
+        <h3>Python Backend and Simulation Intern</h3>
+        <p class="exp-role-summary">Building backend APIs and simulation services for robotics, electronics, and IoT systems. Currently in architecture and design phase with prototype APIs live on GitHub.</p>
         <ul class="exp-bullets">
-          <li>Built and maintained REST API endpoints using <strong>Django and FastAPI</strong> for internal tooling and business workflows</li>
-          <li>Worked with <strong>SQL databases</strong> for data modeling and query writing handling data flow and storage across API layers</li>
-          <li>Debugged API issues by tracing request flows and validating responses ensuring correct behavior and stability across endpoints</li>
-          <li>Tested APIs using <strong>Postman</strong> and <strong>pytest</strong>, validating outputs and data flow to confirm expected responses before delivery</li>
+          <li>Developing and maintaining backend services and REST API endpoints using <strong>Django and FastAPI</strong> to support internal platforms and IoT simulation systems</li>
+          <li>Designing RESTful APIs integrated with simulation interfaces and <strong>SQL databases</strong> for data modeling, storage, and system configuration management</li>
+          <li>Building and integrating backend components for <strong>robotics, electronics, and IoT simulation environments</strong> across the technology stack</li>
+          <li>Testing, debugging, and validating backend modules using <strong>Postman and pytest</strong>, tracing request flows to confirm correct behavior before delivery</li>
         </ul>
       </div>
     </a>
@@ -1201,246 +1201,349 @@
 </section>
 
 <!-- PROJECTS -->
-<section id="projects">
+<section id="projects" aria-label="Projects">
   <div class="container">
     <p class="section-label">Projects</p>
-    <h2 class="section-title">Selected work — all deployed, all real</h2>
+    <h2 class="section-title">Selected work, all deployed</h2>
     <div class="divider"></div>
     <div class="projects-grid">
 
-<!-- FinVerse -->
-<a href="https://finverse.jaayysoni.com" target="_blank" rel="noopener" class="project-card">
-  <div class="project-header">
-    <h3 class="project-name">FinVerse — Finance Platform</h3>
-    <span class="project-arrow">↗</span>
-  </div>
-  <span class="project-deploy-tag tag-aws">Deployed · AWS EC2</span>
-  <p class="project-desc">
-    Full-stack financial management platform with role-based access control 3 roles, 17+ API endpoints, a Jinja2 dashboard, and a REST API layer, all sharing the same auth backend.
-  </p>
-  <div class="project-insight">⚙ RBAC enforced at the FastAPI dependency layer even with the UI — access control holds even if someone hits the API directly</div>
-  <ul class="project-highlights">
-    <li>3-role system (admin / analyst / viewer) with server-side enforcement on every protected route</li>
-    <li>Dual interface: browser dashboard via Jinja2 + REST API via <code>/api/*</code> — one shared auth layer for both</li>
-    <li>17+ endpoints covering full CRUD, data import/export, and analytics views</li>
-    <li>Pytest suite validating RBAC logic and endpoint behavior — not just happy paths</li>
-  </ul>
-  <div class="project-metrics">
-    <span class="metric m-purple">17 API Endpoints</span>
-    <span class="metric m-green">RBAC at API Layer</span>
-    <span class="metric m-blue">Dual Interface</span>
-    <span class="metric m-amber">Live on AWS EC2</span>
-  </div>
-  <div class="project-tech">
-    <span class="tech-tag">FastAPI</span>
-    <span class="tech-tag">SQLAlchemy</span>
-    <span class="tech-tag">PostgreSQL</span>
-    <span class="tech-tag">Jinja2</span>
-    <span class="tech-tag">Pytest</span>
-    <span class="tech-tag">AWS EC2</span>
-  </div>
-</a>
+      <!-- FinVerse -->
+      <a href="https://finverse.jaayysoni.com" target="_blank" rel="noopener" class="project-card">
+        <div class="project-header">
+          <h3 class="project-name">FinVerse &mdash; Finance Platform</h3>
+          <span class="project-arrow">&#8599;</span>
+        </div>
+        <span class="project-deploy-tag tag-aws">Deployed &middot; AWS EC2</span>
+        <p class="project-desc">Full stack financial management platform with role-based access control across 3 roles, 17+ API endpoints, a Jinja2 dashboard, and a REST API layer all sharing the same auth backend.</p>
+        <div class="project-insight">RBAC enforced at the FastAPI dependency layer. Access control holds even if someone hits the API directly, not just the UI.</div>
+        <ul class="project-highlights">
+          <li>3-role system (admin, analyst, viewer) with server-side enforcement on every protected route</li>
+          <li>Dual interface: browser dashboard via Jinja2 and REST API via /api/* with one shared auth layer for both</li>
+          <li>17+ endpoints covering full CRUD, data import/export, and analytics views</li>
+          <li>Pytest suite validating RBAC logic and endpoint behavior, not just happy paths</li>
+        </ul>
+        <div class="project-metrics">
+          <span class="metric m-purple">17 API Endpoints</span>
+          <span class="metric m-green">RBAC at API Layer</span>
+          <span class="metric m-blue">Dual Interface</span>
+          <span class="metric m-amber">Live on AWS EC2</span>
+        </div>
+        <div class="project-tech">
+          <span class="tech-tag">FastAPI</span>
+          <span class="tech-tag">SQLAlchemy</span>
+          <span class="tech-tag">PostgreSQL</span>
+          <span class="tech-tag">Jinja2</span>
+          <span class="tech-tag">Pytest</span>
+          <span class="tech-tag">AWS EC2</span>
+        </div>
+      </a>
 
-<!-- Crypto -->
-<a href="https://crypto.jaayysoni.com" target="_blank" rel="noopener" class="project-card">
-  <div class="project-header">
-    <h3 class="project-name">Crypto Trading Simulator</h3>
-    <span class="project-arrow">↗</span>
-  </div>
-  <span class="project-deploy-tag tag-aws">Deployed · AWS EC2</span>
-  <p class="project-desc">
-    Real-time trading simulator with WebSocket-based price streaming, FIFO portfolio tracking, and live P&amp;L load-tested to 90+ concurrent connections and deployed on AWS with full CI/CD.
-  </p>
-  <div class="project-insight">⚙ Per-connection async handling with Redis as shared state avoids bottlenecks without blocking the event loop</div>
+      <!-- Crypto -->
+      <a href="https://crypto.jaayysoni.com" target="_blank" rel="noopener" class="project-card">
+        <div class="project-header">
+          <h3 class="project-name">Crypto Trading Simulator</h3>
+          <span class="project-arrow">&#8599;</span>
+        </div>
+        <span class="project-deploy-tag tag-aws">Deployed &middot; AWS EC2</span>
+        <p class="project-desc">Real-time trading simulator with WebSocket-based price streaming, FIFO portfolio tracking, and live P&amp;L. Load-tested to 90+ concurrent connections and deployed on AWS with full CI/CD.</p>
+        <div class="project-insight">Per-connection async handling with Redis as shared state avoids bottlenecks without blocking the event loop.</div>
+        <div style="padding: 9px 14px; background: var(--amber-bg); border: 1px solid var(--amber-border); border-radius: 8px; font-family: 'Geist Mono', monospace; font-size: 11.5px; color: var(--amber); margin-bottom: 12px;">
+          Attracted direct outreach from a <strong>VIP and Partnerships Manager at Crypto.com Exchange</strong> who cited the GitHub project specifically
+        </div>
+        <ul class="project-highlights">
+          <li>FastAPI WebSocket backend load tested at 90+ concurrent connections with no dropped connections and consistent message delivery</li>
+          <li>Redis caching for shared price and portfolio state cut API latency by 40-60% vs direct DB reads</li>
+          <li>FIFO-based portfolio engine with full transaction history and real-time P&amp;L across hundreds of simulated trades</li>
+          <li>GitHub Actions CI/CD with Docker build and AWS EC2 deploy triggered on push to main</li>
+        </ul>
+        <div class="project-metrics">
+          <span class="metric m-blue">90+ Concurrent WS Connections</span>
+          <span class="metric m-amber">40-60% Latency Reduction</span>
+          <span class="metric m-green">Real-time P&amp;L Engine</span>
+        </div>
+        <div class="project-tech">
+          <span class="tech-tag">FastAPI</span>
+          <span class="tech-tag">Redis</span>
+          <span class="tech-tag">WebSockets</span>
+          <span class="tech-tag">Docker</span>
+          <span class="tech-tag">GitHub Actions</span>
+          <span class="tech-tag">AWS EC2</span>
+        </div>
+      </a>
 
-  <!-- CHANGE 4: Crypto.com outreach callout — honest, accurate -->
-  <div style="padding: 9px 14px; background: var(--amber-bg); border: 1px solid var(--amber-border); border-radius: 8px; font-family: 'Geist Mono', monospace; font-size: 11.5px; color: var(--amber); margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
-    <span>📬</span>
-    <span>This project attracted direct outreach from a <strong>VIP & Partnerships Manager at Crypto.com Exchange</strong> — they cited the GitHub work as standing out</span>
-  </div>
+      <!-- E-Voting -->
+      <a href="https://evoting.jaayysoni.com" target="_blank" rel="noopener" class="project-card">
+        <div class="project-header">
+          <h3 class="project-name">Secure E-Voting System 2.0</h3>
+          <span class="project-arrow">&#8599;</span>
+        </div>
+        <span class="project-deploy-tag tag-aws">Deployed &middot; AWS EC2</span>
+        <p class="project-desc">Role-based voting platform built around correctness guarantees: one vote per user, real-time result aggregation, and layered architecture that keeps read performance fast under concurrent load.</p>
+        <div class="project-insight">Vote counting runs entirely in MongoDB aggregation pipelines. Server-side grouping with compound indexes, not pulling records into Python to count.</div>
+        <ul class="project-highlights">
+          <li>Layered architecture with FastAPI, Services, and MongoDB keeping business logic, auth, and data access cleanly separated</li>
+          <li>Compound indexes on voter ID and election ID keep high-cardinality reads fast without full collection scans</li>
+          <li>Cookie-based sessions over JWTs, chosen deliberately for simpler revocation</li>
+          <li>bcrypt auth with duplicate vote prevention enforced at the database level, holds even under race conditions</li>
+        </ul>
+        <div class="project-metrics">
+          <span class="metric m-blue">Compound Indexed Reads</span>
+          <span class="metric m-green">Vote Integrity at DB Layer</span>
+          <span class="metric m-teal">Server-Side Aggregation</span>
+        </div>
+        <div class="project-tech">
+          <span class="tech-tag">FastAPI</span>
+          <span class="tech-tag">MongoDB</span>
+          <span class="tech-tag">Cookie Auth</span>
+          <span class="tech-tag">bcrypt</span>
+          <span class="tech-tag">WebSockets</span>
+          <span class="tech-tag">GitHub Actions</span>
+        </div>
+      </a>
 
-  <ul class="project-highlights">
-    <li>FastAPI WebSocket backend load-tested at 90+ concurrent connections no dropped connections, consistent message delivery</li>
-    <li>Redis caching for shared price + portfolio state reduced redundant DB reads and cut API latency by <strong>40–60%</strong></li>
-    <li>FIFO-based portfolio engine with full transaction history and real-time P&amp;L accurate across hundreds of simulated trades per session</li>
-    <li>GitHub Actions CI/CD → Docker build → AWS EC2 deploy — push to main, it ships</li>
-  </ul>
-  <div class="project-metrics">
-    <span class="metric m-blue">90+ Concurrent WebSocket Connections</span>
-    <span class="metric m-amber">40–60% Latency Reduction</span>
-    <span class="metric m-green">Real-time P&amp;L Engine</span>
-  </div>
-  <div class="project-tech">
-    <span class="tech-tag">FastAPI</span>
-    <span class="tech-tag">Redis</span>
-    <span class="tech-tag">WebSockets</span>
-    <span class="tech-tag">Docker</span>
-    <span class="tech-tag">GitHub Actions</span>
-    <span class="tech-tag">AWS EC2</span>
-  </div>
-</a>
+      <!-- Notifications -->
+      <a href="https://github.com/jaayysoni/Event-Driven-Notification-System" target="_blank" rel="noopener" class="project-card">
+        <div class="project-header">
+          <h3 class="project-name">Event-Driven Notification System</h3>
+          <span class="project-arrow">&#8599;</span>
+        </div>
+        <span class="project-deploy-tag tag-github">GitHub</span>
+        <p class="project-desc">Async notification backend using RabbitMQ to decouple email delivery from the main request flow. Failed messages retry automatically and nothing gets silently dropped.</p>
+        <div class="project-insight">Manual acknowledgments with dead letter queues. A message is not marked done until delivery is confirmed, and failures go to a retry queue automatically.</div>
+        <ul class="project-highlights">
+          <li>RabbitMQ producer-consumer workflow with durable queues and retry logic, zero message loss on delivery failure</li>
+          <li>SendGrid integration for transactional email with delivery status tracking</li>
+          <li>PostgreSQL for user data, session state, and a full audit log of every notification dispatched</li>
+          <li>OAuth2 authentication with middleware-based request validation across all protected routes</li>
+        </ul>
+        <div class="project-metrics">
+          <span class="metric m-green">Zero Message Loss</span>
+          <span class="metric m-purple">OAuth2 Secured</span>
+          <span class="metric m-blue">Full Audit Log</span>
+        </div>
+        <div class="project-tech">
+          <span class="tech-tag">FastAPI</span>
+          <span class="tech-tag">RabbitMQ</span>
+          <span class="tech-tag">Celery</span>
+          <span class="tech-tag">SendGrid</span>
+          <span class="tech-tag">PostgreSQL</span>
+          <span class="tech-tag">OAuth2</span>
+        </div>
+      </a>
 
-<!-- E-Voting -->
-<a href="https://evoting.jaayysoni.com" target="_blank" rel="noopener" class="project-card">
-  <div class="project-header">
-    <h3 class="project-name">Secure E-Voting System 2.0</h3>
-    <span class="project-arrow">↗</span>
-  </div>
-  <span class="project-deploy-tag tag-aws">Deployed · AWS EC2</span>
-  <p class="project-desc">
-    Role-based voting platform built around correctness guarantees one vote per user, real-time result aggregation, and a layered architecture that keeps read performance fast under concurrent load.
-  </p>
-  <div class="project-insight">⚙ Vote counting runs entirely in MongoDB aggregation pipelines server-side grouping with compound indexes, not pulling records into Python to count</div>
-  <ul class="project-highlights">
-    <li>Layered architecture: FastAPI → Services → MongoDB — deliberate separation so business logic, auth, and data access never bleed into each other</li>
-    <li>Compound indexes on voter ID + election ID fields — high-cardinality reads stay fast without full collection scans under concurrent load</li>
-    <li>Chose cookie-based sessions over JWTs here to keep revocation simple tradeoff made deliberately, not by default</li>
-    <li>bcrypt auth with duplicate-vote prevention enforced at the database level, not just application logic constraint holds even under race conditions</li>
-  </ul>
-  <div class="project-metrics">
-    <span class="metric m-blue">Compound Indexed for Concurrent Reads</span>
-    <span class="metric m-green">Vote Integrity at DB Layer</span>
-    <span class="metric m-teal">Server-Side Aggregation</span>
-  </div>
-  <div class="project-tech">
-    <span class="tech-tag">FastAPI</span>
-    <span class="tech-tag">MongoDB</span>
-    <span class="tech-tag">Cookie Auth</span>
-    <span class="tech-tag">bcrypt</span>
-    <span class="tech-tag">WebSockets</span>
-    <span class="tech-tag">GitHub Actions</span>
-  </div>
-</a>
+      <!-- Credit Approval -->
+      <a href="https://github.com/jaayysoni/Credit-Approval-Backend-System" target="_blank" rel="noopener" class="project-card wide">
+        <div class="project-header">
+          <h3 class="project-name">Credit Approval Backend System</h3>
+          <span class="project-arrow">&#8599;</span>
+        </div>
+        <span class="project-deploy-tag tag-github">GitHub</span>
+        <p class="project-desc">Loan approval backend with rule-based credit scoring, EMI calculation, and async processing via Celery. Built to mirror how a real fintech backend handles credit decisions.</p>
+        <div class="project-insight">ORM queries use select_related and prefetch_related throughout. No N+1 queries and no unnecessary DB round-trips.</div>
+        <ul class="project-highlights">
+          <li>Django REST Framework APIs with optimized ORM queries, N+1 patterns avoided from the start</li>
+          <li>Rule-based credit scoring engine evaluating income, debt-to-income ratio, and repayment history to determine eligibility and interest rate</li>
+          <li>Celery with Redis for async loan computation so heavy processing does not block the API response</li>
+          <li>EMI and amortization calculations per credit tier, stored and retrievable per user</li>
+          <li>PostgreSQL with transactional integrity so financial data either commits fully or not at all</li>
+        </ul>
+        <div class="project-metrics">
+          <span class="metric m-amber">Async Loan Processing</span>
+          <span class="metric m-green">Rule-Based Scoring Engine</span>
+          <span class="metric m-purple">N+1 Free ORM</span>
+          <span class="metric m-blue">Transactional PostgreSQL</span>
+        </div>
+        <div class="project-tech">
+          <span class="tech-tag">Django REST</span>
+          <span class="tech-tag">Celery</span>
+          <span class="tech-tag">Redis</span>
+          <span class="tech-tag">PostgreSQL</span>
+          <span class="tech-tag">Python</span>
+        </div>
+      </a>
 
-<!-- Notifications -->
-<a href="https://github.com/jaayysoni/Event-Driven-Notification-System" target="_blank" rel="noopener" class="project-card">
-  <div class="project-header">
-    <h3 class="project-name">Event-Driven Notification System</h3>
-    <span class="project-arrow">↗</span>
+    </div>
   </div>
-  <span class="project-deploy-tag tag-github">GitHub</span>
-  <p class="project-desc">
-    Async notification backend using RabbitMQ to decouple email delivery from the main request flow failed messages retry automatically, nothing gets silently dropped.
-  </p>
-  <div class="project-insight">⚙ Manual acknowledgments + dead-letter queues — a message isn't marked done until delivery is confirmed, and failures go to a retry queue automatically</div>
-  <ul class="project-highlights">
-    <li>RabbitMQ producer-consumer workflow with durable queues and retry logic zero message loss on delivery failure</li>
-    <li>SendGrid integration for transactional email with delivery status tracking</li>
-    <li>PostgreSQL for user data, session state, and a full audit log of every notification dispatched</li>
-    <li>OAuth2 authentication with middleware-based request validation across all protected routes</li>
-  </ul>
-  <div class="project-metrics">
-    <span class="metric m-green">Zero Message Loss</span>
-    <span class="metric m-purple">OAuth2 Secured</span>
-    <span class="metric m-blue">Full Audit Log</span>
-  </div>
-  <div class="project-tech">
-    <span class="tech-tag">FastAPI</span>
-    <span class="tech-tag">RabbitMQ</span>
-    <span class="tech-tag">Celery</span>
-    <span class="tech-tag">SendGrid</span>
-    <span class="tech-tag">PostgreSQL</span>
-    <span class="tech-tag">OAuth2</span>
-  </div>
-</a>
+</section>
 
-<!-- Credit Approval -->
-<a href="https://github.com/jaayysoni/Credit-Approval-Backend-System" target="_blank" rel="noopener" class="project-card wide">
-  <div class="project-header">
-    <h3 class="project-name">Credit Approval Backend System</h3>
-    <span class="project-arrow">↗</span>
-  </div>
-  <span class="project-deploy-tag tag-github">GitHub</span>
-  <p class="project-desc">
-    Loan approval backend with rule-based credit scoring, EMI calculation, and async processing via Celery built to mirror how a real fintech backend handles credit decisions.
-  </p>
-  <div class="project-insight">⚙ ORM queries use select_related and prefetch_related throughout no N+1 queries, no unnecessary round-trips to the database</div>
-  <ul class="project-highlights">
-    <li>Django REST Framework APIs with optimized ORM queries deliberately avoided N+1 patterns from the start</li>
-    <li>Rule-based credit scoring engine: income, debt-to-income ratio, repayment history → eligibility category → interest rate</li>
-    <li>Celery + Redis for async loan computation heavy processing doesn't block the API response</li>
-    <li>EMI and amortization calculations per credit tier, stored and retrievable per user</li>
-    <li>PostgreSQL with transactional integrity financial data either commits fully or not at all</li>
-  </ul>
-  <div class="project-metrics">
-    <span class="metric m-amber">Async Loan Processing</span>
-    <span class="metric m-green">Rule-Based Scoring Engine</span>
-    <span class="metric m-purple">N+1 Free ORM</span>
-    <span class="metric m-blue">Transactional PostgreSQL</span>
-  </div>
-  <div class="project-tech">
-    <span class="tech-tag">Django REST</span>
-    <span class="tech-tag">Celery</span>
-    <span class="tech-tag">Redis</span>
-    <span class="tech-tag">PostgreSQL</span>
-    <span class="tech-tag">Python</span>
-  </div>
-</a>
+<!-- CERTIFICATIONS & BADGES -->
+<section id="badges" aria-label="Certifications and Badges">
+  <div class="container">
+    <p class="section-label">Certifications</p>
+    <h2 class="section-title">13 verified badges &mdash; AWS and Linux Foundation</h2>
+    <div class="divider"></div>
 
+    <div class="badges-group">
+      <p class="badges-group-title">Amazon Web Services &middot; AWS Educate</p>
+      <div class="badges-grid">
+        <a href="https://www.credly.com/users/jaayysoni" target="_blank" rel="noopener" class="badge-card">
+          <div class="badge-icon aws-icon">AWS</div>
+          <div class="badge-info">
+            <div class="badge-name">Introduction to Cloud 101</div>
+            <div class="badge-issuer">AWS Educate</div>
+            <div class="badge-date">Oct 2025</div>
+          </div>
+        </a>
+        <a href="https://www.credly.com/users/jaayysoni" target="_blank" rel="noopener" class="badge-card">
+          <div class="badge-icon aws-icon">AWS</div>
+          <div class="badge-info">
+            <div class="badge-name">Getting Started with Compute</div>
+            <div class="badge-issuer">AWS Educate</div>
+            <div class="badge-date">Oct 2025</div>
+          </div>
+        </a>
+        <a href="https://www.credly.com/users/jaayysoni" target="_blank" rel="noopener" class="badge-card">
+          <div class="badge-icon aws-icon">AWS</div>
+          <div class="badge-info">
+            <div class="badge-name">Getting Started with Databases</div>
+            <div class="badge-issuer">AWS Educate</div>
+            <div class="badge-date">Oct 2025</div>
+          </div>
+        </a>
+        <a href="https://www.credly.com/users/jaayysoni" target="_blank" rel="noopener" class="badge-card">
+          <div class="badge-icon aws-icon">AWS</div>
+          <div class="badge-info">
+            <div class="badge-name">Getting Started with Networking</div>
+            <div class="badge-issuer">AWS Educate</div>
+            <div class="badge-date">Oct 2025</div>
+          </div>
+        </a>
+        <a href="https://www.credly.com/users/jaayysoni" target="_blank" rel="noopener" class="badge-card">
+          <div class="badge-icon aws-icon">AWS</div>
+          <div class="badge-info">
+            <div class="badge-name">Getting Started with Security</div>
+            <div class="badge-issuer">AWS Educate</div>
+            <div class="badge-date">Oct 2025</div>
+          </div>
+        </a>
+        <a href="https://www.credly.com/users/jaayysoni" target="_blank" rel="noopener" class="badge-card">
+          <div class="badge-icon aws-icon">AWS</div>
+          <div class="badge-info">
+            <div class="badge-name">Getting Started with Serverless</div>
+            <div class="badge-issuer">AWS Educate</div>
+            <div class="badge-date">Oct 2025</div>
+          </div>
+        </a>
+        <a href="https://www.credly.com/users/jaayysoni" target="_blank" rel="noopener" class="badge-card">
+          <div class="badge-icon aws-icon">AWS</div>
+          <div class="badge-info">
+            <div class="badge-name">Getting Started with Storage</div>
+            <div class="badge-issuer">AWS Educate</div>
+            <div class="badge-date">Oct 2025</div>
+          </div>
+        </a>
+        <a href="https://www.credly.com/users/jaayysoni" target="_blank" rel="noopener" class="badge-card">
+          <div class="badge-icon aws-icon">AWS</div>
+          <div class="badge-info">
+            <div class="badge-name">Getting Started with Cloud Ops</div>
+            <div class="badge-issuer">AWS Educate</div>
+            <div class="badge-date">Oct 2025</div>
+          </div>
+        </a>
+        <a href="https://www.credly.com/users/jaayysoni" target="_blank" rel="noopener" class="badge-card">
+          <div class="badge-icon aws-icon">AWS</div>
+          <div class="badge-info">
+            <div class="badge-name">Introduction to Generative AI</div>
+            <div class="badge-issuer">AWS Educate</div>
+            <div class="badge-date">Jan 2026</div>
+          </div>
+        </a>
+        <a href="https://www.credly.com/users/jaayysoni" target="_blank" rel="noopener" class="badge-card">
+          <div class="badge-icon aws-icon">AWS</div>
+          <div class="badge-info">
+            <div class="badge-name">Machine Learning Foundations</div>
+            <div class="badge-issuer">AWS Educate</div>
+            <div class="badge-date">Jan 2026</div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="badges-group">
+      <p class="badges-group-title">The Linux Foundation</p>
+      <div class="badges-grid">
+        <a href="https://www.credly.com/users/jaayysoni" target="_blank" rel="noopener" class="badge-card">
+          <div class="badge-icon lf-icon">LF</div>
+          <div class="badge-info">
+            <div class="badge-name">LFS158: Introduction to Kubernetes</div>
+            <div class="badge-issuer">Linux Foundation</div>
+            <div class="badge-date">Apr 2026</div>
+          </div>
+        </a>
+        <a href="https://www.credly.com/users/jaayysoni" target="_blank" rel="noopener" class="badge-card">
+          <div class="badge-icon lf-icon">LF</div>
+          <div class="badge-info">
+            <div class="badge-name">LFS101: Introduction to Linux</div>
+            <div class="badge-issuer">Linux Foundation</div>
+            <div class="badge-date">Apr 2026</div>
+          </div>
+        </a>
+        <a href="https://www.credly.com/users/jaayysoni" target="_blank" rel="noopener" class="badge-card">
+          <div class="badge-icon lf-icon">LF</div>
+          <div class="badge-info">
+            <div class="badge-name">LFD121: Developing Secure Software</div>
+            <div class="badge-issuer">Linux Foundation</div>
+            <div class="badge-date">Apr 2026</div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div style="margin-top: 24px;">
+      <a href="https://www.credly.com/users/jaayysoni" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:6px; font-family:'Geist Mono',monospace; font-size:12px; color:var(--accent); text-decoration:none; border:1px solid #bfdbfe; padding:8px 16px; border-radius:8px; background:var(--accent-light); transition:background 0.15s;">
+        View all verified badges on Credly &#8599;
+      </a>
     </div>
   </div>
 </section>
 
 <!-- ACHIEVEMENTS -->
-<section id="achievements">
+<section id="achievements" aria-label="Achievements">
   <div class="container">
     <p class="section-label">Achievements</p>
     <h2 class="section-title">By the numbers</h2>
     <div class="divider"></div>
     <div class="achievements-row">
-
       <div class="ach-card">
         <div class="ach-number">5</div>
         <div class="ach-title">Live AWS Deployments</div>
-        <p class="ach-desc">
-          Not demos — actual systems running on AWS EC2 behind Nginx, deployed via Docker and GitHub Actions CI/CD. You can visit them right now.
-        </p>
+        <p class="ach-desc">Actual systems running on AWS EC2 behind Nginx, deployed via Docker and GitHub Actions CI/CD. Accessible right now at my domains.</p>
       </div>
-
       <div class="ach-card">
-        <div class="ach-number">10<span>+</span></div>
-        <div class="ach-title">AWS Educate Badges</div>
-        <p class="ach-desc">
-          Certifications across compute, databases, storage, networking, and security — not collected for the badge, used to make better infrastructure decisions on real projects.
-        </p>
+        <div class="ach-number">13<span>+</span></div>
+        <div class="ach-title">Verified Certifications</div>
+        <p class="ach-desc">10 AWS Educate badges covering compute, databases, storage, networking, security, serverless, ML, and GenAI. Plus 3 Linux Foundation certifications in Kubernetes, Linux, and Secure Software Development.</p>
       </div>
-
       <div class="ach-card">
-        <div class="ach-number">170<span>+</span></div>
+        <div class="ach-number">180<span>+</span></div>
         <div class="ach-title">LeetCode Problems</div>
-        <p class="ach-desc">
-          DSA across arrays, trees, graphs, and dynamic programming — the kind of foundation that shows up when you're debugging a slow query or designing an efficient data structure under pressure.
-        </p>
+        <p class="ach-desc">DSA across arrays, trees, graphs, and dynamic programming. The foundation that shows up when debugging a slow query or designing an efficient data structure under pressure.</p>
       </div>
-
     </div>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact">
+<section id="contact" aria-label="Contact Jay Soni">
   <div class="container">
     <div class="contact-inner">
       <div class="contact-left">
         <p class="section-label">Contact</p>
         <h2>Let's work<br><em>together</em></h2>
-        <p>
-          Open to Backend Engineer &amp; SDE roles — full-time or internship. Willing to relocate anywhere in India or work remotely. I respond within 24 hours.
-        </p>
-        <a href="mailto:jaayysoni@gmail.com" class="contact-email-btn">
-          jaayysoni@gmail.com →
-        </a>
+        <p>Open to Backend Engineer and SDE roles, full-time or internship. Willing to relocate to Pune, Bangalore, or Mumbai, or work remotely. I respond within 24 hours.</p>
+        <a href="mailto:jaayysoni@gmail.com" class="contact-email-btn">jaayysoni@gmail.com &rarr;</a>
       </div>
       <div class="contact-right">
         <a href="https://github.com/jaayysoni" target="_blank" rel="noopener" class="contact-item">
           <div class="contact-item-left">
-            <div class="contact-icon">⌥</div>
+            <div class="contact-icon">GH</div>
             <div>
               <div class="contact-item-label">GitHub</div>
               <div class="contact-item-value">github.com/jaayysoni</div>
             </div>
           </div>
-          <span class="contact-item-arrow">↗</span>
+          <span class="contact-item-arrow">&#8599;</span>
         </a>
         <a href="https://www.linkedin.com/in/jaayysoni" target="_blank" rel="noopener" class="contact-item">
           <div class="contact-item-left">
@@ -1450,37 +1553,37 @@
               <div class="contact-item-value">linkedin.com/in/jaayysoni</div>
             </div>
           </div>
-          <span class="contact-item-arrow">↗</span>
+          <span class="contact-item-arrow">&#8599;</span>
         </a>
         <a href="https://www.credly.com/users/jaayysoni" target="_blank" rel="noopener" class="contact-item">
           <div class="contact-item-left">
-            <div class="contact-icon">☁</div>
+            <div class="contact-icon">CR</div>
             <div>
               <div class="contact-item-label">Credly</div>
-              <div class="contact-item-value">10+ AWS Educate Badges</div>
+              <div class="contact-item-value">13 Verified Badges</div>
             </div>
           </div>
-          <span class="contact-item-arrow">↗</span>
+          <span class="contact-item-arrow">&#8599;</span>
         </a>
         <a href="https://leetcode.com/jaayysoni" target="_blank" rel="noopener" class="contact-item">
           <div class="contact-item-left">
             <div class="contact-icon">LC</div>
             <div>
               <div class="contact-item-label">LeetCode</div>
-              <div class="contact-item-value">170+ Problems Solved</div>
+              <div class="contact-item-value">180+ Problems Solved</div>
             </div>
           </div>
-          <span class="contact-item-arrow">↗</span>
+          <span class="contact-item-arrow">&#8599;</span>
         </a>
         <a href="tel:+919407820271" class="contact-item">
           <div class="contact-item-left">
-            <div class="contact-icon">✆</div>
+            <div class="contact-icon">Ph</div>
             <div>
               <div class="contact-item-label">Phone</div>
               <div class="contact-item-value">+91 94078 20271</div>
             </div>
           </div>
-          <span class="contact-item-arrow">→</span>
+          <span class="contact-item-arrow">&rarr;</span>
         </a>
       </div>
     </div>
@@ -1490,7 +1593,7 @@
 <footer>
   <div class="container">
     <div class="footer-inner">
-      <span class="footer-copy">© 2026 Jay Soni · Backend Engineer · Bhopal, India</span>
+      <span class="footer-copy">&copy; 2026 Jay Soni &middot; Python Backend Engineer &middot; Bhopal, India</span>
       <div class="footer-links">
         <a href="https://github.com/jaayysoni" target="_blank" rel="noopener">GitHub</a>
         <a href="https://www.linkedin.com/in/jaayysoni" target="_blank" rel="noopener">LinkedIn</a>
