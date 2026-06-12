@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jay Soni | Python Backend Engineer — FastAPI, Django, AWS, Redis</title>
-  <meta name="description" content="Jay Soni — Python Backend Engineer. FastAPI, Django, PostgreSQL, Redis, Docker, AWS EC2, WebSockets. 5 production-deployed systems. Open to Backend Engineer and SDE roles.">
+  <meta name="description" content="Jay Soni — Python Backend Engineer. FastAPI, Django, PostgreSQL, Redis, Docker, AWS EC2, WebSockets. 3 production-deployed systems. Open to Backend Engineer and SDE roles.">
   <meta property="og:title" content="Jay Soni | Python Backend Engineer">
-  <meta property="og:description" content="5 production-deployed systems. FastAPI, Redis, RabbitMQ, AWS EC2, Docker. Building backends that stay up under load.">
+  <meta property="og:description" content="3 production-deployed systems. FastAPI, Redis, RabbitMQ, AWS EC2, Docker. Building backends that stay up under load.">
   <meta name="keywords" content="python backend engineer, fastapi developer, django developer, rest api, distributed systems, redis, aws ec2, postgresql, mongodb, websockets, docker, celery, rabbitmq, github actions, backend intern, sde, software developer india, pune, bangalore, bhopal">
   <meta name="author" content="Jay Soni">
   <meta name="robots" content="index, follow">
@@ -76,7 +76,6 @@
       overflow-x: hidden;
     }
 
-    /* NAV */
     nav {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -129,10 +128,8 @@
     }
     .nav-resume-btn:hover { background: #2d2b27 !important; transform: translateY(-1px); }
 
-    /* CONTAINER */
     .container { max-width: 1100px; margin: 0 auto; padding: 0 32px; }
 
-    /* HERO */
     #hero {
       min-height: 100vh;
       display: flex;
@@ -191,8 +188,21 @@
       font-size: 17px;
       color: var(--text-muted);
       line-height: 1.75;
-      margin-bottom: 36px;
+      margin-bottom: 16px;
       max-width: 480px;
+    }
+    .crypto-callout {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 14px;
+      background: var(--amber-bg);
+      border: 1px solid var(--amber-border);
+      border-radius: 8px;
+      font-family: 'Geist Mono', monospace;
+      font-size: 11.5px;
+      color: var(--amber);
+      margin-bottom: 36px;
     }
     .hero-stats {
       display: flex;
@@ -273,7 +283,6 @@
     }
     .btn-ghost:hover { border-color: var(--text); color: var(--text); transform: translateY(-1px); }
 
-    /* Hero right */
     .hero-right {
       display: flex;
       flex-direction: column;
@@ -311,7 +320,6 @@
     }
     .pill:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-light); }
 
-    /* SECTION HEADINGS */
     .section-label {
       font-family: 'Geist Mono', monospace;
       font-size: 11px;
@@ -336,7 +344,6 @@
       margin-bottom: 40px;
     }
 
-    /* ABOUT */
     #about {
       padding: 100px 0;
       border-bottom: 1px solid var(--border);
@@ -394,7 +401,6 @@
     .highlight-text h4 { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 3px; }
     .highlight-text p { font-size: 13px; color: var(--text-muted); line-height: 1.55; }
 
-    /* SKILLS */
     #skills {
       padding: 100px 0;
       border-bottom: 1px solid var(--border);
@@ -422,11 +428,7 @@
       border-color: var(--border-strong);
       box-shadow: 0 6px 20px rgba(0,0,0,0.07);
     }
-    .skill-card img {
-      width: 36px;
-      height: 36px;
-      object-fit: contain;
-    }
+    .skill-card img { width: 36px; height: 36px; object-fit: contain; }
     .skill-card span {
       font-family: 'Geist Mono', monospace;
       font-size: 11px;
@@ -436,7 +438,6 @@
       line-height: 1.4;
     }
 
-    /* EXPERIENCE */
     #experience {
       padding: 100px 0;
       border-bottom: 1px solid var(--border);
@@ -449,8 +450,6 @@
       border: 1px solid var(--border);
       border-radius: 16px;
       background: var(--surface);
-      text-decoration: none;
-      color: inherit;
       transition: border-color 0.2s, box-shadow 0.2s;
     }
     .exp-card:hover { border-color: var(--border-strong); box-shadow: 0 4px 24px rgba(0,0,0,0.06); }
@@ -463,6 +462,8 @@
       text-transform: uppercase;
     }
     .exp-company { font-size: 14px; color: var(--text-muted); line-height: 1.5; font-weight: 500; }
+    .company-link { color: var(--text-muted); text-decoration: none; transition: color 0.15s; }
+    .company-link:hover { color: var(--accent); }
     .exp-status {
       display: inline-flex;
       align-items: center;
@@ -490,13 +491,6 @@
       color: var(--text);
       letter-spacing: -0.01em;
     }
-    .exp-role-summary {
-      font-size: 14px;
-      color: var(--text-muted);
-      line-height: 1.6;
-      margin-bottom: 18px;
-      font-style: italic;
-    }
     .exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 10px; }
     .exp-bullets li {
       font-size: 14.5px;
@@ -508,17 +502,46 @@
     .exp-bullets li::before {
       content: '';
       display: inline-block;
-      width: 5px;
-      height: 5px;
+      width: 5px; height: 5px;
       border-radius: 50%;
       background: var(--accent);
       position: absolute;
-      left: 2px;
-      top: 9px;
+      left: 2px; top: 9px;
     }
     .exp-bullets li strong { color: var(--text); font-weight: 600; }
+    .exp-project {
+      margin-top: 20px;
+      padding: 14px 16px;
+      background: var(--accent-light);
+      border: 1px solid #bfdbfe;
+      border-radius: 10px;
+    }
+    .exp-project-title {
+      font-family: 'Geist Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+    .exp-project-desc {
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+    .exp-project-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 600;
+      transition: opacity 0.15s ease;
+    }
+    .exp-project-link:hover { opacity: 0.8; }
 
-    /* PROJECTS */
     #projects {
       padding: 100px 0;
       border-bottom: 1px solid var(--border);
@@ -602,13 +625,11 @@
     .project-highlights li::before {
       content: '';
       display: inline-block;
-      width: 4px;
-      height: 4px;
+      width: 4px; height: 4px;
       border-radius: 50%;
       background: var(--accent);
       position: absolute;
-      left: 4px;
-      top: 7px;
+      left: 4px; top: 7px;
     }
     .project-metrics { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
     .metric {
@@ -635,7 +656,6 @@
       color: var(--text-dim);
     }
 
-    /* BADGES SECTION */
     #badges {
       padding: 100px 0;
       border-bottom: 1px solid var(--border);
@@ -691,29 +711,55 @@
     }
     .badge-icon.aws-icon { background: var(--amber-bg); color: var(--amber); font-size: 10px; letter-spacing: 0.04em; }
     .badge-icon.lf-icon { background: var(--teal-bg); color: var(--teal); font-size: 10px; letter-spacing: 0.04em; }
+    .badge-icon.lc-icon { background: var(--accent-light); color: var(--accent); font-size: 10px; letter-spacing: 0.04em; }
     .badge-info { flex: 1; min-width: 0; }
-    .badge-name {
-      font-size: 12.5px;
-      font-weight: 600;
-      color: var(--text);
-      line-height: 1.35;
-      margin-bottom: 3px;
+    .badge-name { font-size: 12.5px; font-weight: 600; color: var(--text); line-height: 1.35; margin-bottom: 3px; }
+    .badge-issuer { font-family: 'Geist Mono', monospace; font-size: 10px; color: var(--text-dim); letter-spacing: 0.04em; }
+    .badge-date { font-family: 'Geist Mono', monospace; font-size: 9px; color: var(--text-dim); margin-top: 4px; letter-spacing: 0.03em; }
+
+    .leetcode-stats-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 12px;
+      margin-bottom: 20px;
     }
-    .badge-issuer {
+    .leetcode-stat {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px;
+      text-align: center;
+    }
+    .leetcode-value {
+      display: block;
+      font-family: 'Bricolage Grotesque', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+    .leetcode-label {
       font-family: 'Geist Mono', monospace;
       font-size: 10px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
       color: var(--text-dim);
-      letter-spacing: 0.04em;
     }
-    .badge-date {
-      font-family: 'Geist Mono', monospace;
-      font-size: 9px;
-      color: var(--text-dim);
-      margin-top: 4px;
-      letter-spacing: 0.03em;
+    .leetcode-badges-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 16px;
+      margin-bottom: 20px;
     }
+    .leetcode-badges-row img {
+      width: 120px;
+      height: auto;
+      border-radius: 12px;
+      transition: transform 0.2s ease;
+    }
+    .leetcode-badges-row img:hover { transform: translateY(-4px); }
 
-    /* ACHIEVEMENTS */
     #achievements {
       padding: 100px 0;
       border-bottom: 1px solid var(--border);
@@ -741,15 +787,10 @@
       line-height: 1;
       margin-bottom: 6px;
     }
-    .ach-number span {
-      font-family: 'Instrument Serif', serif;
-      font-style: italic;
-      color: var(--accent);
-    }
+    .ach-number span { font-family: 'Instrument Serif', serif; font-style: italic; color: var(--accent); }
     .ach-title { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
     .ach-desc { font-size: 13px; color: var(--text-muted); line-height: 1.65; }
 
-    /* CONTACT */
     #contact { padding: 100px 0; }
     .contact-inner {
       display: grid;
@@ -765,12 +806,7 @@
       line-height: 1.1;
       margin-bottom: 16px;
     }
-    .contact-left h2 em {
-      font-family: 'Instrument Serif', serif;
-      font-style: italic;
-      font-weight: 400;
-      color: var(--accent);
-    }
+    .contact-left h2 em { font-family: 'Instrument Serif', serif; font-style: italic; font-weight: 400; color: var(--accent); }
     .contact-left p { font-size: 15.5px; color: var(--text-muted); line-height: 1.75; margin-bottom: 32px; }
     .contact-email-btn {
       display: inline-flex;
@@ -815,39 +851,18 @@
       font-weight: 600;
       color: var(--text-muted);
     }
-    .contact-item-label {
-      font-family: 'Geist Mono', monospace;
-      font-size: 10px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--text-dim);
-      margin-bottom: 2px;
-    }
+    .contact-item-label { font-family: 'Geist Mono', monospace; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 2px; }
     .contact-item-value { font-size: 14px; font-weight: 500; color: var(--text); }
     .contact-item-arrow { color: var(--text-dim); font-size: 14px; transition: color 0.15s; }
     .contact-item:hover .contact-item-arrow { color: var(--accent); }
 
-    /* FOOTER */
     footer { border-top: 1px solid var(--border); padding: 24px 0; }
     .footer-inner { display: flex; justify-content: space-between; align-items: center; }
-    .footer-copy {
-      font-family: 'Geist Mono', monospace;
-      font-size: 11px;
-      color: var(--text-dim);
-      letter-spacing: 0.04em;
-    }
+    .footer-copy { font-family: 'Geist Mono', monospace; font-size: 11px; color: var(--text-dim); letter-spacing: 0.04em; }
     .footer-links { display: flex; gap: 20px; }
-    .footer-links a {
-      font-family: 'Geist Mono', monospace;
-      font-size: 11px;
-      color: var(--text-dim);
-      text-decoration: none;
-      letter-spacing: 0.04em;
-      transition: color 0.15s;
-    }
+    .footer-links a { font-family: 'Geist Mono', monospace; font-size: 11px; color: var(--text-dim); text-decoration: none; letter-spacing: 0.04em; transition: color 0.15s; }
     .footer-links a:hover { color: var(--text); }
 
-    /* ANIMATIONS */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
@@ -859,12 +874,12 @@
     .d4 { animation-delay: 0.35s; }
     .d5 { animation-delay: 0.45s; }
 
-    /* RESPONSIVE */
     @media (max-width: 900px) {
       .hero-grid { grid-template-columns: 1fr; gap: 40px; text-align: center; }
       .hero-stats { justify-content: center; margin: 0 auto 40px; }
       .hero-links { justify-content: center; }
-      .hero-sub { margin: 0 auto 36px; }
+      .hero-sub { margin: 0 auto 16px; }
+      .crypto-callout { margin-bottom: 36px; }
       .hero-right { order: -1; }
       .about-grid { grid-template-columns: 1fr; gap: 40px; }
       .skills-logo-grid { grid-template-columns: repeat(3, 1fr); }
@@ -889,7 +904,6 @@
 </head>
 <body>
 
-<!-- NAV -->
 <nav aria-label="Main navigation">
   <div class="nav-inner">
     <a href="#hero" class="nav-logo">jay soni</a>
@@ -899,12 +913,11 @@
       <li><a href="#projects">Projects</a></li>
       <li><a href="#badges">Certifications</a></li>
       <li><a href="#contact">Contact</a></li>
-      <li><a href="resume.pdf" target="_blank" class="nav-resume-btn">Resume &darr;</a></li>
+      <li><a href="Jay's_Resume_Linkedin.pdf" target="_blank" class="nav-resume-btn">Resume &darr;</a></li>
     </ul>
   </div>
 </nav>
 
-<!-- HERO -->
 <section id="hero" aria-label="Introduction">
   <div class="container">
     <div class="hero-grid">
@@ -919,8 +932,12 @@
         </h1>
 
         <p class="hero-sub fade-up d3">
-          Python Backend Engineer with hands-on experience building <strong style="color:var(--text)">real-time and async systems</strong>. Five projects deployed on AWS, WebSocket servers load-tested to 90+ concurrent connections, and API latency reduced 40-60% with Redis caching. My GitHub work attracted direct outreach from a VIP and Partnerships Manager at Crypto.com Exchange, who cited the project specifically.
+          Python Backend Engineer specializing in <strong style="color:var(--text)">real-time and async systems</strong>. Three projects live on AWS EC2, WebSocket servers load-tested to 90+ concurrent connections, API latency cut 40-60% with Redis caching.
         </p>
+
+        <div class="crypto-callout fade-up d3">
+          &#9733;&nbsp; GitHub work cited by a VIP &amp; Partnerships Manager at Crypto.com Exchange
+        </div>
 
         <span style="position:absolute;width:1px;height:1px;overflow:hidden;opacity:0;pointer-events:none;" aria-hidden="true">
           Python Developer. Backend Engineer. FastAPI. Django. REST API. PostgreSQL. Redis. Docker. AWS EC2. WebSockets. Celery. RabbitMQ. GitHub Actions. SQLAlchemy. MongoDB. Linux. CI/CD. Nginx. B.Tech Computer Science 2026. Prestige Institute Bhopal. Open to work. Entry level backend engineer. Junior software developer India. Pune. Bangalore.
@@ -928,7 +945,7 @@
 
         <div class="hero-stats fade-up d4">
           <div class="stat">
-            <span class="stat-num">5</span>
+            <span class="stat-num">3</span>
             <span class="stat-label">AWS Deployments</span>
           </div>
           <div class="stat">
@@ -946,7 +963,7 @@
         </div>
 
         <div class="hero-links fade-up d5">
-          <a href="Jay's_Resume_Linkedin.pdf" target="_blank" class="btn-accent">Download Resume &darr;</a>
+          <a href="JAY-SONI-RESUME.pdf" target="_blank" class="btn-accent">Download Resume &darr;</a>
           <a href="mailto:jaayysoni@gmail.com" class="btn-primary">Email Me &rarr;</a>
           <a href="https://github.com/jaayysoni" target="_blank" rel="noopener" class="btn-ghost">GitHub &nearr;</a>
           <a href="https://www.linkedin.com/in/jaayysoni" target="_blank" rel="noopener" class="btn-ghost">LinkedIn &nearr;</a>
@@ -979,19 +996,18 @@
   </div>
 </section>
 
-<!-- ABOUT -->
 <section id="about" aria-label="About Jay Soni">
   <div class="container">
     <p class="section-label">About</p>
-    <h2 class="section-title">Building backends with the full stack in mind</h2>
+    <h2 class="section-title">Building backends that hold up under real conditions</h2>
     <div class="divider"></div>
     <div class="about-grid">
       <div class="about-text">
         <p>
-          My focus has been on backend systems that go beyond basic CRUD: <strong>real-time WebSocket servers, async message queues with RabbitMQ and Celery, Redis caching, role-based auth, and CI/CD pipelines deployed on AWS EC2.</strong>
+          I got into backend because I wanted to understand what actually happens between a request and a response. That led me to tracing slow queries to missing indexes, learning when async processing earns its complexity, and building systems where the next engineer can find their way around without asking.
         </p>
         <p>
-          I care about code that holds up under real conditions. That means tracing a slow query back to a missing index, knowing when async processing adds value versus complexity, and structuring services so the next engineer can work with them cleanly.
+          The stack I reach for: <strong>FastAPI or Django for APIs, PostgreSQL or MongoDB for persistence, Redis for caching and shared state, RabbitMQ and Celery for async work, Docker and GitHub Actions for deployment.</strong> Every choice in my projects has a reason behind it I can defend.
         </p>
         <span class="role-note">Targeting Backend Engineer and SDE roles, Full-time or Internship</span>
       </div>
@@ -1000,7 +1016,7 @@
           <div class="highlight-icon icon-blue" style="font-size:13px;font-family:'Geist Mono',monospace;font-weight:700;color:var(--accent)">AWS</div>
           <div class="highlight-text">
             <h4>Production Deployed</h4>
-            <p>5 systems running on AWS EC2 with Docker, Nginx, and GitHub Actions CI/CD. Live at my domains right now, not demos.</p>
+            <p>3 systems live on AWS EC2 with Docker, Nginx, and GitHub Actions CI/CD. Accessible at my domains right now, not screenshots.</p>
           </div>
         </div>
         <div class="highlight-card">
@@ -1022,197 +1038,170 @@
   </div>
 </section>
 
-<!-- SKILLS -->
 <section id="skills" aria-label="Technical Skills">
   <div class="container">
     <p class="section-label">Tech Stack</p>
     <h2 class="section-title">What I work with</h2>
     <div class="divider"></div>
-
     <div class="skills-logo-grid">
-
       <div class="skill-card">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
         <span>Python 3</span>
       </div>
-
       <div class="skill-card">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL">
         <span>SQL</span>
       </div>
-
       <div class="skill-card">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="FastAPI">
         <span>FastAPI</span>
       </div>
-
       <div class="skill-card">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django">
         <span>Django</span>
       </div>
-
       <div class="skill-card">
         <img src="https://cdn.simpleicons.org/djangorest/a30000" alt="Django REST Framework">
         <span>DRF</span>
       </div>
-
       <div class="skill-card">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask">
         <span>Flask</span>
       </div>
-
       <div class="skill-card">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL">
         <span>PostgreSQL</span>
       </div>
-
       <div class="skill-card">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB">
         <span>MongoDB</span>
       </div>
-
       <div class="skill-card">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" alt="SQLite">
         <span>SQLite</span>
       </div>
-
       <div class="skill-card">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" alt="Redis">
         <span>Redis</span>
       </div>
-
       <div class="skill-card">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlalchemy/sqlalchemy-original.svg" alt="SQLAlchemy" onerror="this.src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg'">
         <span>SQLAlchemy</span>
       </div>
-
       <div class="skill-card">
         <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/celery.svg" alt="Celery">
         <span>Celery</span>
       </div>
-
       <div class="skill-card">
         <img src="https://cdn.simpleicons.org/rabbitmq/FF6600" alt="RabbitMQ">
         <span>RabbitMQ</span>
       </div>
-
       <div class="skill-card">
         <img src="https://cdn.simpleicons.org/socketdotio/010101" alt="WebSockets">
         <span>WebSockets</span>
       </div>
-
       <div class="skill-card">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker">
         <span>Docker</span>
       </div>
-
       <div class="skill-card">
         <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="AWS">
         <span>AWS EC2</span>
       </div>
-
       <div class="skill-card">
         <img src="https://cdn.simpleicons.org/githubactions/2088FF" alt="GitHub Actions">
         <span>GitHub Actions</span>
       </div>
-
       <div class="skill-card">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg" alt="Nginx">
         <span>Nginx</span>
       </div>
-
       <div class="skill-card">
         <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/2699.svg" alt="CI/CD">
         <span>CI/CD</span>
       </div>
-
       <div class="skill-card">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux">
         <span>Linux</span>
       </div>
-
       <div class="skill-card">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas">
         <span>Pandas</span>
       </div>
-
       <div class="skill-card">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy">
         <span>NumPy</span>
       </div>
-
       <div class="skill-card">
         <img src="https://cdn.simpleicons.org/pytest/0A9EDC" alt="Pytest">
         <span>Pytest</span>
       </div>
-
       <div class="skill-card">
         <img src="https://cdn.simpleicons.org/postman/FF6C37" alt="Postman">
         <span>Postman</span>
       </div>
-
       <div class="skill-card">
         <img src="https://cdn.simpleicons.org/jinja/B41717" alt="Jinja2">
         <span>Jinja2</span>
       </div>
-
       <div class="skill-card">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
         <span>Git</span>
       </div>
-
       <div class="skill-card">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
         <span>HTML</span>
       </div>
-
       <div class="skill-card">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
         <span>CSS</span>
       </div>
-
     </div>
   </div>
 </section>
 
-
-<!-- EXPERIENCE -->
 <section id="experience" aria-label="Work Experience">
   <div class="container">
     <p class="section-label">Experience</p>
     <h2 class="section-title">Where I've worked</h2>
     <div class="divider"></div>
-    <a href="https://www.linkedin.com/company/keshava-elite-projects/posts/?feedView=all"
-       target="_blank" rel="noopener noreferrer" class="exp-card">
+
+    <div class="exp-card">
       <div class="exp-meta">
-        <span class="exp-date">Mar 2026 &ndash; Present</span>
-        <span class="exp-company">Keshava Elite Projects<br>(KEP Labs)<br>Remote</span>
-        <span class="exp-status"><span class="dot"></span>Active</span>
+        <span class="exp-date">Feb 2026 &ndash; Present</span>
+        <span class="exp-company">
+          <a href="https://www.linkedin.com/company/keshava-elite-projects/posts/?feedView=all" target="_blank" rel="noopener noreferrer" class="company-link">Keshava Elite Projects</a>
+          <br>(KEP Labs)<br>Remote
+        </span>
+        <span class="exp-status">
+          <span class="dot"></span>Active
+        </span>
       </div>
       <div class="exp-content">
         <h3>Python Backend and Simulation Intern</h3>
-        <p class="exp-role-summary">Assisting in backend development for internal platforms and simulation systems covering robotics, electronics, and IoT under senior guidance.</p>
         <ul class="exp-bullets">
           <li>Developing and maintaining backend services and <strong>REST APIs using Python (FastAPI, Django)</strong> to support internal platforms and simulation systems</li>
           <li>Assisting in building and integrating backend components for <strong>robotics, electronics, and IoT simulation</strong> environments</li>
           <li>Working with <strong>SQL databases</strong> to store and manage user data, simulation data, and system configurations</li>
           <li>Performing testing, debugging, and basic performance checks on backend modules using <strong>Postman and pytest</strong></li>
         </ul>
+        <div class="exp-project">
+          <div class="exp-project-title">Internship Prototype</div>
+          <p class="exp-project-desc">Built a FastAPI-based IoT simulation prototype that validates battery, LED, and switch circuit connections through REST APIs, enabling internal testing and demonstration of circuit logic without physical hardware.</p>
+          <a href="https://github.com/jaayysoni/KEP-Prototype" target="_blank" rel="noopener noreferrer" class="exp-project-link">View Prototype ↗</a>
+        </div>
       </div>
-    </a>
+    </div>
   </div>
 </section>
 
-
-<!-- PROJECTS -->
 <section id="projects" aria-label="Projects">
   <div class="container">
     <p class="section-label">Projects</p>
-    <h2 class="section-title">Selected work, all deployed</h2>
+    <h2 class="section-title">Selected work</h2>
     <div class="divider"></div>
     <div class="projects-grid">
 
-      <!-- FinVerse -->
       <a href="https://finverse.jaayysoni.com" target="_blank" rel="noopener" class="project-card">
         <div class="project-header">
           <h3 class="project-name">FinVerse &mdash; Finance Platform</h3>
@@ -1243,7 +1232,6 @@
         </div>
       </a>
 
-      <!-- Crypto -->
       <a href="https://crypto.jaayysoni.com" target="_blank" rel="noopener" class="project-card">
         <div class="project-header">
           <h3 class="project-name">Crypto Trading Simulator</h3>
@@ -1253,16 +1241,16 @@
         <p class="project-desc">Real-time trading simulator with WebSocket-based price streaming, FIFO portfolio tracking, and live P&amp;L. Load-tested to 90+ concurrent connections and deployed on AWS with full CI/CD.</p>
         <div class="project-insight">Per-connection async handling with Redis as shared state avoids bottlenecks without blocking the event loop.</div>
         <div style="padding: 9px 14px; background: var(--amber-bg); border: 1px solid var(--amber-border); border-radius: 8px; font-family: 'Geist Mono', monospace; font-size: 11.5px; color: var(--amber); margin-bottom: 12px;">
-          Attracted direct outreach from a <strong>VIP and Partnerships Manager at Crypto.com Exchange</strong> who cited the GitHub project specifically
+          Cited by a <strong>VIP and Partnerships Manager at Crypto.com Exchange</strong> on GitHub
         </div>
         <ul class="project-highlights">
-          <li>FastAPI WebSocket backend load tested at 90+ concurrent connections with no dropped connections and consistent message delivery</li>
+          <li>FastAPI WebSocket backend load tested at 90+ concurrent connections with no dropped connections</li>
           <li>Redis caching for shared price and portfolio state cut API latency by 40-60% vs direct DB reads</li>
-          <li>FIFO-based portfolio engine with full transaction history and real-time P&amp;L across hundreds of simulated trades</li>
+          <li>FIFO-based portfolio engine with full transaction history and real-time P&amp;L</li>
           <li>GitHub Actions CI/CD with Docker build and AWS EC2 deploy triggered on push to main</li>
         </ul>
         <div class="project-metrics">
-          <span class="metric m-blue">90+ Concurrent WS Connections</span>
+          <span class="metric m-blue">90+ Concurrent WS</span>
           <span class="metric m-amber">40-60% Latency Reduction</span>
           <span class="metric m-green">Real-time P&amp;L Engine</span>
         </div>
@@ -1276,7 +1264,6 @@
         </div>
       </a>
 
-      <!-- E-Voting -->
       <a href="https://evoting.jaayysoni.com" target="_blank" rel="noopener" class="project-card">
         <div class="project-header">
           <h3 class="project-name">Secure E-Voting System 2.0</h3>
@@ -1306,7 +1293,6 @@
         </div>
       </a>
 
-      <!-- Notifications -->
       <a href="https://github.com/jaayysoni/Event-Driven-Notification-System" target="_blank" rel="noopener" class="project-card">
         <div class="project-header">
           <h3 class="project-name">Event-Driven Notification System</h3>
@@ -1336,7 +1322,6 @@
         </div>
       </a>
 
-      <!-- Credit Approval -->
       <a href="https://github.com/jaayysoni/Credit-Approval-Backend-System" target="_blank" rel="noopener" class="project-card wide">
         <div class="project-header">
           <h3 class="project-name">Credit Approval Backend System</h3>
@@ -1347,7 +1332,7 @@
         <div class="project-insight">ORM queries use select_related and prefetch_related throughout. No N+1 queries and no unnecessary DB round-trips.</div>
         <ul class="project-highlights">
           <li>Django REST Framework APIs with optimized ORM queries, N+1 patterns avoided from the start</li>
-          <li>Rule-based credit scoring engine evaluating income, debt-to-income ratio, and repayment history to determine eligibility and interest rate</li>
+          <li>Rule-based credit scoring engine evaluating income, debt-to-income ratio, and repayment history</li>
           <li>Celery with Redis for async loan computation so heavy processing does not block the API response</li>
           <li>EMI and amortization calculations per credit tier, stored and retrievable per user</li>
           <li>PostgreSQL with transactional integrity so financial data either commits fully or not at all</li>
@@ -1371,7 +1356,6 @@
   </div>
 </section>
 
-<!-- CERTIFICATIONS & BADGES -->
 <section id="badges" aria-label="Certifications and Badges">
   <div class="container">
     <p class="section-label">Certifications</p>
@@ -1495,14 +1479,13 @@
     </div>
 
     <div style="margin-top: 24px;">
-      <a href="https://www.credly.com/users/jaayysoni" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:6px; font-family:'Geist Mono',monospace; font-size:12px; color:var(--accent); text-decoration:none; border:1px solid #bfdbfe; padding:8px 16px; border-radius:8px; background:var(--accent-light); transition:background 0.15s;">
+      <a href="https://www.credly.com/users/jaayysoni" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:6px; font-family:'Geist Mono',monospace; font-size:12px; color:var(--accent); text-decoration:none; border:1px solid #bfdbfe; padding:8px 16px; border-radius:8px; background:var(--accent-light);">
         View all verified badges on Credly &#8599;
       </a>
     </div>
   </div>
 </section>
 
-<!-- ACHIEVEMENTS -->
 <section id="achievements" aria-label="Achievements">
   <div class="container">
     <p class="section-label">Achievements</p>
@@ -1510,9 +1493,9 @@
     <div class="divider"></div>
     <div class="achievements-row">
       <div class="ach-card">
-        <div class="ach-number">5</div>
+        <div class="ach-number">3</div>
         <div class="ach-title">Live AWS Deployments</div>
-        <p class="ach-desc">Actual systems running on AWS EC2 behind Nginx, deployed via Docker and GitHub Actions CI/CD. Accessible right now at my domains.</p>
+        <p class="ach-desc">Systems running on AWS EC2 behind Nginx, deployed via Docker and GitHub Actions CI/CD. Accessible right now at my domains.</p>
       </div>
       <div class="ach-card">
         <div class="ach-number">13<span>+</span></div>
@@ -1528,7 +1511,6 @@
   </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact" aria-label="Contact Jay Soni">
   <div class="container">
     <div class="contact-inner">
